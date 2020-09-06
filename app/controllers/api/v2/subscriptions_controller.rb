@@ -1,19 +1,19 @@
-class SubscriptionsController < ApplicationController
+class Api::V2::SubscriptionsController < ApplicationController
   before_action :set_subscription, only: [:show, :update, :destroy]
 
-  # GET /subscriptions
-  # GET /subscriptions.json
+  # GET /api/v2/subscriptions
+  # GET /api/v2/subscriptions.json
   def index
     @subscriptions = Subscription.all
   end
 
-  # GET /subscriptions/1
-  # GET /subscriptions/1.json
+  # GET /api/v2/subscriptions/1
+  # GET /api/v2/subscriptions/1.json
   def show
   end
 
-  # POST /subscriptions
-  # POST /subscriptions.json
+  # POST /api/v2/subscriptions
+  # POST /api/v2/subscriptions.json
   def create
     @subscription = Subscription.new(subscription_params)
 
@@ -24,8 +24,8 @@ class SubscriptionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /subscriptions/1
-  # PATCH/PUT /subscriptions/1.json
+  # PATCH/PUT /api/v2/subscriptions/1
+  # PATCH/PUT /api/v2/subscriptions/1.json
   def update
     if @subscription.update(subscription_params)
       render :show, status: :ok, location: @subscription
@@ -34,8 +34,8 @@ class SubscriptionsController < ApplicationController
     end
   end
 
-  # DELETE /subscriptions/1
-  # DELETE /subscriptions/1.json
+  # DELETE /api/v2/subscriptions/1
+  # DELETE /api/v2/subscriptions/1.json
   def destroy
     @subscription.destroy
   end

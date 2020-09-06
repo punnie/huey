@@ -1,19 +1,19 @@
-class AggregationsController < ApplicationController
+class Api::V2::AggregationsController < ApplicationController
   before_action :set_aggregation, only: [:show, :update, :destroy]
 
-  # GET /aggregations
-  # GET /aggregations.json
+  # GET /api/v2/aggregations
+  # GET /api/v2/aggregations.json
   def index
     @aggregations = Aggregation.all
   end
 
-  # GET /aggregations/1
-  # GET /aggregations/1.json
+  # GET /api/v2/aggregations/1
+  # GET /api/v2/aggregations/1.json
   def show
   end
 
-  # POST /aggregations
-  # POST /aggregations.json
+  # POST /api/v2/aggregations
+  # POST /api/v2/aggregations.json
   def create
     @aggregation = Aggregation.new(aggregation_params)
 
@@ -24,8 +24,8 @@ class AggregationsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /aggregations/1
-  # PATCH/PUT /aggregations/1.json
+  # PATCH/PUT /api/v2/aggregations/1
+  # PATCH/PUT /api/v2/aggregations/1.json
   def update
     if @aggregation.update(aggregation_params)
       render :show, status: :ok, location: @aggregation
@@ -34,8 +34,8 @@ class AggregationsController < ApplicationController
     end
   end
 
-  # DELETE /aggregations/1
-  # DELETE /aggregations/1.json
+  # DELETE /api/v2/aggregations/1
+  # DELETE /api/v2/aggregations/1.json
   def destroy
     @aggregation.destroy
   end

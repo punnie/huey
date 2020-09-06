@@ -1,19 +1,19 @@
-class FeedsController < ApplicationController
+class Api::V2::FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :update, :destroy]
 
-  # GET /feeds
-  # GET /feeds.json
+  # GET /api/v2/feeds
+  # GET /api/v2/feeds.json
   def index
     @feeds = Feed.all
   end
 
-  # GET /feeds/1
-  # GET /feeds/1.json
+  # GET /api/v2/feeds/1
+  # GET /api/v2/feeds/1.json
   def show
   end
 
-  # POST /feeds
-  # POST /feeds.json
+  # POST /api/v2/feeds
+  # POST /api/v2/feeds.json
   def create
     @feed = Feed.new(feed_params)
 
@@ -24,8 +24,8 @@ class FeedsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /feeds/1
-  # PATCH/PUT /feeds/1.json
+  # PATCH/PUT /api/v2/feeds/1
+  # PATCH/PUT /api/v2/feeds/1.json
   def update
     if @feed.update(feed_params)
       render :show, status: :ok, location: @feed
@@ -34,8 +34,8 @@ class FeedsController < ApplicationController
     end
   end
 
-  # DELETE /feeds/1
-  # DELETE /feeds/1.json
+  # DELETE /api/v2/feeds/1
+  # DELETE /api/v2/feeds/1.json
   def destroy
     @feed.destroy
   end
