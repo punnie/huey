@@ -1,0 +1,16 @@
+---
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres:12
+    environment:
+      POSTGRES_USER: literss
+      POSTGRES_PASSWORD: literss
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
