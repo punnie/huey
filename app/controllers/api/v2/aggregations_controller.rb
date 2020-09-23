@@ -1,5 +1,5 @@
 class Api::V2::AggregationsController < ApplicationController
-  before_action :set_aggregation, only: [:show, :update, :destroy]
+  before_action :set_aggregation, only: %i[show update destroy]
 
   # GET /api/v2/aggregations
   # GET /api/v2/aggregations.json
@@ -9,8 +9,7 @@ class Api::V2::AggregationsController < ApplicationController
 
   # GET /api/v2/aggregations/1
   # GET /api/v2/aggregations/1.json
-  def show
-  end
+  def show; end
 
   # POST /api/v2/aggregations
   # POST /api/v2/aggregations.json
@@ -41,13 +40,14 @@ class Api::V2::AggregationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_aggregation
-      @aggregation = Aggregation.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def aggregation_params
-      params.fetch(:aggregation, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_aggregation
+    @aggregation = Aggregation.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def aggregation_params
+    params.fetch(:aggregation, {})
+  end
 end

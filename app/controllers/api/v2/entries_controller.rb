@@ -1,5 +1,5 @@
 class Api::V2::EntriesController < ApplicationController
-  before_action :set_entry, only: [:show, :update, :destroy]
+  before_action :set_entry, only: %i[show update destroy]
 
   # GET /api/v2/entries
   # GET /api/v2/entries.json
@@ -9,8 +9,7 @@ class Api::V2::EntriesController < ApplicationController
 
   # GET /api/v2/entries/1
   # GET /api/v2/entries/1.json
-  def show
-  end
+  def show; end
 
   # POST /api/v2/entries
   # POST /api/v2/entries.json
@@ -41,13 +40,14 @@ class Api::V2::EntriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_entry
-      @entry = Entry.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def entry_params
-      params.fetch(:entry, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_entry
+    @entry = Entry.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def entry_params
+    params.fetch(:entry, {})
+  end
 end

@@ -1,5 +1,5 @@
 class Api::V2::SubscriptionsController < ApplicationController
-  before_action :set_subscription, only: [:show, :update, :destroy]
+  before_action :set_subscription, only: %i[show update destroy]
 
   # GET /api/v2/subscriptions
   # GET /api/v2/subscriptions.json
@@ -9,8 +9,7 @@ class Api::V2::SubscriptionsController < ApplicationController
 
   # GET /api/v2/subscriptions/1
   # GET /api/v2/subscriptions/1.json
-  def show
-  end
+  def show; end
 
   # POST /api/v2/subscriptions
   # POST /api/v2/subscriptions.json
@@ -41,13 +40,14 @@ class Api::V2::SubscriptionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_subscription
-      @subscription = Subscription.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def subscription_params
-      params.fetch(:subscription, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_subscription
+    @subscription = Subscription.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def subscription_params
+    params.fetch(:subscription, {})
+  end
 end

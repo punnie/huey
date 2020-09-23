@@ -1,5 +1,5 @@
 class Api::V2::FeedsController < ApplicationController
-  before_action :set_feed, only: [:show, :update, :destroy]
+  before_action :set_feed, only: %i[show update destroy]
 
   # GET /api/v2/feeds
   # GET /api/v2/feeds.json
@@ -9,8 +9,7 @@ class Api::V2::FeedsController < ApplicationController
 
   # GET /api/v2/feeds/1
   # GET /api/v2/feeds/1.json
-  def show
-  end
+  def show; end
 
   # POST /api/v2/feeds
   # POST /api/v2/feeds.json
@@ -41,13 +40,14 @@ class Api::V2::FeedsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_feed
-      @feed = Feed.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def feed_params
-      params.fetch(:feed, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_feed
+    @feed = Feed.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def feed_params
+    params.fetch(:feed, {})
+  end
 end
