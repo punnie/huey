@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Api::V2::AggregationsController < ApplicationController
   before_action :set_aggregation, only: %i[show update destroy]
 
@@ -14,10 +16,10 @@ class Api::V2::AggregationsController < ApplicationController
   # POST /api/v2/aggregations
   # POST /api/v2/aggregations.json
   def create
-    @aggregation = Aggregation.new(aggregation_params)
+    @aggregation = current_user.aggregations.new(aggregation_params)
 
     if @aggregation.save
-      render :show, status: :created, location: @aggregation
+      render :show, status: :created, location: api_v2_aggregation_url(@aggregation)
     else
       render json: @aggregation.errors, status: :unprocessable_entity
     end
@@ -27,7 +29,7 @@ class Api::V2::AggregationsController < ApplicationController
   # PATCH/PUT /api/v2/aggregations/1.json
   def update
     if @aggregation.update(aggregation_params)
-      render :show, status: :ok, location: @aggregation
+      render :show, status: :ok, location: api_v2_aggregation_url(@aggregation)
     else
       render json: @aggregation.errors, status: :unprocessable_entity
     end

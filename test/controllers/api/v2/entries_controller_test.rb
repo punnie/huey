@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Api::V2::EntriesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @entry = entries(:one)
+    @entry = entries(:entry_one)
   end
 
   test "should show entry" do

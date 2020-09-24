@@ -2,7 +2,8 @@ require 'test_helper'
 
 class Api::V2::AggregationsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @aggregation = aggregations(:one)
+    @user = users(:user_one)
+    @aggregation = aggregations(:aggregation_one)
   end
 
   test "should get index" do
@@ -11,8 +12,8 @@ class Api::V2::AggregationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create aggregation" do
-    assert_difference('Api::V2::Aggregation.count') do
-      post api_v2_aggregations_url, params: { aggregation: {  } }, as: :json
+    assert_difference('Aggregation.count') do
+      post api_v2_aggregations_url, params: { aggregation: {} }, as: :json
     end
 
     assert_response 201
@@ -29,7 +30,7 @@ class Api::V2::AggregationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy aggregation" do
-    assert_difference('Api::V2::Aggregation.count', -1) do
+    assert_difference('Aggregation.count', -1) do
       delete api_v2_aggregation_url(@aggregation), as: :json
     end
 

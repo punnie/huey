@@ -17,7 +17,7 @@ class Api::V2::FeedsController < ApplicationController
     @feed = Feed.new(feed_params)
 
     if @feed.save
-      render :show, status: :created, location: @feed
+      render :show, status: :created, location: api_v2_feed_url(@feed)
     else
       render json: @feed.errors, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class Api::V2::FeedsController < ApplicationController
   # PATCH/PUT /api/v2/feeds/1.json
   def update
     if @feed.update(feed_params)
-      render :show, status: :ok, location: @feed
+      render :show, status: :ok, location: api_v2_feed_url(@feed)
     else
       render json: @feed.errors, status: :unprocessable_entity
     end

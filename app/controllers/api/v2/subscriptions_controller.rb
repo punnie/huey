@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class Api::V2::SubscriptionsController < ApplicationController
-  before_action :set_subscription, only: %i[show update destroy]
+  before_action :set_subscription, only: %i[show destroy]
 
   # GET /api/v2/subscriptions
   # GET /api/v2/subscriptions.json
@@ -17,17 +19,7 @@ class Api::V2::SubscriptionsController < ApplicationController
     @subscription = Subscription.new(subscription_params)
 
     if @subscription.save
-      render :show, status: :created, location: @subscription
-    else
-      render json: @subscription.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /api/v2/subscriptions/1
-  # PATCH/PUT /api/v2/subscriptions/1.json
-  def update
-    if @subscription.update(subscription_params)
-      render :show, status: :ok, location: @subscription
+      render :show, status: :created, location: api_v2_subscriptions_url(@subscription)
     else
       render json: @subscription.errors, status: :unprocessable_entity
     end
@@ -48,6 +40,6 @@ class Api::V2::SubscriptionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def subscription_params
-    params.fetch(:subscription, {})
+    params.require(:subscription).permit(:feed_id, :aggregation_id)
   end
 end
