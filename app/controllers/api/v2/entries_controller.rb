@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Api::V2::EntriesController < ApplicationController
   before_action :set_entry, only: %i[show update destroy]
 

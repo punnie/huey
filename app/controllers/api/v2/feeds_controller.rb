@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Api::V2::FeedsController < ApplicationController
   before_action :set_feed, only: %i[show update destroy]
 
