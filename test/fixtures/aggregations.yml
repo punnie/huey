@@ -1,9 +1,0 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-aggregation_one:
-  permalink: one-permalink
-  user: user_one
-
-aggregation_two:
-  permalink: two-permalink
-  user: user_two
