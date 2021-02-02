@@ -1,3 +1,4 @@
+# typed: false
 # frozen_string_literal: true
 
 class CreateUsers < ActiveRecord::Migration[6.0]
@@ -11,7 +12,5 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.index ['token'], name: 'users_token_idx', unique: true
       t.index ['username'], name: 'users_username_idx', unique: true
     end
-
-    add_reference :aggregations, :user, type: :uuid
   end
 end
