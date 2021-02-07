@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_01_230732) do
+ActiveRecord::Schema.define(version: 2021_02_07_123132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,17 @@ ActiveRecord::Schema.define(version: 2021_02_01_230732) do
     t.string "feed_uri", limit: 1023
     t.datetime "last_refreshed_at", default: -> { "now()" }, null: false
     t.string "type"
+    t.string "scrape_index_news_element_selector"
+    t.string "scrape_index_headline_selector"
+    t.string "scrape_index_summary_selector"
+    t.string "scrape_index_illustration_selector"
+    t.string "scrape_index_illustration_attribute_name"
+    t.string "scrape_index_link_selector"
+    t.string "scrape_index_link_attribute_name"
+    t.string "scrape_index_link_base"
+    t.string "scrape_index_date_selector"
+    t.string "scrape_index_date_format"
+    t.string "scrape_index_author_selector"
   end
 
   create_table "users", id: :uuid, default: -> { "uuid_generate_v1mc()" }, force: :cascade do |t|
