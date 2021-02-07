@@ -2,6 +2,8 @@
 # frozen_string_literal: true
 
 class SafeDownloader
+  class SafeDownloadError < StandardError; end
+
   attr_reader :max_size, :max_hops
 
   def initialize(max_size: 10 * 1024 * 1024, max_hops: 30)
@@ -17,9 +19,10 @@ class SafeDownloader
       .follow(max_hops: max_hops)
       .get(url)
 
-    while content_size < max_size
-      chunk = response.body.readpartial
-      break if chunk.nil?
+    raise SafeDownloadError unless response.status.success?
+
+    response.body.each do |chunk|
+      break if content_size > max_size || chunk.nil?
 
       content << chunk
       content_size += chunk.size
