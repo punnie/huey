@@ -20,6 +20,7 @@ class DownloadReadableContentJob < ApplicationJob
       content: content.content,
     }
 
+    entry.is_ready = true
     entry.save!
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_07_123132) do
+ActiveRecord::Schema.define(version: 2021_02_07_194727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 2021_02_07_123132) do
 
   create_table "entries", id: :uuid, default: -> { "uuid_generate_v1mc()" }, force: :cascade do |t|
     t.uuid "feed_id"
-    t.jsonb "authors"
+    t.jsonb "authors", default: []
     t.jsonb "contents"
-    t.jsonb "contributors"
+    t.jsonb "contributors", default: []
     t.jsonb "description"
-    t.jsonb "enclosures"
+    t.jsonb "enclosures", default: []
     t.string "link", limit: 1023
     t.datetime "published_date"
     t.string "title", limit: 1023
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_02_07_123132) do
     t.string "url", limit: 1023
     t.string "uri", limit: 1023
     t.jsonb "readable_content"
+    t.boolean "is_ready", default: false, null: false
     t.index ["published_date"], name: "entries_published_date_idx"
     t.index ["uri"], name: "entries_uri_idx"
   end
