@@ -10,29 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_06_195328) do
+ActiveRecord::Schema.define(version: 2021_02_07_194727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "aggregations", id: :uuid, default: -> { "uuid_generate_v1mc()" }, force: :cascade do |t|
-    t.string "permalink", limit: 255, null: false
-    t.datetime "created_at", default: -> { "now()" }, null: false
-    t.string "name", limit: 1023
-    t.uuid "user_id"
-    t.datetime "updated_at", precision: 6, default: -> { "now()" }, null: false
-    t.index ["permalink"], name: "aggregations_permalink_idx"
-    t.index ["user_id"], name: "index_aggregations_on_user_id"
-  end
-
   create_table "entries", id: :uuid, default: -> { "uuid_generate_v1mc()" }, force: :cascade do |t|
     t.uuid "feed_id"
-    t.jsonb "authors"
+    t.jsonb "authors", default: []
     t.jsonb "contents"
-    t.jsonb "contributors"
+    t.jsonb "contributors", default: []
     t.jsonb "description"
-    t.jsonb "enclosures"
+    t.jsonb "enclosures", default: []
     t.string "link", limit: 1023
     t.datetime "published_date"
     t.string "title", limit: 1023
@@ -40,8 +30,7 @@ ActiveRecord::Schema.define(version: 2020_09_06_195328) do
     t.string "url", limit: 1023
     t.string "uri", limit: 1023
     t.jsonb "readable_content"
-    t.index ["feed_id", "published_date"], name: "entries_feed_id_published_date_idx"
-    t.index ["feed_id"], name: "entries_feed_id_idx"
+    t.boolean "is_ready", default: false, null: false
     t.index ["published_date"], name: "entries_published_date_idx"
     t.index ["uri"], name: "entries_uri_idx"
   end
@@ -63,16 +52,18 @@ ActiveRecord::Schema.define(version: 2020_09_06_195328) do
     t.string "uri", limit: 1023
     t.string "feed_uri", limit: 1023
     t.datetime "last_refreshed_at", default: -> { "now()" }, null: false
-    t.index ["link"], name: "feeds_link_idx"
-  end
-
-  create_table "subscriptions", id: :uuid, default: -> { "uuid_generate_v1mc()" }, force: :cascade do |t|
-    t.uuid "aggregation_id"
-    t.uuid "feed_id"
-    t.datetime "created_at", precision: 6, default: -> { "now()" }, null: false
-    t.datetime "updated_at", precision: 6, default: -> { "now()" }, null: false
-    t.index ["aggregation_id", "feed_id"], name: "subscriptions_aggregation_id_feed_id_idx"
-    t.index ["aggregation_id"], name: "subscriptions_aggregation_id_idx"
+    t.string "type"
+    t.string "scrape_index_news_element_selector"
+    t.string "scrape_index_headline_selector"
+    t.string "scrape_index_summary_selector"
+    t.string "scrape_index_illustration_selector"
+    t.string "scrape_index_illustration_attribute_name"
+    t.string "scrape_index_link_selector"
+    t.string "scrape_index_link_attribute_name"
+    t.string "scrape_index_link_base"
+    t.string "scrape_index_date_selector"
+    t.string "scrape_index_date_format"
+    t.string "scrape_index_author_selector"
   end
 
   create_table "users", id: :uuid, default: -> { "uuid_generate_v1mc()" }, force: :cascade do |t|
@@ -104,6 +95,4 @@ ActiveRecord::Schema.define(version: 2020_09_06_195328) do
   end
 
   add_foreign_key "entries", "feeds", name: "entries_feed_id_fkey", on_delete: :cascade
-  add_foreign_key "subscriptions", "aggregations", name: "subscriptions_aggregation_id_fkey", on_delete: :cascade
-  add_foreign_key "subscriptions", "feeds", name: "subscriptions_feed_id_fkey", on_delete: :cascade
 end

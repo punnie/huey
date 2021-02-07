@@ -1,34 +1,27 @@
 # typed: false
 # frozen_string_literal: true
 
-class SafeDownloader
-  class SafeDownloadError < StandardError; end
+class ReadableContentDownloader
+  class ReadableContentDownloadError < StandardError; end
 
-  attr_reader :max_size, :max_hops
+  attr_reader :mercury_api_url
 
-  def initialize(max_size: 10 * 1024 * 1024, max_hops: 30)
-    @max_size = max_size
-    @max_hops = max_hops
+  def initialize(mercury_api_url:)
+    @mercury_api_url = mercury_api_url
   end
 
   def download(url)
-    content = String.new
-    content_size = 0
+    response = HTTP.post(
+      mercury_api_url,
+      json: {
+        url: url,
+        user_agent: user_agent,
+      },
+    )
 
-    response = HTTP.headers(user_agent: user_agent)
-      .follow(max_hops: max_hops)
-      .get(url)
+    raise ReadableContentDownloadError unless response.status.success?
 
-    raise SafeDownloadError unless response.status.success?
-
-    response.body.each do |chunk|
-      break if content_size > max_size || chunk.nil?
-
-      content << chunk
-      content_size += chunk.size
-    end
-
-    content
+    OpenStruct.new(response.parse)
   end
 
   private
