@@ -26,7 +26,7 @@ class ScrapeFeed < Feed
       entry.link = link
       entry.title = headline
       entry.published_date ||= date || Time.now.utc
-      entry.updated_date ||= date || Time.now.utc
+      entry.updated_date ||= Time.now.utc
 
       entry.save!
     end
