@@ -17,7 +17,8 @@ class RssFeed < Feed
     self.last_refreshed_at = Time.now
 
     feed.items.each do |item|
-      entry = entries.find_or_initialize_by(uri: item.guid.content)
+      guid = item.guid&.content || item.link
+      entry = entries.find_or_initialize_by(uri: guid)
 
       entry.authors = item.author.blank? ? nil : [item.author]
       entry.description = item.description
