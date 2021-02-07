@@ -3,7 +3,7 @@
 
 class DownloadReadableContentJob < ApplicationJob
   def perform(entry:)
-    downloader = ReadableContentDownloader.new(mercury_api_url: 'http://localhost:3000/content')
+    downloader = ReadableContentDownloader.new(mercury_api_url: ENV['MERCURY_API_URL'])
     content = downloader.download(entry.real_uri)
 
     entry.readable_content = content
