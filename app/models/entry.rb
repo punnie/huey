@@ -6,6 +6,14 @@ class Entry < ApplicationRecord
 
   after_create :download_readable_content
 
+  # Getting some PHP vibes here
+  def real_uri
+    return uri if uri =~ URI::DEFAULT_PARSER.make_regexp
+    return link if link =~ URI::DEFAULT_PARSER.make_regexp
+
+    raise StandardError, 'No valid URI found'
+  end
+
   private
 
   def download_readable_content
