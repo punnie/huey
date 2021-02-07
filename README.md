@@ -1,24 +1,5 @@
-# README
+# Huey
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![](https://s3.ethereal.io/mabyer-sics-chita-engarrison/christian_bale_american_psycho_patrick_bateman_axe_10989289_RE_PwnzElite_has_declared_war_on_Grammar_Nazis-s400x300-173837.jpg)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+>  Do you like Huey Lewis and the News?
