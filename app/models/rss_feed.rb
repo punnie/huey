@@ -21,9 +21,9 @@ class RssFeed < Feed
       entry = entries.find_or_initialize_by(uri: guid)
 
       entry.authors = item.author.blank? ? nil : [item.author]
-      entry.description = item.description
+      entry.description = Nokogiri::XML('<el>' + item.description + '</el>').text.strip
       entry.link = item.link
-      entry.title = Nokogiri::XML('<title>' + item.title + '</title>').text.strip
+      entry.title = Nokogiri::XML('<el>' + item.title + '</el>').text.strip
       entry.published_date = item.pubDate
       entry.updated_date = item.pubDate
 
