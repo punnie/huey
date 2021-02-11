@@ -23,7 +23,7 @@ class RssFeed < Feed
       entry.authors = item.author.blank? ? nil : [item.author]
       entry.description = item.description
       entry.link = item.link
-      entry.title = item.title
+      entry.title = Nokogiri::XML('<title>' + item.title + '</title>').text.strip
       entry.published_date = item.pubDate
       entry.updated_date = item.pubDate
 
