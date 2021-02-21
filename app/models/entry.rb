@@ -4,7 +4,7 @@
 class Entry < ApplicationRecord
   belongs_to :feed
 
-  after_create :download_readable_content
+  after_commit :download_readable_content, on: %i[create update]
 
   # Getting some PHP vibes here
   def real_uri
