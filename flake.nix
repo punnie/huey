@@ -67,7 +67,7 @@
         devShells.huey = hueyDevShell;
         devShells.default = hueyDevShell;
 
-        overlay.default = (final: prev: {
+        overlays.default = (final: prev: {
           huey = hueyPackage;
           huey-docker-image = dockerImage;
         });
