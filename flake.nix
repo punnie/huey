@@ -1,5 +1,5 @@
 {
-  description = "Huey";
+  description = "Huey flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -66,5 +66,10 @@
 
         devShells.huey = hueyDevShell;
         devShells.default = hueyDevShell;
+
+        overlay.default = (final: prev: {
+          huey = hueyPackage;
+          huey-docker-image = dockerImage;
+        });
       });
 }
