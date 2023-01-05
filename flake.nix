@@ -31,15 +31,12 @@
 
           buildPhase = ''
             patchShebangs bin/
-
-            rm -rf log
-            ln -s /var/log/huey log
           '';
 
 
           installPhase = ''
-            mkdir -p $out
-            cp -rv $src/* $out
+            mkdir -p $out/app
+            cp -rv $src/* $out/app
           '';
         };
 
@@ -48,16 +45,10 @@
           tag = "latest";
           created = "now";
 
+          copyToRoot = hueyPackage;
+
           config = {
-            Cmd = [
-              "${hueyPackage}/bin/bundle"
-              "exec"
-              "puma"
-              "-C"
-              "${hueyPackage}/config/puma.rb"
-              "${hueyPackage}/config.ru"
-            ];
-            WorkingDir = "/tmp";
+            WorkingDir = "/app";
             Volumes = { "/tmp" = { }; };
           };
         };
