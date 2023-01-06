@@ -27,12 +27,11 @@
 
           src = self;
 
-          buildInputs = [ pkgs.bash hueyGems hueyGems.wrappedRuby ];
+          buildInputs = [ pkgs.cacert hueyGems hueyGems.wrappedRuby ];
 
           buildPhase = ''
             patchShebangs bin/
           '';
-
 
           installPhase = ''
             mkdir -p $out/app
@@ -54,7 +53,7 @@
         };
 
         hueyDevShell = pkgs.mkShell {
-          buildInputs = [ pkgs.bash hueyGems hueyGems.wrappedRuby solargraph ];
+          buildInputs = [ hueyGems hueyGems.wrappedRuby solargraph ];
         };
 
       in {
