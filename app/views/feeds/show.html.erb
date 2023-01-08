@@ -9,6 +9,6 @@
 
 <ul>
     <% @entries.each do |entry| %>
-        <li><small><%= entry.publiuhed_date %></small> - <%= link_to entry.title, entry.real_uri %></li>
+        <li><small><%= entry.published_date %></small> - <%= link_to entry.title, entry.real_uri %></li>
     <% end %>
 </ul>
