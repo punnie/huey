@@ -2,11 +2,15 @@
 # frozen_string_literal: true
 
 class DownloadReadableContentJob < ApplicationJob
+  attr_reader :mercury_api_url
+
   def perform(entry:)
-    downloader = ReadableContentDownloader.new(mercury_api_url: ENV['MERCURY_API_URL'])
+    downloader = ReadableContentDownloader.new(mercury_api_url: mercury_api_url)
     content = downloader.download(entry.real_uri)
 
     entry.readable_content = content
+
+    entry.title = content.title if entry.title.blank?
 
     entry.authors = ((entry.authors || []) + [content.author]).uniq.compact
     entry.published_date = content.date_published if entry.published_date.blank?
@@ -22,5 +26,11 @@ class DownloadReadableContentJob < ApplicationJob
 
     entry.is_ready = true
     entry.save!
+  end
+
+  private
+
+  def mercury_api_url
+    ENV['MERCURY_API_URL'] || 'https://mercury-api.ethereal.io/content'
   end
 end
