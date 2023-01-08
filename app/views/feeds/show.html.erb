@@ -1,0 +1,14 @@
+<% content_for :head do %>
+  <link rel="alternate" type="application/rss+xml" title="<%= @feed.title %>" href="<%= feed_url(@feed, format: :rss) %>" />
+  <link rel="alternate" type="application/feed+json" title="<%= @feed.title %>" href="<%= feed_url(@feed, format: :json) %>" />
+<% end %>
+
+<h1><%= @feed.title %></h1>
+
+<p><%= link_to 'RSS', feed_url(@feed, format: :rss) %> - <%= link_to 'JSON', feed_url(@feed, format: :json) %></p>
+
+<ul>
+    <% @entries.each do |entry| %>
+        <li><small><%= entry.published_date %></small> - <%= link_to entry.title, entry.uri %></li>
+    <% end %>
+</ul>
