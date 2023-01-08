@@ -9,6 +9,7 @@ json.feed_url api_v2_feed_url(@feed, format: :json)
 
 json.items @entries do |entry|
   json.id entry.uri
+  json.title entry.title
   json.summary entry.description
   json.date_published entry.published_date
   json.content_text entry.contents.fetch('content')
