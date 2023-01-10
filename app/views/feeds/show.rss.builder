@@ -11,8 +11,8 @@ xml.rss version: '2.0', 'xmlns:atom': 'http://www.w3.org/2005/Atom' do
         xml.title entry.title
         xml.description entry.contents.fetch('content')
         xml.pubDate entry.published_date.to_s(:rfc822)
-        xml.link entry.uri
-        xml.guid entry.uri
+        xml.link entry.real_uri
+        xml.guid entry.id
       end
     end
   end
