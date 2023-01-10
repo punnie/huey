@@ -3,14 +3,14 @@
 
 module Fetchers
   class SitemapIndexFeedFetcher < BaseFetcher
-    def fetch(uri)
+    def fetch(uri, limit_sitemaps: 2)
       downloader = SafeDownloader.new
       content = downloader.download(uri)
 
       document = Nokogiri::XML(content).remove_namespaces!
 
-      document.xpath('//sitemap/loc').first(2).map(&:text).each do |uri| # TODO magic number
-        SyncSitemapJob.perform_later(feed: feed, sitemap_uri: uri)
+      document.xpath('//sitemap/loc').first(limit_sitemaps).map(&:text).each do |u|
+        SyncSitemapJob.perform_later(feed: feed, sitemap_uri: u)
       end
 
       feed.last_refreshed_at = Time.now
