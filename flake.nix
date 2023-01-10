@@ -2,7 +2,7 @@
   description = "Huey flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -11,8 +11,8 @@
       let
         pkgs = import nixpkgs { inherit system; };
 
-        ruby = pkgs.ruby;
-        solargraph = pkgs.rubyPackages.solargraph;
+        ruby = pkgs.ruby_3_1;
+        solargraph = pkgs.rubyPackages_3_1.solargraph;
 
         hueyGems = pkgs.bundlerEnv {
           name = "huey-bundler-env";
@@ -54,7 +54,23 @@
         };
 
         hueyDevShell = pkgs.mkShell {
-          buildInputs = [ hueyGems hueyGems.wrappedRuby solargraph ];
+          buildInputs = [
+            hueyGems
+            hueyGems.wrappedRuby
+            solargraph
+
+            (with pkgs; [
+              bundix
+              nodejs
+              yarn
+            ])
+
+            (with pkgs.nodePackages; [
+              eslint
+              typescript
+              typescript-language-server
+            ])
+          ];
         };
 
       in {
