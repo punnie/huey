@@ -9,8 +9,17 @@ module Fetchers
 
       document = Nokogiri::XML(content).remove_namespaces!
 
-      document.xpath('//url/loc').map(&:text).each do |uri|
-        entry = feed.entries.find_or_initialize_by(uri: uri) # TODO find last_modified_date
+      document.xpath('//url').map { |el|
+        {
+          loc: el.xpath('loc').text,
+          lastmod: el.xpath('lastmod').text,
+        }
+      }.each do |u|
+        entry = feed.entries.find_or_initialize_by(uri: u[:loc])
+        date = u[:lastmod]
+
+        entry.published_date ||= date || Time.now.utc
+        entry.updated_date ||= Time.now.utc
         entry.save!
       end
 
