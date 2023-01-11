@@ -22,6 +22,16 @@ gem 'rack-cors'
 # Background jobs
 gem 'sidekiq'
 
+# Sprockets for asset generation
+gem 'sprockets-rails'
+
+# JS and CSS bundling
+gem 'jsbundling-rails'
+gem 'cssbundling-rails'
+
+# Foreman for parallel execution
+gem 'foreman'
+
 # RSS
 gem 'rss'
 # Http gem

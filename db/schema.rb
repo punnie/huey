@@ -2,16 +2,15 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# This file is the source Rails uses to define your schema when running `rails
-# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[6.1].define(version: 2021_02_07_194727) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_01_10_232810) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
@@ -24,9 +23,9 @@ ActiveRecord::Schema[6.1].define(version: 2021_02_07_194727) do
     t.jsonb "description"
     t.jsonb "enclosures", default: []
     t.string "link", limit: 1023
-    t.datetime "published_date"
+    t.datetime "published_date", precision: nil
     t.string "title", limit: 1023
-    t.datetime "updated_date"
+    t.datetime "updated_date", precision: nil
     t.string "url", limit: 1023
     t.string "uri", limit: 1023
     t.jsonb "readable_content"
@@ -47,11 +46,11 @@ ActiveRecord::Schema[6.1].define(version: 2021_02_07_194727) do
     t.string "language", limit: 1023
     t.string "link", limit: 1023
     t.jsonb "entry_links"
-    t.datetime "published_date"
+    t.datetime "published_date", precision: nil
     t.string "title", limit: 1023
     t.string "uri", limit: 1023
     t.string "feed_uri", limit: 1023
-    t.datetime "last_refreshed_at", default: -> { "now()" }, null: false
+    t.datetime "last_refreshed_at", precision: nil, default: -> { "now()" }, null: false
     t.string "type"
     t.string "scrape_index_news_element_selector"
     t.string "scrape_index_headline_selector"
@@ -68,25 +67,25 @@ ActiveRecord::Schema[6.1].define(version: 2021_02_07_194727) do
 
   create_table "users", id: :uuid, default: -> { "uuid_generate_v1mc()" }, force: :cascade do |t|
     t.string "token", limit: 255, null: false
-    t.datetime "created_at", default: -> { "now()" }, null: false
-    t.datetime "updated_at", default: -> { "now()" }, null: false
+    t.datetime "created_at", precision: nil, default: -> { "now()" }, null: false
+    t.datetime "updated_at", precision: nil, default: -> { "now()" }, null: false
     t.string "email", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
+    t.datetime "reset_password_sent_at", precision: nil
+    t.datetime "remember_created_at", precision: nil
     t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
+    t.datetime "current_sign_in_at", precision: nil
+    t.datetime "last_sign_in_at", precision: nil
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
     t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
+    t.datetime "confirmed_at", precision: nil
+    t.datetime "confirmation_sent_at", precision: nil
     t.string "unconfirmed_email"
     t.integer "failed_attempts", default: 0, null: false
     t.string "unlock_token"
-    t.datetime "locked_at"
+    t.datetime "locked_at", precision: nil
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
