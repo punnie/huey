@@ -3,12 +3,30 @@
   <link rel="alternate" type="application/feed+json" title="<%= @feed.title %>" href="<%= feed_url(@feed, format: :json) %>" />
 <% end %>
 
-<h1><%= @feed.title %></h1>
+<!-- <h1><%= @feed.title %></h1>
 
-<p><%= link_to 'RSS', feed_url(@feed, format: :rss) %> - <%= link_to 'JSON', feed_url(@feed, format: :json) %></p>
+     <p><%= link_to 'RSS', feed_url(@feed, format: :rss) %> - <%= link_to 'JSON', feed_url(@feed, format: :json) %></p> -->
 
-<ul>
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container mx-auto">
+    <div class="divide-y-2 divide-gray-100">
+
     <% @entries.each do |entry| %>
-        <li><small><%= entry.published_date %></small> - <%= link_to entry.title, entry.real_uri %></li>
+      <div class="md:py-2 flex md:flex-nowrap">
+        <div class="w-24 md:w-64 md:pr-4 flex-shrink-0 flex flex-col align-middle">
+          <img class="object-cover h-full" src="<%= entry.readable_content.dig('table', 'lead_image_url') %>" alt="<%= entry.description %>" />
+        </div>
+        <div class="flex-grow m-2 space-y-2">
+          <a href="<%= entry.real_uri %>" target="_blank">
+            <h2 class="text-m md:text-xl font-medium text-gray-900 title-font"><%= entry.title %></h2>
+          </a>
+          <p class="leading-relaxed text-sm md:text-l"><%= entry.description %></p>
+          <p class="text-gray-500 text-xs md:text-sm"><%= time_ago_in_words entry.published_date %> ago</p>
+        </div>
+      </div>
     <% end %>
-</ul>
+
+
+    </div>
+  </div>
+</section>
