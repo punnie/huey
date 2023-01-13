@@ -27,5 +27,8 @@ module Huey
     # Autoload lib
     config.enable_dependency_loading = true
     config.autoload_paths << Rails.root.join('lib')
+
+    # Set Sidekiq as activejob adapter
+    config.active_job.queue_adapter = :sidekiq
   end
 end
