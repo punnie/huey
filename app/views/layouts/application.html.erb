@@ -5,27 +5,26 @@
         <%= yield :head %>
         <%= stylesheet_link_tag "application" %>
         <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "application" %>
     </head>
     <body>
+        <header class="text-gray-600 body-font sticky top-0 left-0 bg-white drop-shadow-md">
+            <div class="container mx-auto flex flex-wrap p-2 flex-row items-center">
+                <nav class="flex w-1/5 flex-nowrap items-center text-base ml-auto">
+                    <% if params['controller'] != 'welcome' %>
+                        <a class="text-gray-300" href="<%= root_url %>">Back</a>
+                    <% end %>
+                </nav>
+                <a class="flex w-3/5 items-center items-center justify-center">
+                    <span><%= yield :title %></span>
+                </a>
+                <div class="w-1/5 inline-flex justify-end font-extrabold text-gray-900">
+                    <span>Huey</span>
+                </div>
+            </div>
+        </header>
 
-        <!-- <header class="text-gray-600 body-font">
-             <div class="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
-             <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
-             <a class="mr-5 hover:text-gray-900">First Link</a>
-             <a class="mr-5 hover:text-gray-900">Second Link</a>
-             <a class="mr-5 hover:text-gray-900">Third Link</a>
-             <a class="hover:text-gray-900">Fourth Link</a>
-             </nav>
-             <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0" href="<%= root_url %>">
-             <span class="ml-3 text-xl">Huey</span>
-             </a>
-             <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-             <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Sign in
-             </button>
-             </div>
-             </div>
-             </header>
-        -->
         <div class="container mx-auto">
             <%= yield %>
         </div>
