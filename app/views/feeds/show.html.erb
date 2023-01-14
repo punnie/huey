@@ -3,28 +3,4 @@
   <link rel="alternate" type="application/feed+json" title="<%= @feed.title %>" href="<%= feed_url(@feed, format: :json) %>" />
 <% end %>
 
-<% content_for(:title, @feed.title) %>
-
-<!-- <p><%= link_to 'RSS', feed_url(@feed, format: :rss) %> - <%= link_to 'JSON', feed_url(@feed, format: :json) %></p> -->
-
-<section class="text-gray-600 body-font overflow-hidden">
-  <div class="container mx-auto">
-    <div class="divide-y-2 divide-gray-100">
-
-    <% @entries.each do |entry| %>
-      <div class="md:py-2 flex md:flex-nowrap space-x-2 mx-2">
-        <div class="flex-grow space-y-1 my-2">
-          <a href="<%= entry.real_uri %>" target="_blank">
-            <h2 class="text-sm font-bold text-gray-900 title-font"><%= entry.title %></h2>
-          </a>
-          <p class="leading-relaxed text-xs"><%= entry.description.truncate_words(50) %></p>
-          <p class="text-gray-500 text-xs"><%= time_ago_in_words entry.published_date %> ago &mdash; <%= entry.feed.title %></p>
-        </div>
-        <div class=" md:pr-4 flex-shrink-0 flex flex-col align-bottom">
-          <img class="object-cover w-16 h-16 md:h-20 md:w-20 rounded my-auto" src="<%= entry.readable_content.dig('table', 'lead_image_url') %>" />
-        </div>
-      </div>
-    <% end %>
-    </div>
-  </div>
-</section>
+<%= render partial: 'shared/feed', locals: { feed: @feed, entry_limit: 100, display_mode: :extended } %>

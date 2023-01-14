@@ -7,8 +7,6 @@ class FeedsController < ApplicationController
   # GET /feeds/1.json
   # GET /feeds/1.rss
   def show
-    @entries = @feed.entries.where(is_ready: true).order(published_date: :desc).limit(entry_limit)
-
     respond_to do |format|
       format.html { render layout: 'layouts/application' }
       format.json { render layout: false }

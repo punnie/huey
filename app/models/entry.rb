@@ -6,6 +6,8 @@ class Entry < ApplicationRecord
 
   after_commit :download_readable_content, on: :create
 
+  scope :for_feed, ->(entry_limit = 10) { where(is_ready: true).order(published_date: :desc).limit(entry_limit) }
+
   # Getting some PHP vibes here
   def real_uri
     return uri if uri =~ URI::DEFAULT_PARSER.make_regexp

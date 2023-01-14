@@ -1,17 +1,3 @@
-<h1>Huey</h1>
-
-<p>You like Huey Lewis and the News?</p>
-
-<h2>Feeds</h2>
-
-<ul>
-    <% @feeds.each do |feed| %>
-        <li>
-            <%= link_to feed.title, feed.link %> -
-            <%= link_to 'HTML', feed_url(feed) %>
-            <%= link_to 'RSS', feed_url(feed, format: :rss) %>
-            <%= link_to 'JSON', feed_url(feed, format: :json) %>
-        </li>
-
-    <% end %>
-</ul>
+<% @feeds.order(:title).each do |feed| %>
+    <%= render partial: 'shared/feed', locals: { feed: feed, display_mode: :compact } %>
+<% end %>
