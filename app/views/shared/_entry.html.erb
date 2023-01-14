@@ -1,0 +1,12 @@
+<div class="py-1 flex flex-nowrap space-x-2 px-2">
+    <div class="flex-grow space-y-1 my-2">
+        <a href="<%= entry.real_uri %>" target="_blank">
+            <h2 class="text-sm font-bold text-gray-900 title-font"><%= entry.title %></h2>
+        </a>
+        <p class="leading-relaxed text-xs"><%= entry.description.truncate_words(50) %></p>
+        <p class="text-gray-500 text-xs"><%= time_ago_in_words entry.published_date %> ago &mdash; <%= entry.feed.title %></p>
+    </div>
+    <div class=" flex-shrink-0 flex flex-col align-bottom">
+        <img class="object-cover w-16 h-16 md:h-20 md:w-20 rounded my-auto" src="<%= entry.readable_content.dig('table', 'lead_image_url') %>" />
+    </div>
+</div>
