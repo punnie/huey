@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_15_221530) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_15_234247) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
@@ -32,6 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_15_221530) do
     t.boolean "is_ready", default: false, null: false
     t.bigint "sid", default: -> { "generate_snowflake_id()" }, null: false
     t.index ["published_date"], name: "entries_published_date_idx"
+    t.index ["sid"], name: "index_entries_on_sid", unique: true
     t.index ["uri"], name: "entries_uri_idx"
   end
 
@@ -65,6 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_15_221530) do
     t.string "scrape_index_date_format"
     t.string "scrape_index_author_selector"
     t.bigint "sid", default: -> { "generate_snowflake_id()" }, null: false
+    t.index ["sid"], name: "index_feeds_on_sid", unique: true
   end
 
   create_table "users", id: :uuid, default: -> { "uuid_generate_v1mc()" }, force: :cascade do |t|
@@ -92,6 +94,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_15_221530) do
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["sid"], name: "index_users_on_sid", unique: true
     t.index ["token"], name: "users_token_idx", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
