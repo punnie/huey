@@ -1,0 +1,11 @@
+<div class="py-1 flex flex-nowrap space-x-2 px-2">
+    <div class="flex-grow space-y-1 my-2">
+        <a href="<%= entry.real_uri %>" target="_blank">
+            <h2 class="text-sm font-bold text-gray-900 title-font"><%= entry.title %></h2>
+        </a>
+        <p class="text-gray-500 text-xs"><%= time_ago_in_words entry.published_date %> ago &mdash; <%= link_to entry.feed.title, feed_url(entry.feed) %></p>
+    </div>
+    <div class=" flex-shrink-0 flex flex-col align-bottom">
+        <img class="object-cover w-12 h-12 rounded my-auto" src="<%= entry.readable_content.dig('table', 'lead_image_url') %>" />
+    </div>
+</div>

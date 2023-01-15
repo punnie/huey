@@ -5,22 +5,29 @@
         <%= yield :head %>
         <%= stylesheet_link_tag "application" %>
         <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <%= stylesheet_link_tag "application" %>
     </head>
     <body>
         <header class="text-gray-600 body-font sticky top-0 left-0 bg-white border-b-1 border-solid border-gray-100">
             <div class="container mx-auto flex p-2 flex-row items-center">
                 <nav class="flex w-1/5 flex-nowrap items-center text-base ml-auto">
-                    <% if params['controller'] != 'welcome' %>
+                    <% unless params['controller'] == 'welcome' %>
                         <a class="text-gray-300" href="<%= root_url %>">Back</a>
                     <% end %>
                 </nav>
-                <a class="flex w-3/5 font-bold items-center justify-center">
+                <a class="flex w-3/5 font-bold items-center justify-center" href="<%= root_url %>">
                     <span>Huey</span>
                 </a>
-                <div class="w-1/5 inline-flex justify-end text-gray-900">
-                    <span><!-- Maybe sign in? --></span>
+                <div class="w-1/5 inline-flex justify-end text-gray-900 space-x-2">
+                    <%= link_to root_url do %>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z" />
+                        </svg>
+                    <% end %>
+                    <%= link_to root_url(chronological: true) do %>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                        </svg>
+                    <% end %>
                 </div>
             </div>
         </header>

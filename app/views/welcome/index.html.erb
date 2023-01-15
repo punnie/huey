@@ -1,7 +1,17 @@
-<div class="flex flex-wrap">
-    <% @feeds.order(:title).each do |feed| %>
-        <div class="lg:basis-1/3">
-            <%= render partial: 'shared/feed', locals: { feed: feed, display_mode: :compact } %>
+<% unless @chronological %>
+    <div class="flex flex-wrap">
+        <% @feeds.order(:title).each do |feed| %>
+            <div class="lg:basis-1/3 w-full">
+                <%= render partial: 'shared/feed', locals: { feed: feed, display_mode: :compact } %>
+            </div>
+        <% end %>
+    </div>
+<% else %>
+    <section class="text-gray-600 body-font my-4">
+        <div class="divide-y-2 divide-gray-100">
+            <% Entry.all.for_feed(local_assigns.fetch(:entry_limit, 100)).each do |entry| %>
+                <%= render partial: 'shared/entry_cozy', locals: { entry: entry } %>
+            <% end %>
         </div>
-    <% end %>
-</div>
+    </section>
+<% end %>
