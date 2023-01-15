@@ -6,7 +6,9 @@
         <p class="leading-relaxed text-xs"><%= entry.description.truncate_words(50) %></p>
         <p class="text-gray-500 text-xs"><%= time_ago_in_words entry.published_date %> ago &mdash; <%= entry.feed.title %></p>
     </div>
-    <div class=" flex-shrink-0 flex flex-col align-bottom">
-        <img class="object-cover w-16 h-16 md:h-20 md:w-20 rounded my-auto" src="<%= entry.readable_content.dig('table', 'lead_image_url') %>" />
-    </div>
+    <% if entry.readable_content.dig('table', 'lead_image_url').present? %>
+        <div class=" flex-shrink-0 flex flex-col align-bottom">
+            <img class="object-cover w-12 h-12 rounded my-auto" src="<%= entry.readable_content.dig('table', 'lead_image_url') %>" />
+        </div>
+    <% end %>
 </div>
