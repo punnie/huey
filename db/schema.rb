@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_15_234247) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_18_120143) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
@@ -66,6 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_15_234247) do
     t.string "scrape_index_date_format"
     t.string "scrape_index_author_selector"
     t.bigint "sid", default: -> { "generate_snowflake_id()" }, null: false
+    t.boolean "use_googlebot_agent", default: true, null: false
     t.index ["sid"], name: "index_feeds_on_sid", unique: true
   end
 
