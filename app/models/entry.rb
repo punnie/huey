@@ -16,6 +16,10 @@ class Entry < ApplicationRecord
     raise StandardError, 'No valid URI found'
   end
 
+  def to_param
+    sid.to_s
+  end
+
   private
 
   def download_readable_content

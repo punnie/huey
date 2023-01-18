@@ -16,14 +16,7 @@ class FeedsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_feed
-    @feed = Feed.find(params[:id])
-  end
-
-  def entry_limit
-    return 100 if request.format.html?
-
-    10
+    @feed = Feed.find_by(sid: params[:sid])
   end
 end

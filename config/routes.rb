@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :feeds, only: [:show]
+  resources :feeds, param: :sid, only: [:show]
 
   root to: 'welcome#index'
 end

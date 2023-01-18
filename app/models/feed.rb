@@ -11,4 +11,8 @@ class Feed < ApplicationRecord
   def sync
     fetcher.fetch(uri)
   end
+
+  def to_param
+    sid.to_s
+  end
 end
