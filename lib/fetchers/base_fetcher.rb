@@ -6,7 +6,6 @@ module Fetchers
       @feed = feed
     end
 
-    def fetch(uri)
-    end
+    def fetch(uri); end
   end
 end

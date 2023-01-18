@@ -9,11 +9,12 @@ module Fetchers
 
       rss_feed = RSS::Parser.parse(content, validate: false)
 
+      feed.description ||= rss_feed.channel.description
+      feed.title ||= rss_feed.channel.title
+      feed.link ||= rss_feed.channel.link
+
       feed.copyright = rss_feed.channel.copyright
-      feed.description = rss_feed.channel.description
-      feed.link = rss_feed.channel.link
       feed.published_date = rss_feed.channel.pubDate
-      feed.title = rss_feed.channel.title
 
       feed.last_refreshed_at = Time.now
 
@@ -33,7 +34,7 @@ module Fetchers
         if contents.present?
           entry.contents = {
             type: 'text/html',
-            content: contents,
+            content: contents
           }
         end
 
