@@ -6,7 +6,7 @@ class DownloadReadableContentJob < ApplicationJob
 
   def perform(entry:)
     downloader = ReadableContentDownloader.new(mercury_api_url: mercury_api_url)
-    content = downloader.download(entry.real_uri, entry.feed.use_googlebot_agent)
+    content = downloader.download(entry.real_uri, use_googlebot_agent: entry.feed.use_googlebot_agent)
 
     entry.readable_content = content
 
