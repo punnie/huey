@@ -389,6 +389,49 @@
     };
     version = "2.6.3";
   };
+  kaminari = {
+    dependencies = ["activesupport" "kaminari-actionview" "kaminari-activerecord" "kaminari-core"];
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "0gia8irryvfhcr6bsr64kpisbgdbqjsqfgrk12a11incmpwny1y4";
+      type = "gem";
+    };
+    version = "1.2.2";
+  };
+  kaminari-actionview = {
+    dependencies = ["actionview" "kaminari-core"];
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "02f9ghl3a9b5q7l079d3yzmqjwkr4jigi7sldbps992rigygcc0k";
+      type = "gem";
+    };
+    version = "1.2.2";
+  };
+  kaminari-activerecord = {
+    dependencies = ["activerecord" "kaminari-core"];
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "0c148z97s1cqivzbwrak149z7kl1rdmj7dxk6rpkasimmdxsdlqd";
+      type = "gem";
+    };
+    version = "1.2.2";
+  };
+  kaminari-core = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "1zw3pg6kj39y7jxakbx7if59pl28lhk98fx71ks5lr3hfgn6zliv";
+      type = "gem";
+    };
+    version = "1.2.2";
+  };
   listen = {
     dependencies = ["rb-fsevent" "rb-inotify"];
     groups = ["development"];
