@@ -9,17 +9,17 @@ class FeedsController < ApplicationController
   def show
     respond_to do |format|
       format.html do
-        @entries = @feed.entries.for_feed.page(params[:page]).per(params[:per_page] || 100)
+        @entries = @feed.entries.for_feed.page(params[:page]).per(default_per_page_html)
         render layout: 'layouts/application'
       end
 
       format.json do
-        @entries = @feed.entries.for_feed.page(params[:page]).per(params[:per_page])
+        @entries = @feed.entries.for_feed.page(params[:page]).per(default_per_page_feeds)
         render layout: false
       end
 
       format.rss do
-        @entries = @feed.entries.for_feed.page(params[:page]).per(params[:per_page])
+        @entries = @feed.entries.for_feed.page(params[:page]).per(default_per_page_feeds)
         render layout: false
       end
     end
@@ -29,5 +29,13 @@ class FeedsController < ApplicationController
 
   def set_feed
     @feed = Feed.find_by(sid: params[:sid])
+  end
+
+  def default_per_page_html
+    params[:per_page] || 100
+  end
+
+  def default_per_page_feeds
+    params[:per_page] || 25
   end
 end

@@ -24,6 +24,10 @@ class WelcomeController < ApplicationController
   end
 
   def set_entries
-    @entries = Entry.all.for_feed.page(params[:page]).per(params[:per_page])
+    @entries = Entry.all.for_feed.page(params[:page]).per(default_per_page)
+  end
+
+  def default_per_page
+    params[:per_page] || 100
   end
 end
