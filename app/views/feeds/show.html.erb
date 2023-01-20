@@ -3,4 +3,4 @@
   <link rel="alternate" type="application/feed+json" title="<%= @feed.title %>" href="<%= feed_url(@feed, format: :json) %>" />
 <% end %>
 
-<%= render partial: 'shared/feed', locals: { feed: @feed, entry_limit: 100, display_mode: :extended } %>
+<%= render partial: 'shared/feed', locals: { feed: @feed, entries: @entries , display_mode: :extended } %>

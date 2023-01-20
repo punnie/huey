@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="divide-y-2 divide-gray-100">
-        <% feed.entries.for_feed(local_assigns.fetch(:entry_limit, 10)).each do |entry| %>
+        <% entries.each do |entry| %>
             <%= render partial: entry_partial, locals: { entry: entry } %>
         <% end %>
     </div>

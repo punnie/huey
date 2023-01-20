@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :feeds, param: :sid, only: [:show]
 
   root to: 'welcome#index'
+  get 'chronological', to: 'welcome#chronological', as: :chronological
 end

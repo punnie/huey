@@ -8,9 +8,20 @@ class FeedsController < ApplicationController
   # GET /feeds/1.rss
   def show
     respond_to do |format|
-      format.html { render layout: 'layouts/application' }
-      format.json { render layout: false }
-      format.rss { render layout: false }
+      format.html do
+        @entries = @feed.entries.for_feed.page(params[:page]).per(params[:per_page] || 100)
+        render layout: 'layouts/application'
+      end
+
+      format.json do
+        @entries = @feed.entries.for_feed.page(params[:page]).per(params[:per_page])
+        render layout: false
+      end
+
+      format.rss do
+        @entries = @feed.entries.for_feed.page(params[:page]).per(params[:per_page])
+        render layout: false
+      end
     end
   end
 

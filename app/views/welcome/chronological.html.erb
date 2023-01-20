@@ -1,0 +1,7 @@
+<section class="text-gray-600 body-font my-4">
+    <div class="divide-y-2 divide-gray-100">
+        <% @entries.each do |entry| %>
+            <%= render partial: 'shared/entry_cozy', locals: { entry: entry } %>
+        <% end %>
+    </div>
+</section>
