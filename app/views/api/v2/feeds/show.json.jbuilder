@@ -12,6 +12,6 @@ json.items @entries do |entry|
   json.title entry.title
   json.summary entry.description
   json.date_published entry.published_date
-  json.content_text entry.contents.fetch('content')
-  json.url entry.uri
+  json.content_html entry.contents.fetch('content', '')
+  json.url entry.real_uri
 end
