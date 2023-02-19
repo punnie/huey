@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_19_121320) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_19_121807) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
   create_table "entries", id: :bigint, default: -> { "generate_snowflake_id()" }, force: :cascade do |t|
-    t.uuid "feed_id"
     t.jsonb "authors", default: []
     t.jsonb "contents"
     t.jsonb "contributors", default: []
@@ -30,13 +29,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_19_121320) do
     t.string "uri", limit: 1023
     t.jsonb "readable_content"
     t.boolean "is_ready", default: false, null: false
-    t.bigint "feed_sid"
+    t.bigint "feed_id"
     t.index ["id"], name: "index_entries_on_id", unique: true
     t.index ["published_date"], name: "entries_published_date_idx"
     t.index ["uri"], name: "entries_uri_idx"
   end
 
-  create_table "feeds", id: :uuid, default: -> { "uuid_generate_v1mc()" }, force: :cascade do |t|
+  create_table "feeds", id: :bigint, default: -> { "generate_snowflake_id()" }, force: :cascade do |t|
     t.jsonb "authors"
     t.jsonb "categories"
     t.jsonb "contributors"
@@ -65,9 +64,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_19_121320) do
     t.string "scrape_index_date_selector"
     t.string "scrape_index_date_format"
     t.string "scrape_index_author_selector"
-    t.bigint "sid", default: -> { "generate_snowflake_id()" }, null: false
     t.boolean "use_googlebot_agent", default: true, null: false
-    t.index ["sid"], name: "index_feeds_on_sid", unique: true
+    t.index ["id"], name: "index_feeds_on_id", unique: true
   end
 
   create_table "users", id: :bigint, default: -> { "generate_snowflake_id()" }, force: :cascade do |t|
@@ -99,5 +97,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_19_121320) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
-  add_foreign_key "entries", "feeds", name: "entries_feed_id_fkey", on_delete: :cascade
+  add_foreign_key "entries", "feeds", on_delete: :nullify
 end

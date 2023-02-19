@@ -28,7 +28,7 @@ class FeedsController < ApplicationController
   private
 
   def set_feed
-    @feed = Feed.find_by(sid: params[:sid])
+    @feed = Feed.find(params[:id])
   end
 
   def default_per_page_html
