@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_19_121807) do
   enable_extension "uuid-ossp"
 
   create_table "entries", id: :bigint, default: -> { "generate_snowflake_id()" }, force: :cascade do |t|
+    t.uuid "uuid", default: -> { "uuid_generate_v1mc()" }, null: false
     t.jsonb "authors", default: []
     t.jsonb "contents"
     t.jsonb "contributors", default: []

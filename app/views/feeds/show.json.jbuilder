@@ -8,7 +8,7 @@ json.home_page_url @feed.link
 json.feed_url api_v2_feed_url(@feed, format: :json)
 
 json.items @entries do |entry|
-  json.id entry.id
+  json.id entry.uuid
   json.title entry.title
   json.summary entry.description
   json.date_published entry.published_date
