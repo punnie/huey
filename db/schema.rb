@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_19_120645) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_19_121320) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "entries", id: :uuid, default: -> { "uuid_generate_v1mc()" }, force: :cascade do |t|
+  create_table "entries", id: :bigint, default: -> { "generate_snowflake_id()" }, force: :cascade do |t|
     t.uuid "feed_id"
     t.jsonb "authors", default: []
     t.jsonb "contents"
@@ -30,10 +30,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_19_120645) do
     t.string "uri", limit: 1023
     t.jsonb "readable_content"
     t.boolean "is_ready", default: false, null: false
-    t.bigint "sid", default: -> { "generate_snowflake_id()" }, null: false
     t.bigint "feed_sid"
+    t.index ["id"], name: "index_entries_on_id", unique: true
     t.index ["published_date"], name: "entries_published_date_idx"
-    t.index ["sid"], name: "index_entries_on_sid", unique: true
     t.index ["uri"], name: "entries_uri_idx"
   end
 
