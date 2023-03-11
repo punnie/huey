@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_19_121807) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_19_164318) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
@@ -69,6 +69,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_19_121807) do
     t.index ["id"], name: "index_feeds_on_id", unique: true
   end
 
+  create_table "stream_assignments", id: :bigint, default: -> { "generate_snowflake_id()" }, force: :cascade do |t|
+    t.bigint "feed_id", null: false
+    t.bigint "stream_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["feed_id"], name: "index_stream_assignments_on_feed_id"
+    t.index ["stream_id"], name: "index_stream_assignments_on_stream_id"
+  end
+
+  create_table "streams", id: :bigint, default: -> { "generate_snowflake_id()" }, force: :cascade do |t|
+    t.string "name"
+    t.string "permalink"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_streams_on_user_id"
+  end
+
   create_table "users", id: :bigint, default: -> { "generate_snowflake_id()" }, force: :cascade do |t|
     t.string "token", limit: 255, null: false
     t.datetime "created_at", precision: nil, default: -> { "now()" }, null: false
@@ -99,4 +117,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_19_121807) do
   end
 
   add_foreign_key "entries", "feeds", on_delete: :nullify
+  add_foreign_key "stream_assignments", "feeds"
+  add_foreign_key "stream_assignments", "streams"
+  add_foreign_key "streams", "users"
 end
