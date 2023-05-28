@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :feeds, only: [:show]
+  resources :streams, only: [:show]
 
   root to: 'welcome#index'
   get 'chronological', to: 'welcome#chronological', as: :chronological
