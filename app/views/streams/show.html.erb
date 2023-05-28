@@ -2,7 +2,7 @@
     <div class="flex p-2 flex-nowrap text-sm ml-auto gap-2">
         <% @streams.each do |stream| %>
             <% if stream.id == @stream.id %>
-                <% pill_class = "rounded-full bg-blue-500 text-white font-semibold px-3 py-1 flex-none" %>
+                <% pill_class = "rounded-full bg-indigo-500 text-white font-semibold px-3 py-1 flex-none" %>
             <% else  %>
                 <% pill_class = "rounded-full bg-gray-300 px-3 py-1 flex-none" %>
             <% end %>
@@ -19,3 +19,28 @@
         <% end %>
     </div>
 </section>
+
+<button id="back-to-top-button" onclick="backToTop()" title="Back To Top"
+        class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
+
+<script type="text/javascript">
+ let bttButton = document.getElementById("back-to-top-button");
+
+ window.onscroll = function () {
+     scrollFunction();
+ };
+
+ function scrollFunction() {
+     if (
+         document.body.scrollTop > 100 ||
+         document.documentElement.scrollTop > 100
+     ) {
+         bttButton.style.display = "block";
+     } else {
+         bttButton.style.display = "none";
+     }
+ }
+ function backToTop() {
+     document.documentElement.scrollIntoView({ behavior: "smooth" })
+ }
+</script>
