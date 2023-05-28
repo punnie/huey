@@ -2,9 +2,7 @@
 # frozen_string_literal: true
 
 class WelcomeController < ApplicationController
-  before_action :set_entries, only: [:chronological]
   before_action :set_feeds, only: [:index]
-  before_action :set_streams
 
   def index
     respond_to do |format|
@@ -13,21 +11,13 @@ class WelcomeController < ApplicationController
   end
 
   def chronological
-    redirect_to stream_path(Stream.first)
+    redirect_to stream_path(default_stream)
   end
 
   private
 
   def set_feeds
-    @feeds = Feed.all
-  end
-
-  def set_streams
-    @streams = Stream.all
-  end
-
-  def set_entries
-    @entries = Entry.all.for_feed.page(filtered_params[:page]).per(default_per_page)
+    @feeds = default_stream.feeds
   end
 
   def default_per_page
@@ -36,5 +26,9 @@ class WelcomeController < ApplicationController
 
   def filtered_params
     params.slice(:page, :per_page)
+  end
+
+  def default_stream
+    Stream.first
   end
 end
