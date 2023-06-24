@@ -1,0 +1,47 @@
+# typed: false
+# frozen_string_literal: true
+
+module Fetchers
+  class AtomFeedFetcher < BaseFetcher
+    def fetch(uri)
+      downloader = SafeDownloader.new
+      content = downloader.download(uri)
+
+      atom_feed = RSS::Parser.parse(content, validate: false)
+
+      feed.feed_type ||= atom_feed.feed_type
+
+      feed.title ||= atom_feed.title&.content
+      feed.link ||= atom_feed.link&.href
+
+      feed.copyright ||= atom_feed.rights&.content
+      feed.published_date ||= atom_feed.updated&.content
+
+      feed.last_refreshed_at = Time.now
+
+      atom_feed.items.each do |item|
+        guid = item.id.content
+        entry = feed.entries.find_or_initialize_by(uri: guid)
+
+        entry.authors = item.authors
+        entry.link = item.link.href
+        entry.title = item.title.content
+        entry.published_date = item.published.content
+        entry.updated_date = item.updated.content
+
+        contents = item.content.content
+
+        if contents.present?
+          entry.contents = {
+            type: 'text/html',
+            content: contents
+          }
+        end
+
+        entry.save!
+      end
+
+      feed.save!
+    end
+  end
+end
