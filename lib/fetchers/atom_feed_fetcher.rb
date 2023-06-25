@@ -27,8 +27,8 @@ module Fetchers
         entry.description = ''
         entry.link = item.link.href
         entry.title = item.title.content
-        entry.published_date = item.published.content
-        entry.updated_date = item.updated.content
+        entry.published_date = item.published&.content || item.updated&.content
+        entry.updated_date = item.updated&.content || item.published&.content
 
         contents = item.content.content
 
