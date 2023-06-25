@@ -11,7 +11,7 @@ module Fetchers
     end
 
     def grab(uri)
-      downloader = SafeDownloader.new
+      downloader = SafeDownloader.new(use_googlebot_agent: feed.use_googlebot_agent)
       downloader.download(uri)
     end
 

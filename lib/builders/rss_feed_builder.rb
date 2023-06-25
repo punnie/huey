@@ -1,7 +1,7 @@
 module Builders
   class RssFeedBuilder
-    def build(uri)
-      downloader = SafeDownloader.new
+    def build(uri, use_googlebot_agent: true)
+      downloader = SafeDownloader.new(use_googlebot_agent: use_googlebot_agent)
       content = downloader.download(uri)
       feed = RSS::Parser.parse(content, validate: false)
 
