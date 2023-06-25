@@ -3,10 +3,15 @@
 
 module Fetchers
   class SitemapIndexFeedFetcher < BaseFetcher
-    def fetch(uri, limit_sitemaps: 2)
-      downloader = SafeDownloader.new
-      content = downloader.download(uri)
+    attr_reader :limit_sitemaps
 
+    def initialize(feed:, limit_sitemaps: 2)
+      @limit_sitemaps = limit_sitemaps
+
+      super(feed: feed)
+    end
+
+    def parse(content)
       document = Nokogiri::XML(content).remove_namespaces!
 
       document.xpath('//sitemap/loc').first(limit_sitemaps).map(&:text).each do |u|

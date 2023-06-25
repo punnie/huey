@@ -3,10 +3,7 @@
 
 module Fetchers
   class ScrapeFeedFetcher < BaseFetcher
-    def fetch(uri)
-      downloader = SafeDownloader.new
-      content = downloader.download(uri)
-
+    def parse(content)
       document = Nokogiri::HTML(content)
 
       # TODO: replace selector with dynamic setting

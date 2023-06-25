@@ -3,10 +3,7 @@
 
 module Fetchers
   class SitemapFeedFetcher < BaseFetcher
-    def fetch(uri)
-      downloader = SafeDownloader.new
-      content = downloader.download(uri)
-
+    def parse(content)
       document = Nokogiri::XML(content).remove_namespaces!
 
       document.xpath('//url').map do |el|

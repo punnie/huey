@@ -3,10 +3,7 @@
 
 module Fetchers
   class RssFeedFetcher < BaseFetcher
-    def fetch(uri)
-      downloader = SafeDownloader.new
-      content = downloader.download(uri)
-
+    def parse(content)
       rss_feed = RSS::Parser.parse(content, validate: false)
 
       feed.description ||= rss_feed.channel.description
