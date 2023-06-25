@@ -23,7 +23,6 @@ module Fetchers
         guid = item.id.content
         entry = feed.entries.find_or_initialize_by(uri: guid)
 
-        entry.authors = item.authors
         entry.description = ''
         entry.link = item.link.href
         entry.title = item.title.content
@@ -53,6 +52,7 @@ module Fetchers
       fragment = Loofah.fragment(content)
       scrubber = Scrubbers::Description.new
       sanitizer = Rails::Html::FullSanitizer.new
+
 
       fragment.scrub!(scrubber)
 
