@@ -99,6 +99,7 @@
             (with pkgs; [
               bundix
               nodejs
+              postgresql
               yarn
             ])
 

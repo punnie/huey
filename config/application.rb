@@ -28,6 +28,12 @@ module Huey
     config.enable_dependency_loading = true
     config.autoload_paths << Rails.root.join('lib')
 
+    # Disable legacy connection handling
+    config.active_record.legacy_connection_handling = false
+
+    # Use SQL to store the database schema
+    config.active_record.schema_format = :sql
+
     # Set Sidekiq as activejob adapter
     config.active_job.queue_adapter = :sidekiq
   end
