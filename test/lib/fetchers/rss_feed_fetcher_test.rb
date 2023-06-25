@@ -27,6 +27,30 @@ class RssFeedFetcherTest < ActiveSupport::TestCase
     assert feed.entries.first.uri == 'https://www.publico.pt/2023/06/25/politica/noticia/rio-mau-montenegro-bom-problema-guru-economico-dois-costa-2054602'
   end
 
+  test 'parse feeds.macrumors.com feed' do
+    feed = RssFeed.new
+    Fetchers::RssFeedFetcher.new(feed: feed).parse(feed_content('feeds.macrumors.com', 'MacRumors-All'))
+
+    assert feed.title == 'MacRumors: Mac News and Rumors - All Stories'
+    assert feed.entries.count == 20
+
+    assert feed.entries.first.title == 'Top Stories: visionOS SDK, iOS 17 Beta 2, and More'
+    assert feed.entries.first.link == 'https://www.macrumors.com/2023/06/24/top-stories-visionos-sdk/'
+    assert feed.entries.first.uri == 'https://www.macrumors.com/2023/06/24/top-stories-visionos-sdk/'
+  end
+
+  test 'parse lwn.net feed' do
+    feed = RssFeed.new
+    Fetchers::RssFeedFetcher.new(feed: feed).parse(feed_content('lwn.net', 'rss'))
+
+    assert feed.title == 'LWN.net'
+    assert feed.entries.count == 15
+
+    assert feed.entries.first.title == 'Kuhn: A Comprehensive Analysis of the GPL Issues With the Red Hat Enterprise Linux (RHEL) Business Model'
+    assert feed.entries.first.link == 'https://lwn.net/Articles/936127/'
+    assert feed.entries.first.uri == 'https://lwn.net/Articles/936127/'
+  end
+
   def feed_content(*path)
     File.read(Rails.root.join('test', 'fixtures', 'files', *path))
   end

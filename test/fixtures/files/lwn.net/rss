@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://purl.org/rss/1.0/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+>
+
+  <channel rdf:about="https://lwn.net/headlines/rss">
+    <title>LWN.net</title>
+    <link>https://lwn.net</link>
+    <description>
+ LWN.net is a comprehensive source of news and opinions from
+        and about the Linux community.  This is the main LWN.net feed,
+        listing all articles which are posted to the site front page.
+
+    </description>
+
+    <syn:updatePeriod>hourly</syn:updatePeriod>
+    <syn:updateFrequency>2</syn:updateFrequency>
+    <items>
+      <rdf:Seq>
+	<rdf:li resource="https://lwn.net/Articles/936127/" />
+	<rdf:li resource="https://lwn.net/Articles/935602/" />
+	<rdf:li resource="https://lwn.net/Articles/935180/" />
+	<rdf:li resource="https://lwn.net/Articles/936040/" />
+	<rdf:li resource="https://lwn.net/Articles/935918/" />
+	<rdf:li resource="https://lwn.net/Articles/935195/" />
+	<rdf:li resource="https://lwn.net/Articles/935872/" />
+	<rdf:li resource="https://lwn.net/Articles/934727/" />
+	<rdf:li resource="https://lwn.net/Articles/935260/" />
+	<rdf:li resource="https://lwn.net/Articles/935592/" />
+	<rdf:li resource="https://lwn.net/Articles/935579/" />
+	<rdf:li resource="https://lwn.net/Articles/935079/" />
+	<rdf:li resource="https://lwn.net/Articles/935552/" />
+	<rdf:li resource="https://lwn.net/Articles/934941/" />
+	<rdf:li resource="https://lwn.net/Articles/935354/" />
+      
+      </rdf:Seq>
+    </items>
+
+  </channel>
+    <item rdf:about="https://lwn.net/Articles/936127/">
+      <title>Kuhn: A Comprehensive Analysis of the GPL Issues With the Red Hat Enterprise Linux (RHEL) Business Model</title>
+      <link>https://lwn.net/Articles/936127/</link>
+      <dc:date>2023-06-23T21:23:15+00:00</dc:date>
+      <dc:creator>jake</dc:creator>
+      <description>
+      Over on the &lt;a href=&quot;https://sfconservancy.org/&quot;&gt;Software Freedom Conservancy&lt;/a&gt; blog, Policy Fellow and Hacker-in-Residence Bradley M. Kuhn &lt;a href=&quot;https://sfconservancy.org/blog/2023/jun/23/rhel-gpl-analysis/&quot;&gt;analyzes&lt;/a&gt; the &lt;a href=&quot;https://lwn.net/Articles/935592/&quot;&gt;recent changes to Red Hat Enterprise Linux (RHEL) source availability&lt;/a&gt; in light of the GPL.  It contains some interesting information about two alleged GPL violations that came about because the company's business model is structured in a way that brings it too close to non-compliance with the license, he said:
+&lt;blockquote class=&quot;bq&quot;&gt;
+Perhaps the biggest problem with a murky business model that skirts the line of GPL compliance is that violations can and do happen — since even a minor deviation from the business model clearly violates the GPL agreements. Pre-IBM Red Hat deserves a certain amount of credit, as SFC is aware of only two documented incidents of GPL violations that have occurred since 2006 regarding the RHEL business model. We've decided to share some general details of these violations for the purpose of explaining where this business model can so easily cross the line.
+&lt;p&gt;
+[...] In another violation incident, we learned that Red Hat, in a specific non-USA country, was requiring that any customer who lowered the number of RHEL machines under service contract with Red Hat sign an additional agreement. This additional agreement promised that the customer had deleted every copy of RHEL in their entire organization other than the copies of RHEL that were currently contracted for service with Red Hat. Again, this is a &quot;further restriction&quot;. The GPL agreements give everyone the unfettered right to make and keep as many copies of the software as they like, and a distributor of GPL'd software may not require a user to attest that they've deleted these legitimate, licensed copies of third-party-licensed software under the GPL. SFC informed Red Hat's legal department of this violation, and we were assured that this additional agreement would no longer be presented to any Red Hat customers in the future.
+&lt;/blockquote&gt;
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935602/">
+      <title>[$] Removing the kthread freezer</title>
+      <link>https://lwn.net/Articles/935602/</link>
+      <dc:date>2023-06-23T16:27:55+00:00</dc:date>
+      <dc:creator>jake</dc:creator>
+      <description>
+      The final day of the
+&lt;a href=&quot;https://lwn.net/Articles/lsfmmbpf2023&quot;&gt;2023 Linux Storage, Filesystem,
+Memory-Management and BPF Summit&lt;/a&gt; featured three separate sessions led by
+Luis Chamberlain (he also led a &lt;a href=&quot;https://lwn.net/Articles/933437/&quot;&gt;plenary&lt;/a&gt; on
+day two); the first of those was a filesystem session on the status of the
+kthread-freezer-removal effort.  The kthread freezer is meant to help
+filesystems freeze their state in order to
+suspend or hibernate the system, but since at least&amp;nbsp;2015, the &lt;a
+href=&quot;https://lwn.net/Articles/662703/&quot;&gt;freezer has been targeted for removal&lt;/a&gt;.  Things
+&lt;a href=&quot;https://lwn.net/Articles/705269/&quot;&gt;did not change much&lt;/a&gt; a year later, nor &lt;a
+href=&quot;https://lwn.net/Articles/752588/&quot;&gt;by 
+LSFMM in&amp;nbsp;2018&lt;/a&gt; when Chamberlain had picked up Jiri Kosina's removal
+effort; this year, Chamberlain was back to try to push things along.
+
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935180/">
+      <title>[$] Reports from OSPM 2023, part 3</title>
+      <link>https://lwn.net/Articles/935180/</link>
+      <dc:date>2023-06-23T14:06:45+00:00</dc:date>
+      <dc:creator>corbet</dc:creator>
+      <description>
+      The &lt;a href=&quot;http://retis.sssup.it/ospm-summit/&quot;&gt;fifth conference on Power
+Management and Scheduling in the Linux Kernel&lt;/a&gt; (abbreviated &quot;OSPM&quot;) was
+held on April&amp;nbsp;17 to&amp;nbsp;19 in Ancona, Italy.  LWN was not there,
+unfortunately, but the attendees of the event have gotten together to write
+up summaries of the discussions that took place and LWN has the privilege
+of being able to publish them.  Reports from the third and final day of the
+event appear below.
+
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/936040/">
+      <title>Security updates for Friday</title>
+      <link>https://lwn.net/Articles/936040/</link>
+      <dc:date>2023-06-23T13:58:28+00:00</dc:date>
+      <dc:creator>jake</dc:creator>
+      <description>
+      Security updates have been issued by &lt;b&gt;Debian&lt;/b&gt; (asterisk, lua5.3, and trafficserver), &lt;b&gt;Fedora&lt;/b&gt; (tang and trafficserver), &lt;b&gt;Oracle&lt;/b&gt; (.NET 7.0, c-ares, firefox, openssl, postgresql, python3, texlive, and thunderbird), &lt;b&gt;Red Hat&lt;/b&gt; (python27:2.7 and python39:3.9 and python39-devel:3.9), &lt;b&gt;Scientific Linux&lt;/b&gt; (c-ares), &lt;b&gt;Slackware&lt;/b&gt; (cups), &lt;b&gt;SUSE&lt;/b&gt; (cups, dav1d, google-cloud-sap-agent, java-1_8_0-openjdk, libX11, openssl-1_0_0, openssl-1_1, openssl-3, openvswitch, and python-sqlparse), and &lt;b&gt;Ubuntu&lt;/b&gt; (cups, dotnet6, dotnet7, and openssl).
+
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935918/">
+      <title>AlmaLinux's response to Red Hat's policy change</title>
+      <link>https://lwn.net/Articles/935918/</link>
+      <dc:date>2023-06-22T20:27:09+00:00</dc:date>
+      <dc:creator>corbet</dc:creator>
+      <description>
+      The AlmaLinux organization has posted &lt;a
+href=&quot;https://almalinux.org/blog/impact-of-rhel-changes/&quot;&gt;a message&lt;/a&gt;
+describing the impact of Red Hat's decision to stop releasing the source to
+the RHEL distribution and how AlmaLinux will respond.
+&lt;P&gt;
+&lt;blockquote class=&quot;bq&quot;&gt;
+	In the immediate term, our plan is to pull from CentOS Stream
+	updates and Oracle Linux updates to ensure security patches
+	continue to be released. These updates will be carefully curated to
+	ensure they are 1:1 compatible with RHEL, while not violating Red
+	Hat’s licensing, and will be vetted and tested just like all of our
+	other releases.
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;b&gt;Update&lt;/b&gt;: Rocky Linux has also &lt;a
+href=&quot;https://rockylinux.org/news/2023-06-22-press-release/&quot;&gt;sent out a
+release&lt;/a&gt; on the subject.  &quot;&lt;q&gt;There will be no disruption or change for
+any Rocky Linux users, collaborators, or partners&lt;/q&gt;&quot;.
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935195/">
+      <title>[$] Delegating privilege with BPF tokens</title>
+      <link>https://lwn.net/Articles/935195/</link>
+      <dc:date>2023-06-22T15:23:26+00:00</dc:date>
+      <dc:creator>corbet</dc:creator>
+      <description>
+      The quest to enable limited use of BPF features in unprivileged processes
+continues.  In &lt;a href=&quot;https://lwn.net/Articles/929746/&quot;&gt;the previous episode&lt;/a&gt;, an
+attempt to use authoritative Linux security module (LSM) hooks for this
+purpose was strongly rejected by the LSM developers.  BPF developer Andrii
+Nakryiko has now returned with a new mechanism based on a
+privilege-conveying token.  That approach, too, has run into some
+resistance, but a solution for the strongest concerns might be in sight.
+
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935872/">
+      <title>Security updates for Thursday</title>
+      <link>https://lwn.net/Articles/935872/</link>
+      <dc:date>2023-06-22T14:24:06+00:00</dc:date>
+      <dc:creator>jake</dc:creator>
+      <description>
+      Security updates have been issued by &lt;b&gt;Debian&lt;/b&gt; (avahi, hsqldb, hsqldb1.8.0, minidlna, trafficserver, and xmltooling), &lt;b&gt;Oracle&lt;/b&gt; (.NET 6.0, .NET 7.0, 18, c-ares, firefox, kernel, less, libtiff, libvirt, python, python3.11, texlive, and thunderbird), &lt;b&gt;Red Hat&lt;/b&gt; (c-ares, kernel, kernel-rt, kpatch-patch, less, libtiff, libvirt, openssl, and postgresql), &lt;b&gt;Slackware&lt;/b&gt; (bind and kernel), &lt;b&gt;SUSE&lt;/b&gt; (bluez, curl, geoipupdate, kernel, netty, netty-tcnative, ntp, open-vm-tools, php8, python-reportlab, rustup, Salt, salt, terraform-provider-aws, terraform-provider-null, and webkit2gtk3), and &lt;b&gt;Ubuntu&lt;/b&gt; (bind9, linux-aws, linux-azure, linux-bluefield, linux-gcp, linux-gke,
+ linux-gkeop, linux-ibm, linux-kvm, linux-oracle, linux-raspi, linux-azure, linux-gcp, linux-ibm, linux-kvm, linux-oracle, and linux-ibm).
+
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/934727/">
+      <title>[$] LWN.net Weekly Edition for June 22, 2023</title>
+      <link>https://lwn.net/Articles/934727/</link>
+      <dc:date>2023-06-22T01:27:29+00:00</dc:date>
+      <dc:creator>corbet</dc:creator>
+      <description>
+      The LWN.net Weekly Edition for June 22, 2023 is available.
+
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935260/">
+      <title>[$] Merging copy offload</title>
+      <link>https://lwn.net/Articles/935260/</link>
+      <dc:date>2023-06-21T17:57:08+00:00</dc:date>
+      <dc:creator>jake</dc:creator>
+      <description>
+      Kernel support for copy offload is a feature that has been floating around
+in limbo for a decade or more at this point; it has been implemented along 
+the way, but never merged.  The idea is that the host
+system can simply ask a block storage device to copy some data within the device
+and it 
+will do so without further involving the host; instead of reading data into
+the host so that it can be written back out again, the device circumvents
+that process.  At the
+&lt;a href=&quot;https://lwn.net/Articles/lsfmmbpf2023&quot;&gt;2023 Linux Storage, Filesystem,
+Memory-Management and BPF Summit&lt;/a&gt;, Nitesh Shetty led a storage and
+filesystem session to discuss the current status of a patch set that he and
+others have been working on, with an
+eye toward getting something merged fairly soon.
+
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935592/">
+      <title>Red Hat cutting back RHEL source availability</title>
+      <link>https://lwn.net/Articles/935592/</link>
+      <dc:date>2023-06-21T14:42:19+00:00</dc:date>
+      <dc:creator>corbet</dc:creator>
+      <description>
+      Red Hat has &lt;a
+href=&quot;https://www.redhat.com/en/blog/furthering-evolution-centos-stream&quot;&gt;announced&lt;/a&gt;
+that public source releases will be restricted to CentOS Stream going
+forward:
+&lt;p&gt;
+&lt;blockquote class=&quot;bq&quot;&gt;
+	As the CentOS Stream community grows and the enterprise software
+	world tackles new dynamics, we want to sharpen our focus on CentOS
+	Stream as the backbone of enterprise Linux innovation. We are
+	continuing our investment in and increasing our commitment to
+	CentOS Stream. &lt;b&gt;CentOS Stream will now be the sole repository for
+	public RHEL-related source code releases&lt;/b&gt;. For Red Hat customers
+	and partners, source code will remain available via the Red Hat
+	Customer Portal.
+&lt;/blockquote&gt;
+&lt;p&gt;
+(Emphasis in original; thanks to Janne Blomqvist).
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935579/">
+      <title>Seven more stable kernels</title>
+      <link>https://lwn.net/Articles/935579/</link>
+      <dc:date>2023-06-21T14:32:49+00:00</dc:date>
+      <dc:creator>corbet</dc:creator>
+      <description>
+      The
+&lt;a href=&quot;https://lwn.net/Articles/935589/&quot;&gt;6.3.9&lt;/a&gt;,
+&lt;a href=&quot;https://lwn.net/Articles/935588/&quot;&gt;6.1.35&lt;/a&gt;,
+&lt;a href=&quot;https://lwn.net/Articles/935584/&quot;&gt;5.15.118&lt;/a&gt;,
+&lt;a href=&quot;https://lwn.net/Articles/935583/&quot;&gt;5.10.185&lt;/a&gt;,
+&lt;a href=&quot;https://lwn.net/Articles/935582/&quot;&gt;5.4.248&lt;/a&gt;,
+&lt;a href=&quot;https://lwn.net/Articles/935581/&quot;&gt;4.19.287&lt;/a&gt;, and
+&lt;a href=&quot;https://lwn.net/Articles/935580/&quot;&gt;4.14.319&lt;/a&gt;
+stable kernel updates have all been released; each contains another set of
+important fixes.
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935079/">
+      <title>[$] Armbian 23.05: optimized for single-board computers</title>
+      <link>https://lwn.net/Articles/935079/</link>
+      <dc:date>2023-06-21T13:48:53+00:00</dc:date>
+      <dc:creator>jake</dc:creator>
+      <description>
+      Running a Linux distribution on Arm-based single-board computers (SBCs)
+is still not as easy as on x86 systems because many Arm devices require a
+vendor-supplied kernel, a patched bootloader, and other device-specific
+components. One distribution that addresses this problem is &lt;a
+href=&quot;https://www.armbian.com&quot;&gt;Armbian&lt;/a&gt;, which offers Debian- and
+Ubuntu-based distributions for
+many devices. The headline feature in the recent release, &lt;a
+href=&quot;https://www.armbian.com/newsflash/armbian-23-05-suni/&quot;&gt;Armbian
+23.05&lt;/a&gt;, which came at the end of May, is a major rework of the build
+framework that has been made faster and more reliable after three years of
+development.
+
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935552/">
+      <title>Security updates for Wednesday</title>
+      <link>https://lwn.net/Articles/935552/</link>
+      <dc:date>2023-06-21T12:34:31+00:00</dc:date>
+      <dc:creator>corbet</dc:creator>
+      <description>
+      Security updates have been issued by &lt;b&gt;Debian&lt;/b&gt; (libfastjson, libx11, opensc, python-mechanize, and wordpress), &lt;b&gt;SUSE&lt;/b&gt; (salt and terraform-provider-helm), and &lt;b&gt;Ubuntu&lt;/b&gt; (firefox, libx11, pngcheck, python-werkzeug, ruby3.1, and vlc).
+
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/934941/">
+      <title>[$] Backporting XFS fixes to stable</title>
+      <link>https://lwn.net/Articles/934941/</link>
+      <dc:date>2023-06-20T18:47:27+00:00</dc:date>
+      <dc:creator>jake</dc:creator>
+      <description>
+      Backporting fixes to stable kernels is an ongoing process that, in general,
+is handled by the stable maintainers or the developers of the fixes.
+However, due 
+to some unhappiness in the XFS development
+community with the process of handling stable fixes for that filesystem,
+a different process has come about for backporting XFS patches to the
+stable kernels.  The three developers doing that work, Leah Rumancik, Amir
+Goldstein, and Chandan Babu Rajendra, led a plenary session at the 
+&lt;a href=&quot;https://lwn.net/Articles/lsfmmbpf2023&quot;&gt;2023 Linux Storage, Filesystem,
+Memory-Management and BPF Summit&lt;/a&gt;  (with Rajendra
+participating remotely)  to discuss that process.
+
+      
+      </description>
+    </item>
+    <item rdf:about="https://lwn.net/Articles/935354/">
+      <title>The Rust Leadership Council</title>
+      <link>https://lwn.net/Articles/935354/</link>
+      <dc:date>2023-06-20T13:08:40+00:00</dc:date>
+      <dc:creator>corbet</dc:creator>
+      <description>
+      The Rust project has &lt;a
+href=&quot;https://blog.rust-lang.org/2023/06/20/introducing-leadership-council.html&quot;&gt;announced&lt;/a&gt;
+the formation of the Rust Leadership Council, which will take the place of
+the existing Core Team and Leadership Chat groups.
+&lt;p&gt;
+&lt;blockquote class=&quot;bq&quot;&gt;
+	The Council will assume responsibility for top-level governance
+	concerns while most of the responsibilities of the Rust Project
+	(such as maintenance of the compiler and core tooling, evolution of
+	the language and standard libraries, administration of
+	infrastructure, etc.) remain with the nine top level teams.
+&lt;/blockquote&gt;
+&lt;p&gt;
+The details on how this body is supposed to work can be found in &lt;a
+href=&quot;https://github.com/rust-lang/rfcs/pull/3392&quot;&gt;RFC&amp;nbsp;3392&lt;/a&gt;.
+      
+      </description>
+    </item>
+</rdf:RDF>

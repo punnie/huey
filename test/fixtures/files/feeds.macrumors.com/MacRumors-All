@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MacRumors: Mac News and Rumors - All Stories</title>
+	<atom:link href="https://feeds.macrumors.com/MacRumors-All" rel="self" type="application/rss+xml" />
+	<link>https://www.macrumors.com</link>
+	
+	<description>Apple, iPhone, iPad, Mac News and Rumors</description>
+	<lastBuildDate>Sun, 25 Jun 2023 16:15:09 PDT</lastBuildDate>
+
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://www.macrumors.com</generator>
+		
+		<item>
+		<title>Top Stories: visionOS SDK, iOS 17 Beta 2, and More</title>
+		<link>https://www.macrumors.com/2023/06/24/top-stories-visionos-sdk/</link>
+		<comments>https://forums.macrumors.com/threads/top-stories-visionos-sdk-ios-17-beta-2-and-more.2394026/</comments>
+		<pubDate>Sat, 24 Jun 2023 06:00:00 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/24/top-stories-visionos-sdk/</guid>
+		<dc:creator>MacRumors Staff</dc:creator>
+		<category>Featured</category>
+		<category>Top Stories</category>
+		
+
+		<description><![CDATA[It's been two weeks since WWDC wrapped up, and this week saw Apple release the second round of betas of its upcoming operating system updates introduced at the conference, plus the initial release of developer tools and a simulator needed to allow developers to build apps for the Vision Pro headset.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/top-stories-24jun2023.jpg" alt="" width="1600" height="900" class="aligncenter size-full wp-image-901485" /><br/>
+This week also saw another iPhone 15 rumor while we continue to dig into all of the changes in iOS 17, so read on below for a few tidbits we've seen over the past week!<br/>
+<br/>
+<h2>Vision Pro Developer Tools Now Available With New visionOS SDK</h2><br/>
+Apple this week <a href="https://www.macrumors.com/2023/06/21/apple-vision-pro-sdk/">released a visionOS SDK</a>, allowing developers to start creating apps for the Vision Pro headset ahead of its launch in early 2024. Apple has also made a <a href="https://www.macrumors.com/2023/06/21/apple-releases-first-ever-visionos-beta/">visionOS simulator available in Xcode 15 beta 2</a> on the Mac that offers an emulated Vision Pro experience.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/apple-vision-pro-sdk.jpg" alt="" width="1600" height="900" class="aligncenter size-full wp-image-901336" /><br/>
+The visionOS developer tools are available for Apple Developer Program members at developer.apple.com.<br/>
+<br/>
+Starting in July, developers will also be able to apply for a Vision Pro developer kit and have the opportunity to attend developer labs in Cupertino, London, Munich, Shanghai, Singapore, and Tokyo.<br/>
+<br/>
+<h2>Video: A First Look at visionOS for the Apple Vision Pro</h2><br/>
+On our YouTube channel, we have shared a <a href="https://www.macrumors.com/2023/06/22/visionos-hands-on/">video offering a first look at the visionOS simulator</a> in Xcode. The simulator provides access to apps like Safari and Settings, Control Center, and more.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/visionOS-Demo-Thumb-2.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-901405" /><br/>
+The simulator offers a much more limited visionOS experience than will be available on the actual Vision Pro, but it provides a preview of what to expect when the device launches to the public early next year.<br/>
+<br/>
+<h2>Everything New in iOS 17 Beta 2</h2><br/>
+Apple made the <a href="https://www.macrumors.com/2023/06/21/apple-seeds-ios-17-beta-2-to-developers/">second beta of iOS 17</a> available to developers this week for testing. As usual, there are a handful of smaller changes in the beta, so <a href="https://www.macrumors.com/2023/06/21/everything-new-in-ios-17-beta-2/">check out our list of everything new</a>.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/General-iOS-17-Feature-Blue-Green.jpg" alt="" width="2250" height="1266" class="aligncenter size-full wp-image-898581" /><br/>
+iOS 17 developer betas are available to anyone with a free Apple developer account, and a public beta will be available in July. The software update will be released later this year for the iPhone XS and newer.<br/>
+<br/>
+<h2>Kuo: iPhone 15 to Have Upgraded Ultra Wideband Chip for Enhanced Vision Pro Integration</h2><br/>
+Apple's next-generation iPhone 15 models coming later this year will be <a href="https://www.macrumors.com/2023/06/19/iphone-15-new-u1-chip-vision-pro-headset/">equipped with an upgraded Ultra Wideband chip</a> for enhanced compatibility with the Vision Pro headset.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/05/iphone-15-dummy-models.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-897373" /><br/>
+iPhone 11 models and newer are equipped with a U1 chip for spatial awareness. The chip helps to power features such as Precision Finding for AirTags, directional AirDrop, handing off music to a HomePod, and more.<br/>
+<br/>
+<h2>iOS 17 and macOS Sonoma Add Passkey Support to Your Apple ID</h2><br/>
+Starting with iOS 17, iPadOS 17, and macOS Sonoma, users with an Apple ID will <a href="https://www.macrumors.com/2023/06/20/ios-17-macos-sonoma-apple-id-passkey/">automatically be assigned a passkey</a>, allowing them to sign into their Apple ID with Face ID or Touch ID instead of their password on various Apple sign-in pages, like iCloud.com.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/iOS-17-Passkey-With-Apple-ID-Feature-3.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-901156" /><br/>
+Passkey support for Apple IDs will also be available for third-party apps and websites that support the "Sign in with Apple" feature, according to Apple.<br/>
+<br/>
+<h2>5 New AirDrop Features Coming in iOS 17</h2><br/>
+Since its introduction in iOS 7, AirDrop has become the favored way for iPhone users to instantly share photos, videos, documents, and more to nearby Apple devices with relative ease.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/5-New-AirDrop-Features-Feature.jpg" alt="" width="2000" height="1125" class="aligncenter size-full wp-image-900760" /><br/>
+Given its widespread popularity, the feature hasn't changed all that much over the years. But this year, Apple is stepping things up a gear by <a href="https://www.macrumors.com/2023/06/17/5-new-airdrop-features-for-ios-17/">bringing several new capabilities to AirDrop</a> that make it even more useful.<br/>
+<br/>
+<h3>MacRumors Newsletter</h3><br/>
+Each week, we publish an email newsletter like this highlighting the top Apple stories, making it a great way to get a bite-sized recap of the week hitting all of the major topics we've covered and tying together related stories for a big-picture view.<br/>
+<br/>
+So if you want to have <a href="https://mailchi.mp/macrumors/jun-22-2023">top stories</a> like the above recap delivered to your email inbox each week, <b><a href="http://eepurl.com/OHdUX">subscribe to our newsletter</a></b>!<div class="linkback">Tag: <a href="https://www.macrumors.com/guide/top-stories/">Top Stories</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/24/top-stories-visionos-sdk/">Top Stories: visionOS SDK, iOS 17 Beta 2, and More</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/top-stories-visionos-sdk-ios-17-beta-2-and-more.2394026/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>HyperPack Pro Tech Backpack With Find My Integration Now Available</title>
+		<link>https://www.macrumors.com/2023/06/23/hyperpack-backpack-find-my/</link>
+		<comments>https://forums.macrumors.com/threads/hyperpack-pro-tech-backpack-with-find-my-integration-now-available.2393978/</comments>
+		<pubDate>Fri, 23 Jun 2023 13:05:47 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/23/hyperpack-backpack-find-my/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>Hyper</category>
+		
+
+		<description><![CDATA[Popular accessory maker Hyper this week announced the launch of its HyperPack Pro backpack, which has built-in <a href="https://www.macrumors.com/guide/find-my-network-accessory-program/">Find My</a> functionality. Hyper has been working on the backpack since last year, launching it via a crowdfunding campaign on Indiegogo, but it now has wide availability from the Hyper website.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2022/12/hyperpack-pro-feature.jpg" alt="" width="1600" height="900" class="aligncenter size-full wp-image-876203" /><br/>
+The HyperPack Pro is similar in design to the Targus Cypress Hero Backpack that <a href="https://www.macrumors.com/2023/06/01/targus-find-my-backpack/">launched earlier this month</a>, as Targus now owns the Hyper brand. It uses the same type of &zwnj;Find My&zwnj; location module, which is located at the top of the backpack and has an easy-access replaceable battery. With &zwnj;Find My&zwnj; integration, the HyperPack Pro can be located in the &zwnj;Find My&zwnj; app on an <a href="https://www.macrumors.com/guide/iphone/">iPhone</a>, <a href="https://www.macrumors.com/roundup/ipad/">iPad</a>, or Mac using the items tab.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2022/12/hyperpack-pro-find-my.jpg" alt="" width="1600" height="1100" class="aligncenter size-full wp-image-876211" /><br/>
+There is a dedicated pocket for up to a 16-inch laptop, and the backpack has a total of 22L of storage. There are six individual pockets, including pockets for camera gear, gym clothes, sunglasses, tech accessories, and a 1L water bottle. There is an RFID pocket for credit cards and a hidden back pocket, plus interlocking zippers for security.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2022/12/hyperpack-pro-features.jpg" alt="" width="1600" height="807" class="aligncenter size-full wp-image-876210" /><br/>
+Passthrough charging pockets allow laptops, tables, phones, and more to be charged while still inside the backpack, and the backpack itself is made from a water resistant Cordura fabric.<br/>
+<br/>
+We <a href="https://www.macrumors.com/2022/12/05/hyperpack-pro-find-my-backpack/">reviewed the HyperPack Pro</a> last December and were impressed with the storage capabilities and the utility of the &zwnj;Find My&zwnj; integration.<br/>
+<br/>
+The HyperPack Pro can be <a href="https://www.hypershop.com/products/hyperpack-pro-with-apple-find-my">purchased from the Hyper website</a> for &#36;200.<div class="linkback">Tag: <a href="https://www.macrumors.com/guide/hyper/">Hyper</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/23/hyperpack-backpack-find-my/">HyperPack Pro Tech Backpack With Find My Integration Now Available</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/hyperpack-pro-tech-backpack-with-find-my-integration-now-available.2393978/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>LG Offering Two Free Months of Apple&#039;s MLS Season Pass</title>
+		<link>https://www.macrumors.com/2023/06/23/lg-mls-season-pass-deal/</link>
+		<comments>https://forums.macrumors.com/threads/lg-offering-two-free-months-of-apples-mls-season-pass.2393961/</comments>
+		<pubDate>Fri, 23 Jun 2023 10:37:27 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/23/lg-mls-season-pass-deal/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>LG</category>
+		<category>Apple TV Plus</category>
+		
+
+		<description><![CDATA[LG today announced that LG Smart TV owners in the United States can sign up for two free months of Major League Soccer Season Pass using the <a href="https://www.macrumors.com/roundup/apple-tv/">Apple TV</a> app, allowing access to every live Major League Soccer match, including Leagues Cup, All-Star games, and playoffs.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/lg-mls-trial.jpg" alt="" width="800" height="450" class="aligncenter size-full wp-image-901510" /><br/>
+A compatible LG Smart TV from 2016 to 2023 is required, with customers able to sign up for the MLS Season Pass offer in the LG Content Store or by clicking on the MLS Season Pass ad banner on the LG TV home menu.<br/>
+<br/>
+The offer must be redeemed by July 26, 2023, and there is one subscription available per TV and <a href="https://www.macrumors.com/guide/apple-id/">Apple ID</a>. Both new and qualified returning customers of MLS Season Pass can sign up.<div class="linkback">Tags: <a href="https://www.macrumors.com/guide/lg/">LG</a>, <a href="https://www.macrumors.com/guide/apple-tv-plus/">Apple TV Plus</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/23/lg-mls-season-pass-deal/">LG Offering Two Free Months of Apple&#039;s MLS Season Pass</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/lg-offering-two-free-months-of-apples-mls-season-pass.2393961/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Best Apple Deals of the Week: 10.2-Inch iPad Hits All-Time Low Price of &#36;249.99 Amid Sales on Apple Watch and MacBook Pro</title>
+		<link>https://www.macrumors.com/2023/06/23/best-apple-deals-of-the-week-6-23-23/</link>
+		<comments>https://forums.macrumors.com/threads/best-apple-deals-of-the-week-10-2-inch-ipad-hits-all-time-low-price-of-249-99-amid-sales-on-apple-watch-and-macbook-pro.2393959/</comments>
+		<pubDate>Fri, 23 Jun 2023 10:12:35 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/23/best-apple-deals-of-the-week-6-23-23/</guid>
+		<dc:creator>Mitchel Broussard</dc:creator>
+		<category>Deals</category>
+		<category>Featured</category>
+		
+
+		<description><![CDATA[This week we got news about Amazon's upcoming Prime Day 2023 sale and tracked a few deals on Apple products including the 10.2-inch iPad, M2 MacBook Pro, and Apple Watch Series 8. We also have an exclusive promo code running at Satechi through the end of the weekend. <br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2022/06/Hero0001.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-847991" /><em><small>Note: MacRumors is an affiliate partner with some of these vendors. When you click a link and make a purchase, we may receive a small payment, which helps us keep the site running.</small></em><br/>
+<br/>
+<h2>Prime Day</h2><br/>
+The biggest deals-related news of the week was Amazon's announcement of this summer's Prime Day dates, which will run from July 11 through July 12. Amazon is already offering a <a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fprimeday">few early Prime Day deals</a>, mainly focusing on Amazon-branded products like Kindles and Fire TVs.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/prime-day-green-2.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-901490" /><br/>
+Like previous years, you'll need to be an Amazon Prime member to take part in Prime Day. If you aren't, you can <a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Famazonprime%3Fref%3Dst_wlp_opt_out%26ms3_c%3Dbe84addb4094c3d3fdf3ade361e920a0"><strong>join Prime</strong></a> and get a free 30-day trial to participate in this year's Prime Day. Anyone who chooses to keep Prime after the free trial will pay &#36;14.99/month or &#36;139/year; students pay &#36;7.49/month or &#36;69/year.<br/>
+<br/>
+<div class="center-wrap"><a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Famazonprime%3Fref%3Dst_wlp_opt_out%26ms3_c%3Dbe84addb4094c3d3fdf3ade361e920a0"target="_blank"><div class="fancybutton"><div class="fancybadge">30-DAY FREE TRIAL</div>Amazon Prime Membership</div></a></div><br/>
+<br/>
+We'll be covering all of the best tech and Apple-related discounts during this year's Prime Day, so be sure to keep an eye on the MacRumors front page once the event starts July 11.<br/>
+<br/>
+<h2>Satechi</h2><br/>
+<img src="https://images.macrumors.com/article-new/2023/06/satechi-green-2.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-901493" /><ul><li><strong>What's the deal?</strong> Take 25% off sitewide at Satechi</li><br/>
+<li><strong>Where can I get it?</strong> <a href="https://shareasale.com/r.cfm?b=1554062&u=63177&m=98197&urllink=satechi%2Enet%2F&afftrack=">Satechi</a></li><br/>
+<li><strong>Where can I find the original deal?</strong> <a href="https://www.macrumors.com/2023/06/19/deals-take-25-off-at-satechi/">Right here</a></li></ul><br/>
+<div class="center-wrap"><a href="https://shareasale.com/r.cfm?b=1554062&u=63177&m=98197&urllink=satechi%2Enet%2F&afftrack="target="_blank"><div class="fancybutton"><div class="fancybadge">25% OFF</div>Satechi Sitewide Sale</div></a></div><br/>
+<br/>
+We kicked off the week with a new exclusive sitewide discount at Satechi, offering our readers 25 percent off Satechi's best hubs, chargers, desktop accessories, and more. Just enter the code <strong>MR25</strong> at checkout to get the discount, which will expire this Sunday, June 25. The only exclusion in this sale is Satechi's Thunderbolt products.<br/>
+<br/>
+<h2>10.2-Inch iPad</h2><br/>
+<img src="https://images.macrumors.com/article-new/2023/06/ipad-green.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-901495" /><ul><li><strong>What's the deal?</strong> Take &#36;79 off the 10.2-inch iPad</li><br/>
+<li><strong>Where can I get it?</strong> <a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB09G9FPHY6%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1%26psc%3D1">Amazon</a></li><br/>
+<li><strong>Where can I find the original deal?</strong> <a href="https://www.macrumors.com/2023/06/21/deals-apples-10-2-inch-ipad-3/">Right here</a></li></ul><br/>
+<div class="center-wrap"><em><strong>Note: You won't see the deal price until checkout.</strong></em></div><br/>
+<div class="center-wrap"><a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB09G9FPHY6%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1%26psc%3D1"target="_blank"><div class="fancybutton"><div class="fancybadge">&#36;79 OFF</div>iPad (64GB Wi-Fi) for &#36;249.99</div></a></div><br/>
+<br/>
+A rare deal returned for the 10.2-inch iPad this week, with Amazon offering the 64GB Wi-Fi tablet for &#36;249.99, down from &#36;329.00. You'll need to add the tablet to your cart on Amazon in order to see the final deal price, which is a markdown that we haven't tracked since March.<br/>
+<br/>
+<h2>M2 MacBook Pro</h2><br/>
+<img src="https://images.macrumors.com/article-new/2023/06/macbook-pro-green.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-901497" /><ul><li><strong>What's the deal?</strong> Take &#36;249 off M2 Pro 16-inch MacBook Pro</li><br/>
+<li><strong>Where can I get it?</strong> <a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0BSHF7LLL%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1%26psc%3D1">Amazon</a></li><br/>
+<li><strong>Where can I find the original deal?</strong> <a href="https://www.macrumors.com/2023/06/21/deals-high-end-macbook-pros/">Right here</a></li></ul><br/>
+<div class="center-wrap"><a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0BSHF7LLL%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1%26psc%3D1"target="_blank"><div class="fancybutton"><div class="fancybadge">&#36;249 OFF</div>16-Inch MacBook Pro (12-Core M2 Pro, 512GB) for &#36;2,249.99</div></a></div><br/>
+<div class="center-wrap"><a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0BSHDPX7Z%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1"target="_blank"><div class="fancybutton"><div class="fancybadge">&#36;249 OFF</div>16-Inch MacBook Pro (12-Core M2 Pro, 1TB) for &#36;2,449.99</div></a></div><br/>
+<br/>
+In the middle of the week, we tracked a big collection of discounts on the M1 and M2 MacBook Pro, and a few of these are still live. These current deals mainly focus on the M2 Pro 16-inch MacBook Pro, including the 512GB notebook for &#36;2,249.00 and the 1TB notebook for &#36;2,449.00, both of which are best-ever prices.<br/>
+<br/>
+<h2>Apple Watch Series 8</h2><br/>
+<img src="https://images.macrumors.com/article-new/2023/06/apple-watch-series-8-green.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-901498" /><ul><li><strong>What's the deal?</strong> Take &#36;70 off Apple Watch Series 8</li><br/>
+<li><strong>Where can I get it?</strong> <a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0BDHQD1CQ%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1">Amazon</a></li><br/>
+<li><strong>Where can I find the original deal?</strong> <a href="https://www.macrumors.com/2023/06/22/deals-apple-watch-series-8-amazon/">Right here</a></li></ul><br/>
+<div class="center-wrap"><a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0BDHQD1CQ%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1"target="_blank"><div class="fancybutton"><div class="fancybadge">&#36;70 OFF</div>Apple Watch Series 8 (41mm GPS) for &#36;329.00</div></a></div><br/>
+<div class="center-wrap"><a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0BDHHLRVQ%3Ftag%3Dmacrumors-20%26th%3D1%26geniuslink%3Dtrue"target="_blank"><div class="fancybutton"><div class="fancybadge">&#36;70 OFF</div>Apple Watch Series 8 (45mm GPS) for &#36;359.00</div></a></div><br/>
+<br/>
+Lastly, solid deals reappeared on the GPS models of the Apple Watch Series 8 this week, starting at &#36;329.00 for the 41mm and rising to &#36;359.00 for the 45mm. These are both all-time low prices on the Apple Watch Series 8, and they're available in multiple colors and sizes.<br/>
+<br/>
+If you're on the hunt for more discounts, be sure to visit our <a href="https://www.macrumors.com/roundup/best-apple-deals/">Apple Deals</a> roundup where we recap the best Apple-related bargains of the past week.<div class="linkback">Related Roundup: <a href="https://www.macrumors.com/roundup/best-apple-deals/">Apple Deals</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/23/best-apple-deals-of-the-week-6-23-23/">Best Apple Deals of the Week: 10.2-Inch iPad Hits All-Time Low Price of &#36;249.99 Amid Sales on Apple Watch and MacBook Pro</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/best-apple-deals-of-the-week-10-2-inch-ipad-hits-all-time-low-price-of-249-99-amid-sales-on-apple-watch-and-macbook-pro.2393959/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>The MacRumors Show: Two Weeks Using watchOS 10, iOS 17, and macOS Sonoma</title>
+		<link>https://www.macrumors.com/2023/06/23/the-macrumors-show-ios-17-macos-sonoma-betas/</link>
+		<comments>https://forums.macrumors.com/threads/the-macrumors-show-two-weeks-using-watchos-10-ios-17-and-macos-sonoma.2393953/</comments>
+		<pubDate>Fri, 23 Jun 2023 09:20:33 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/23/the-macrumors-show-ios-17-macos-sonoma-betas/</guid>
+		<dc:creator>Hartley Charlton</dc:creator>
+		<category>Featured</category>
+		<category>The MacRumors Show</category>
+		
+
+		<description><![CDATA[After spending two weeks using the beta versions of <a href="https://www.macrumors.com/roundup/watchos-10/">watchOS 10</a>, <a href="https://www.macrumors.com/roundup/ios-17/">iOS 17</a>, <a href="https://www.macrumors.com/roundup/ipados-17/">iPadOS 17</a>, <a href="https://www.macrumors.com/roundup/macos-sonoma/">macOS Sonoma</a>, and tvOS 17, we discuss our experiences and highlight our favorite new features from each of the updates on this week's episode of <a href="https://podcasts.apple.com/us/podcast/two-weeks-with-betas-ios-17-watchos-10-and-macos-sonoma/id1602394741?i=1000618103329">The MacRumors Show</a>.<br/>
+<br/>
+<div class="center-wrap"><iframe width="560" height="315" src="https://www.youtube.com/embed/7OBHQRPiTFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><em><a href="https://www.youtube.com/user/macrumors?sub_confirmation=1">Subscribe to the MacRumors YouTube channel</a> for more videos</em></div><br/>
+&zwnj;watchOS 10&zwnj; is a major update for the Apple Watch, overhauling its entire user interface. The update refocuses the Apple Watch around a scrollable view of widgets, remaps the buttons, and rearranges the <a href="https://www.macrumors.com/guide/home-screen/">Home Screen</a> of apps. Almost all of Apple's stock apps have received complete redesigns centered around a vertically scrollable view of pages. The update also brings Time in Daylight tracking to Apple Health and adds mood logging to the Mindfulness app.<br/>
+<br/>
+&zwnj;iOS 17&zwnj; introduces features like StandBy mode, Contact Posters, and Live Voicemail, while &zwnj;iPadOS 17&zwnj; makes some meaningful enhancements to <a href="https://www.macrumors.com/guide/stage-manager/">Stage Manager</a>, introduces external camera support, and brings over Lock Screen customization, Live Activities, and the Health app from the <a href="https://www.macrumors.com/guide/iphone/">iPhone</a>.<br/>
+<br/>
+&zwnj;macOS Sonoma&zwnj; adds an integrated video screen saver and wallpaper experience, desktop widgets, Safari web apps, and Game Mode. tvOS 17 is a modest update that redesigns the Control Center and introduces <a href="https://www.macrumors.com/guide/facetime/">FaceTime</a> via Continuity Camera.<br/>
+<br/>
+A large number of new features, like interactive widgets, improved autocorrect, the Messages redesign, offline maps, authentication code autofill, <a href="https://www.macrumors.com/guide/apple-music/">Apple Music</a> crossfade, Note links, support for multiple timers, video call reactions and presenter overlays, and improved PDF support, come to several of Apple's updated operating systems.<br/>
+<br/>
+Listen to <a href="https://www.macrumors.com/guide/the-macrumors-show/">The MacRumors Show</a> in <a href="https://podcasts.apple.com/podcast/id1602394741">Apple Podcasts</a>, <a href="https://open.spotify.com/show/41XOHIA6w8IxAKJZvrnx90">Spotify</a>, <a href="https://overcast.fm/itunes1602394741">Overcast</a>, <a href="https://pca.st/itunes/1602394741">Pocket Casts</a>, <a href="https://castro.fm/itunes/1602394741">Castro</a>, <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly93d3cub21ueWNvbnRlbnQuY29tL2QvcGxheWxpc3QvNjk1NTlmZTgtMzMxOC00ZDI5LTkyMmYtYWJlMTAwNjhjYTYzLzg1OTRmODNjLTBkN2QtNDhkOS04OTcxLWFkZmEwMTAzOWEzMS9kODA4NmM5Ni1iNmQ4LTRkNWMtYTZiMy1hZGZhMDEwM2M4NmQvcG9kY2FzdC5yc3M%3d">Google Podcasts</a>, or your preferred podcasts app. You can also <a href="https://audioboom.com/channels/5096144.rss">copy our RSS feed</a> directly into your podcast player. Watch a video version of the show <a href="https://www.youtube.com/playlist?list=PLD8VmuL7qc7ii5uyjzSRk3UM7KI_c4qC5">on the <em>MacRumors</em> YouTube channel</a>.<br/>
+<br/>
+<div class="center-wrap"><iframe style="width: 100%; max-width: 660px; overflow: hidden; background: transparent;" src="https://embed.podcasts.apple.com/us/podcast/the-macrumors-show/id1602394741" height="450" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"></iframe></div><br/>
+If you haven't already listened to the <a href="https://www.macrumors.com/2023/06/16/the-macrumors-show-vision-pro-deep-dive/">previous episode of The MacRumors Show</a>, listen to our deep dive into the experience of using Apple's Vision Pro headset and what to expect when it goes on sale next year.<br/>
+<br/>
+Subscribe to &zwnj;The MacRumors Show&zwnj; for more episodes, where we discuss some of the topical news breaking here on <em>MacRumors</em>, often joined by exciting guests like <a href="https://www.macrumors.com/2023/02/10/the-macrumors-show-andru-edwards-iphone-ultra/">Andru Edwards</a>, <a href="https://www.macrumors.com/2023/06/07/the-macrumors-show-wwdc23-recap-andru-edwards-kevin-nether/">Kevin Nether</a>, <a href="https://www.macrumors.com/2023/05/26/the-macrumors-show-arnold-kim/">Arnold Kim</a>, <a href="https://www.macrumors.com/2023/05/19/the-macrumors-show-ben-sullins-apple-car/">Ben Sullins</a>, <a href="https://www.macrumors.com/2023/04/21/the-macrumors-show-mark-gurman-talks-wwdc-2023/">Mark Gurman</a>, <a href="https://www.macrumors.com/2023/04/07/the-macrumors-show-marcus-kane-headset-design/">Marcus Kane</a>, <a href="https://www.macrumors.com/2023/03/24/the-macrumors-show-christopher-lawley-talks-ipados/">Christopher Lawley</a>, <a href="https://www.macrumors.com/2023/03/10/the-macrumors-show-frank-mcshan-yellow-iphone-14/">Frank McShan</a>, <a href="https://www.macrumors.com/2023/02/24/the-macrumors-show-david-lewis-talks-apple-audio/">David Lewis</a>, <a href="https://www.macrumors.com/2023/01/27/the-macrumors-show-tyler-stalman-new-macs/">Tyler Stalman</a>, <a href="https://www.macrumors.com/2022/12/23/the-macrumors-show-apple-2022-jon-prosser-sam-kohl/">Jon Prosser</a>, <a href="https://www.macrumors.com/2022/09/02/the-macrumors-show-apple-event-expectations/">Sam Kohl</a>, <a href="https://www.macrumors.com/2022/12/16/the-macrumors-show-quinn-nelson-iphone-15-rumors/">Quinn Nelson</a>, <a href="https://www.macrumors.com/2022/11/09/the-macrumors-show-john-gruber-talks-macos-ventura/">John Gruber</a>, <a href="https://www.macrumors.com/2022/10/28/the-macrumors-show-ipados-16-ft-federico-viticci/">Federico Viticci</a>, <a href="https://www.macrumors.com/2022/09/20/the-macrumors-show-sara-dietschy-talks-iphone-14/">Sara Dietschy</a>, <a href="https://www.macrumors.com/2022/09/09/iphone-14-event-reactions-with-luke-miani/">Luke Miani</a>, <a href="https://www.macrumors.com/2022/08/26/the-macrumors-show-thomas-frank-talks-productivity/">Thomas Frank</a>, <a href="https://www.macrumors.com/2022/07/21/the-macrumors-show-jonathan-morrison/">Jonathan Morrison</a>, <a href="https://www.macrumors.com/2022/07/15/the-macrumors-show-macbook-air-ijustine/">iJustine</a>, <a href="https://www.macrumors.com/2022/07/12/the-macrumors-show-ross-young/">Ross Young</a>, <a href="https://www.macrumors.com/2022/06/21/the-macrumors-show-ian-zelbo/">Ian Zelbo</a>, <a href="https://www.macrumors.com/2022/04/20/the-macrumors-show-jon-rettinger-wwdc-2022/">Jon Rettinger</a>, and <a href="https://www.macrumors.com/2022/03/25/the-macrumors-show-rene-ritchie-talks-mac-studio/">Rene Ritchie</a>. You can also head over to <a href="https://forums.macrumors.com/threads/the-macrumors-show-discussion-thread.2383023/">The MacRumors Show</a> forum thread to engage with us directly. Remember to rate and review the show, and let us know what subjects you would like the podcast to cover in the future.<div class="linkback">Tag: <a href="https://www.macrumors.com/guide/the-macrumors-show/">The MacRumors Show</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/23/the-macrumors-show-ios-17-macos-sonoma-betas/">The MacRumors Show: Two Weeks Using watchOS 10, iOS 17, and macOS Sonoma</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/the-macrumors-show-two-weeks-using-watchos-10-ios-17-and-macos-sonoma.2393953/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Apple Reportedly Planning to Switch Technology Behind A17 Bionic Chip to Cut Costs Next Year</title>
+		<link>https://www.macrumors.com/2023/06/23/apple-to-switch-tech-behind-a17-to-cut-costs/</link>
+		<comments>https://forums.macrumors.com/threads/apple-reportedly-planning-to-switch-technology-behind-a17-bionic-chip-to-cut-costs-next-year.2393938/</comments>
+		<pubDate>Fri, 23 Jun 2023 07:27:12 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/23/apple-to-switch-tech-behind-a17-to-cut-costs/</guid>
+		<dc:creator>Hartley Charlton</dc:creator>
+		<category>iPhone 15 Pro</category>
+		<category>iPhone 16</category>
+		<category>TSMC</category>
+		<category>Apple Silicon</category>
+		
+
+		<description><![CDATA[The A17 Bionic chip initially used in the <a href="https://www.macrumors.com/roundup/iphone-15-pro/">iPhone 15 Pro</a> and &zwnj;iPhone 15 Pro&zwnj; Max later this year will fundamentally differ from a version of the same chip set to be manufactured in 2024, a new rumor claims.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/A17-Feature-Dark.jpg" alt="" width="1920" height="1080" class="alignnone size-full wp-image-901448" /><br/>
+The A17 Bionic is expected to be Apple's first chip manufactured with a <a href="https://www.macrumors.com/guide/3nm/">3nm</a> fabrication process, resulting in major performance and efficiency improvements over the 5nm technique used for the A14, A15, and A16 chips. The initial version of the A17 Bionic chip will reportedly be manufactured <a href="https://www.macrumors.com/2023/05/15/apple-tsmc-3nm-production-capacity/">using TSMC's N3B process</a>, but Apple is planning to switch the A17 over to N3E sometime next year. The move is said to be a cost-cutting measure that could come at the expense of reduced efficiency.<br/>
+<br/>
+N3B is TSMC's original &zwnj;3nm&zwnj; node created in partnership with Apple. N3E, on the other hand, is the simpler, more accessible node that most other TSMC clients will use. N3E has fewer EUV layers and lower transistor density than N3B, resulting in efficiency tradeoffs, but the process can provide better performance. N3B has also been ready for mass production for some time longer than N3E, but it has much lower yield.<br/>
+<br/>
+N3B was effectively designed as a trial node and is not compatible with TSMC's successor processes including N3P, N3X, and N3S, meaning that Apple will need to redesign its future chips to take advantage of TSMC's advancements. Apple was originally believed to be planning to use the N3B for the A16 Bionic chip, but had to revert to N4 because it was not ready in time. It may be the case that Apple is using the N3B CPU and GPU core design originally designed for the A16 Bionic for the initial A17 chips, before switching to the original A17 designs with N3E later in 2024. This architecture will presumably be iterated on through TSMC's successor nodes for chips like the "A18" and "A19."<br/>
+<br/>
+It seems highly unlikely that Apple would make such a drastic change to the A17 Bionic during the product cycle of the &zwnj;iPhone 15 Pro&zwnj; and &zwnj;iPhone 15 Pro&zwnj; Max, so the N3E version of the chip may instead be destined for next year's standard <a href="https://www.macrumors.com/roundup/iphone-16/">iPhone 16</a> and &zwnj;iPhone 16&zwnj; Plus models. The A15 Bionic chip in the <a href="https://www.macrumors.com/roundup/iphone-14/">iPhone 14</a> and &zwnj;iPhone 14&zwnj; Plus is a higher binned variant with one additional GPU core than the A15 used in the <a href="https://www.macrumors.com/roundup/iphone-13/">iPhone 13</a> and &zwnj;iPhone 13&zwnj; mini, so some cross-generational differences despite outwardly featuring the same chip would not be unheard of.<br/>
+<br/>
+The rumor comes from a <a href="https://weibo.com/u/1833340431">Weibo user</a> who claims to be an integrated circuit expert with 25 years of experience working on Intel's Pentium processors. Earlier this year, they were first to claim that the <a href="https://www.macrumors.com/roundup/iphone-15/">iPhone 15</a> and &zwnj;iPhone 15 Pro&zwnj;'s USB-C port and accompanying charging cables <a href="https://www.macrumors.com/2023/02/10/apple-planning-to-limit-iphone-15-usb-c-port/">will feature a Lightning-like authenticator chip</a>, potentially limiting their functionality with Apple-unapproved accessories — a rumor that went on to be <a href="https://www.macrumors.com/2023/02/28/iphone-15-usb-c-accessories-limited-without-mfi/">corroborated</a> by more established sources.<div class="linkback">Related Roundups: <a href="https://www.macrumors.com/roundup/iphone-15-pro/">iPhone 15 Pro</a>, <a href="https://www.macrumors.com/roundup/iphone-16/">iPhone 16</a></div><div class="linkback">Tags: <a href="https://www.macrumors.com/guide/tsmc/">TSMC</a>, <a href="https://www.macrumors.com/guide/apple-silicon/">Apple Silicon</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/23/apple-to-switch-tech-behind-a17-to-cut-costs/">Apple Reportedly Planning to Switch Technology Behind A17 Bionic Chip to Cut Costs Next Year</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/apple-reportedly-planning-to-switch-technology-behind-a17-bionic-chip-to-cut-costs-next-year.2393938/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Here&#039;s How Interactive Widgets Work in macOS Sonoma</title>
+		<link>https://www.macrumors.com/guide/how-widgets-work-macos-sonoma/</link>
+		<comments>https://forums.macrumors.com/threads/heres-how-interactive-widgets-work-in-macos-sonoma.2393921/</comments>
+		<pubDate>Fri, 23 Jun 2023 03:38:04 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/guide/how-widgets-work-macos-sonoma&#038;post_date=1687527484/</guid>
+		<dc:creator>Tim Hardwick</dc:creator>
+		<category>Featured</category>
+		<category>macOS Sonoma</category>
+		
+
+		<description><![CDATA[In macOS Sonoma, Apple has changed the widgets landscape. No longer do widgets have to be hidden offscreen and largely forgotten in the Notifications Center panel. Now they live right on your desktop – and they're interactive, too.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/04/Widgets-on-Your-Mac-Thumb-3.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-893441" /><br/>
+It's worth noting from the off that widgets can still be parked in Notification Center, but now they can also be dragged out onto the desktop. The first widget can be placed anywhere, then Apple provides placement guidance for subsequent widgets by displaying a widget-shaped outline, indicating where they can be snapped into position in relation to the others. <br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/Screenshot-2023-06-23-at-11.19.20.jpg" alt="" width="2880" height="1144" class="aligncenter size-full wp-image-901431" /><br/>
+Alternatively, if you right-click on an empty space on the desktop, the menu that appears includes a new "Edit Widgets..." option. Selecting this brings up a widget gallery, which – thanks to a new Continuity feature between Apple devices – also includes widgets from your iPhone in all available sizes. So even if you don't have the corresponding Mac app, you can still use the iOS widget right on your desktop. Simply drag it from the gallery into an available space.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/widgets-macos.jpg" alt="" width="2880" height="1800" class="aligncenter size-full wp-image-901433" /><br/>
+If you're running the macOS Sonoma beta, trying out iPhone widgets is a good way to get used to their interactivity until third-party developers have a chance to bake this into their Mac widgets. As it stands, only Apple's own widgets offer (sometimes buggy) interactions. <br/>
+<br/>
+In the Home app widget, for example, you can control specific accessories by clicking the individual buttons to turn them on and off.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/home-widget.jpg" alt="" width="728" height="354" class="aligncenter size-full wp-image-901435" /><br/>
+If you right-click a widget, any available customization options appear in the contextual menu. Widgets are available in Small, Medium, and Large sizes, and all include an option to "Remove Widget" if you want to get rid of it.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/widgets-fade.jpg" alt="" width="2880" height="1800" class="aligncenter size-full wp-image-901436" /><br/>
+When not in use, widgets fade into the background by taking on the color of your wallpaper, so you can concentrate on the active app or window. There's also an option in System Settings to change the widget style to from full color to Monochrome, for a more uniform look.<br/>
+<br/>
+Widgets have evolved in macOS Sonoma. By bringing them in from the dark and out into the open workspace of your desktop, users are actively encouraged to work alongside them. What are your thoughts on Apple's new take on Mac widgets? Are you more likely to use them in their new guise? Let us know in the comments.<div class="linkback">Related Roundup: <a href="https://www.macrumors.com/roundup/macos-sonoma/">macOS Sonoma</a></div><div class="linkback">Related Forum: <a href="https://forums.macrumors.com/forums/macos-sonoma.243">macOS Sonoma</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/guide/how-widgets-work-macos-sonoma/">Here&#039;s How Interactive Widgets Work in macOS Sonoma</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/heres-how-interactive-widgets-work-in-macos-sonoma.2393921/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Apple Reportedly in Discussions With Banks to Launch Apple Card in India</title>
+		<link>https://www.macrumors.com/2023/06/23/apple-seeks-apple-card-launch-india/</link>
+		<comments>https://forums.macrumors.com/threads/apple-reportedly-in-discussions-with-banks-to-launch-apple-card-in-india.2393917/</comments>
+		<pubDate>Fri, 23 Jun 2023 03:04:41 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/23/apple-seeks-apple-card-launch-india/</guid>
+		<dc:creator>Tim Hardwick</dc:creator>
+		<category>India</category>
+		<category>Apple Card</category>
+		
+
+		<description><![CDATA[Apple is in talks with banks to launch <a href="https://www.macrumors.com/guide/apple-card/">Apple Card</a> in India, claims a report by local finance website <em><a href="https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/announcements/apple-looks-to-launch-its-credit-card-in-india-taps-hdfc-bank-for-partnership-10845911.html">Moneycontrol</a></em>. <br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/Apple-Card-Balance.jpeg" alt="" width="1600" height="900" class="aligncenter size-full wp-image-898056" /><br/>
+According to the report, citing sources familiar with the matter, Apple CEO <a href="https://www.macrumors.com/guide/tim-cook/">Tim Cook</a> met with HDFC Bank CEO and MD Sashidhar Jagdishan during his trip to India in April to discuss the possibility of bringing the credit card to the country alongside <a href="https://www.macrumors.com/roundup/apple-pay/">Apple Pay</a>. <br/>
+<br/>
+In India, only banks are allowed to launch credit cards. According to the outlet's sources, Apple is therefore exploring the possibility of launching its &zwnj;Apple Card&zwnj; there as a co-branded credit card with HDFC Bank. <br/>
+<br/>
+The Cupertino-based tech giant is also said to have held discussions with central bank and regulatory body the Reserve Bank of India (RBI) on the "modalities" of the card. The regulator has reportedly asked Apple to follow the regular procedure for co-branded credit cards, without offering any special considerations for the company. <br/>
+<br/>
+&zwnj;Apple Card&zwnj; was released in the United States in August 2019, and remains exclusive to the country. The outlet speculates that what might have prompted Apple to consider launching the &zwnj;Apple Card&zwnj; in India before Japan or European countries is the fact that Apple does not currently accept card payments in India. Instead, the national Unified Payments Interface (UPI) powers most <a href="https://www.macrumors.com/guide/app-store/">App Store</a> purchases in the country, due to regulations that forbid third-party websites from storing credit card details on their platforms.<br/>
+<br/>
+In the U.S., Apple has partnered with Goldman Sachs for the card, which in its physical form is a plain titanium card with the customer's name but no number printed on the front, with Mastercard and Goldman Sachs mentioned on the reverse. These are reportedly "not liberties that Apple can take in India" as per the current co-branded credit card regulations in India. <br/>
+<br/>
+The discussions are in the early stages and a decision has not been arrived at, the outlet's sources added. <br/>
+<br/>
+During his trip to India, Cook attended the opening of the country's first Apple retail stores. Apple previously only offered products through its regional website and via resellers, and yet Apple's sales in India hit a new high of almost &#36;6 billion in the year through March. Revenue in India grew by nearly 50%, from &#36;4.1 billion a year earlier, according to one <a href="https://www.bloomberg.com/news/articles/2023-04-17/apple-s-india-sales-near-6-billion-as-cook-begins-retail-push">report</a>.<br/>
+<br/>
+Apple has also been working to build out a manufacturing supply chain in India, which is home to the world's second biggest smartphone market. In an indication of the country's perceived importance as a production hub, Apple shifted <a href="https://www.macrumors.com/roundup/iphone-14/">iPhone 14</a> assembly from China to India in the weeks following its release.<div class="linkback">Tags: <a href="https://www.macrumors.com/guide/india/">India</a>, <a href="https://www.macrumors.com/guide/apple-card/">Apple Card</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/23/apple-seeks-apple-card-launch-india/">Apple Reportedly in Discussions With Banks to Launch Apple Card in India</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/apple-reportedly-in-discussions-with-banks-to-launch-apple-card-in-india.2393917/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>LG to Bring AirPlay to Hotel Room TVs Later This Year</title>
+		<link>https://www.macrumors.com/2023/06/22/lg-airplay-hotel-room-tvs/</link>
+		<comments>https://forums.macrumors.com/threads/lg-to-bring-airplay-to-hotel-room-tvs-later-this-year.2393888/</comments>
+		<pubDate>Thu, 22 Jun 2023 16:31:00 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/22/lg-airplay-hotel-room-tvs/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>AirPlay</category>
+		<category>LG</category>
+		
+
+		<description><![CDATA[LG Electronics will be one of the first TV manufacturers to support Apple's <a href="https://www.macrumors.com/guide/airplay/">AirPlay</a> expansion, which will see Apple bringing easy access &zwnj;AirPlay&zwnj; to hotel room TVs.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/airplay-hotels.jpg" alt="" width="1600" height="894" class="aligncenter size-full wp-image-898340" /><br/>
+In a <a href="https://www.prnewswire.com/news-releases/lg-first-to-bring-apple-airplay-to-hotel-room-tvs-301858034.html">press release</a> (via <em><a href="https://www.zdnet.com/article/apple-and-lg-partner-up-to-fix-the-biggest-problem-with-hotel-tvs/">ZDNET</a></em>), LG said that later this year, it will introduce LG Pro:Centric Smart Hotel TVs that include built-in &zwnj;AirPlay&zwnj; technology.<br/>
+<br/>
+"This is a major advancement for in-room entertainment in the travel and hospitality industry, and underscores how closely we are listening to the needs of consumers who increasingly demand simple access to their personal media options on the biggest screen, wherever they are," said LG Business Solutions hospitality vice president Michael Kosla. "Hotels that offer this feature will have an immediate leg up with travelers who use Apple devices, boosting guest satisfaction while providing real differentiation from local competition."<br/>
+<br/>
+LG worked with Apple to make an easy-to-use &zwnj;AirPlay&zwnj; solution. <a href="https://www.macrumors.com/guide/iphone/">iPhone</a> users will be able to scan a QR code to access &zwnj;AirPlay&zwnj;, allowing them to to securely play content from an &zwnj;iPhone&zwnj; or <a href="https://www.macrumors.com/roundup/ipad/">iPad</a> to a hotel room TV with no need for extra equipment. LG says &zwnj;AirPlay&zwnj; will work on the TVs it is releasing this year as well as "recent year's models."<br/>
+<br/>
+Apple <a href="https://www.macrumors.com/2023/06/05/apple-ios-17-new-intelligent-airplay/">at WWDC said</a> that it is partnering with select hotels to bring &zwnj;AirPlay&zwnj; to supported television sets. IHG Hotels &amp; Resorts, which operates 6,000 locations worldwide, will be one of the first companies to support &zwnj;AirPlay&zwnj; in its hotels.<div class="linkback">Tags: <a href="https://www.macrumors.com/guide/airplay/">AirPlay</a>, <a href="https://www.macrumors.com/guide/lg/">LG</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/22/lg-airplay-hotel-room-tvs/">LG to Bring AirPlay to Hotel Room TVs Later This Year</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/lg-to-bring-airplay-to-hotel-room-tvs-later-this-year.2393888/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Video: A First Look at visionOS for the Apple Vision Pro</title>
+		<link>https://www.macrumors.com/2023/06/22/visionos-hands-on/</link>
+		<comments>https://forums.macrumors.com/threads/video-a-first-look-at-visionos-for-the-apple-vision-pro.2393861/</comments>
+		<pubDate>Thu, 22 Jun 2023 10:42:13 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/22/visionos-hands-on/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>Featured</category>
+		<category>visionOS</category>
+		
+
+		<description><![CDATA[Apple yesterday released the <a href="https://www.macrumors.com/2023/06/21/apple-releases-first-ever-visionos-beta/">first ever beta of visionOS</a> and the SDK that will <a href="https://www.macrumors.com/2023/06/21/apple-vision-pro-sdk/">allow developers to create apps</a> for the <a href="https://www.macrumors.com/roundup/apple-vision-pro/">Apple Vision Pro</a> headset. <a href="https://www.macrumors.com/roundup/visionos/">visionOS</a> can only be explored through Xcode right now, but we thought we'd take a hands-on look to see what we can glean about the headset experience from the operating system.<br/>
+<br/>
+<div class="center-wrap"><iframe width="560" height="315" src="https://www.youtube.com/embed/8ug8mhW7xfI" title="This is visionOS on Apple Vision Pro!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><em><a href="https://www.youtube.com/user/macrumors?sub_confirmation=1">Subscribe to the MacRumors YouTube channel</a> for more videos.</em></div><br/>
+Testing out &zwnj;visionOS&zwnj; is as simple as getting the latest Xcode 15 beta and the &zwnj;visionOS&zwnj; 1.0 simulator, but to be honest, there's not a whole lot to see that Apple didn't already tell us about.<br/>
+<br/>
+You can only see the operating system on the screen of your Mac, so it's not what the headset will really be like, and you can't experience the same level of immersion. That said, you can see what &zwnj;visionOS&zwnj; will look like, including the Home View and app windows, plus you can see how 2D <a href="https://www.macrumors.com/roundup/ipad/">iPad</a> and <a href="https://www.macrumors.com/guide/iphone/">iPhone</a> apps will look.<br/>
+<br/>
+Webpages can be loaded into a &zwnj;visionOS&zwnj; version of Safari so website developers can see what their webpages will look like and what needs to be tweaked. Everything looks a lot like iOS, but if iOS were in your living room or kitchen.<br/>
+<br/>
+There's a Control Center with customizable options for things like light and dark mode, and there's a Guest Mode, which is how you'll be able to let curious people try out the headset without access to your sensitive data. Spotlight is available for searches, and you can set up a range of "Environments" that block out the world around you.<br/>
+<br/>
+From the &zwnj;visionOS&zwnj; Xcode experience and &zwnj;visionOS&zwnj; code we know there are over a <a href="https://www.macrumors.com/2023/06/21/visionos-environments/">dozen Environments you can select</a>, such as Joshua Tree, Yosemite, Mount Hood, and even the moon. There's a <a href="https://www.macrumors.com/2023/06/21/vision-pro-visual-search-feature/">Visual Search feature</a> that will be able to identify items around you, copy printed text from the real world, translate languages in real time, and more, plus Apple has <a href="https://www.macrumors.com/2023/06/22/apple-vision-pro-travel-mode/">designed a Travel Mode</a> that can be activated when you're on an airplane.<br/>
+<br/>
+Travel Mode ensures that you're stationary while you're wearing the Vision Pro, and it blocks out distractions around you. Certain sensors are turned off, perhaps for the privacy of other passengers or because close proximity to a number of other people can cause the sensors to malfunction.<br/>
+<br/>
+Apple will provide Vision Pro testing labs to developers in several locations worldwide starting next month, plus the company is going to open up applications for a <a href="https://www.macrumors.com/2023/06/21/apple-vision-pro-sdk/">hardware-based Vision Pro developer kit</a> that will allow developers to test their apps right on the Vision Pro itself.<br/>
+<br/>
+Make sure to watch our full video to get a closer look at the early stages of &zwnj;visionOS&zwnj;.<div class="linkback">Related Roundup: <a href="https://www.macrumors.com/roundup/visionos/">visionOS</a></div><div class="linkback">Related Forum: <a href="https://forums.macrumors.com/forums/apple-vision-pro.209">Apple Vision Pro</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/22/visionos-hands-on/">Video: A First Look at visionOS for the Apple Vision Pro</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/video-a-first-look-at-visionos-for-the-apple-vision-pro.2393861/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Latest iOS 17 Beta Makes Haptic Touch Faster</title>
+		<link>https://www.macrumors.com/2023/06/22/ios-17-haptic-touch-faster/</link>
+		<comments>https://forums.macrumors.com/threads/latest-ios-17-beta-makes-haptic-touch-faster.2393854/</comments>
+		<pubDate>Thu, 22 Jun 2023 09:52:43 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/22/ios-17-haptic-touch-faster/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>Featured</category>
+		<category>iOS 17</category>
+		
+
+		<description><![CDATA[The second beta of <a href="https://www.macrumors.com/roundup/ios-17/">iOS 17</a> that Apple <a href="https://www.macrumors.com/2023/06/21/apple-seeds-ios-17-beta-2-to-developers/">released to developers yesterday</a> includes a setting that makes the haptic feedback feature activate faster than before, which some users may prefer.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/haptic-touch-ios-17-fast.jpg" alt="" width="3411" height="1919" class="aligncenter size-full wp-image-901400" /><br/>
+An Accessibility option, faster haptic feedback can be activated in the Settings app by going to Accessibility &gt; Touch &gt; <a href="https://www.macrumors.com/guide/haptic-touch-vs-3d-touch-whats-the-difference/">Haptic Touch</a>. From there, the options are Fast, Default, and Slow. Toggling on Fast speeds up &zwnj;Haptic Touch&zwnj;, and the duration can be tested using the image in the Settings app.<br/>
+<br/>
+In <a href="https://www.macrumors.com/roundup/ios-16/">iOS 16</a> and the first beta of &zwnj;iOS 17&zwnj;, options for &zwnj;Haptic Touch&zwnj; included Fast and Slow, with "Fast" previously being equivalent to the Default option in the new interface. The new Fast toggle is a step up in speed compared to the old Fast option.<br/>
+<br/>
+<div class="center-wrap"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">New Fast Haptic Touch option in iOS 17 feels like 3D Touch! &#x1f929; <a href="https://twitter.com/hashtag/ios17?src=hash&amp;ref_src=twsrc%5Etfw">#ios17</a> <a href="https://t.co/YDkViEVCpp">pic.twitter.com/YDkViEVCpp</a></p>&mdash; Apple Intro (@AppleIntro) <a href="https://twitter.com/AppleIntro/status/1671778695088943104?ref_src=twsrc%5Etfw">June 22, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div><br/>
+Setting &zwnj;Haptic Touch&zwnj; to Fast makes a noticeable difference in how quick haptic menus pop up under the finger when an icon or on-screen element is long pressed. The speed brings &zwnj;Haptic Touch&zwnj; interactions closer to <a href="https://www.macrumors.com/guide/3d-touch/">3D Touch</a> interactions.<br/>
+<br/>
+As many <a href="https://www.macrumors.com/guide/iphone/">iPhone</a> users might remember, &zwnj;3D Touch&zwnj; was an interactive haptic feature that Apple introduced in 2015 with the &zwnj;iPhone&zwnj; 6s and used prior to the &zwnj;iPhone&zwnj; XR. With the &zwnj;iPhone&zwnj; XR in 2018, Apple transitioned away from &zwnj;3D Touch&zwnj; and instead implemented the simplified &zwnj;Haptic Touch&zwnj;. &zwnj;3D Touch&zwnj; supported multiple levels of pressure for different interactions depending on how hard you pressed, with Apple implementing "Peek and Pop" gestures. Comparatively, &zwnj;Haptic Touch&zwnj; supports just a single level of pressure for the long press gesture.<br/>
+<br/>
+&zwnj;Haptic Touch&zwnj; has always worked slower than &zwnj;3D Touch&zwnj; because of the two levels of pressure that &zwnj;3D Touch&zwnj; allowed for. The first &zwnj;3D Touch&zwnj; pressure level activated quickly when pressing on the display, so those who became used to &zwnj;3D Touch&zwnj; may have found the &zwnj;Haptic Touch&zwnj; replacement to be too sluggish. On Fast mode in &zwnj;iOS 17&zwnj;, &zwnj;Haptic Touch&zwnj; is quicker and feels more sensitive.<br/>
+<br/>
+It's still not entirely clear why Apple got rid of &zwnj;3D Touch&zwnj;, but it has been speculated that Apple eliminated it in order to bring gesture parity to the &zwnj;iPhone&zwnj; and the <a href="https://www.macrumors.com/roundup/ipad/">iPad</a>. &zwnj;3D Touch&zwnj; was always an iPhone-only feature, but &zwnj;Haptic Touch&zwnj; is available on both the &zwnj;iPhone&zwnj; and the &zwnj;iPad&zwnj;.<div class="linkback">Related Roundups: <a href="https://www.macrumors.com/roundup/ios-17/">iOS 17</a>, <a href="https://www.macrumors.com/roundup/ipados-17/">iPadOS 17</a></div><div class="linkback">Related Forums: <a href="https://forums.macrumors.com/forums/ios-17.241">iOS 17</a>, <a href="https://forums.macrumors.com/forums/ipados-17.242">iPadOS 17</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/22/ios-17-haptic-touch-faster/">Latest iOS 17 Beta Makes Haptic Touch Faster</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/latest-ios-17-beta-makes-haptic-touch-faster.2393854/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Apple Vision Pro to Feature &#039;Travel Mode&#039; for Better In-Flight Experience</title>
+		<link>https://www.macrumors.com/2023/06/22/apple-vision-pro-travel-mode/</link>
+		<comments>https://forums.macrumors.com/threads/apple-vision-pro-to-feature-travel-mode-for-better-in-flight-experience.2393850/</comments>
+		<pubDate>Thu, 22 Jun 2023 09:10:22 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/22/apple-vision-pro-travel-mode/</guid>
+		<dc:creator>Steve Moser</dc:creator>
+		<category>Vision Pro</category>
+		<category>visionOS</category>
+		
+
+		<description><![CDATA[Apple has an intriguing hidden feature for its <a href="https://www.macrumors.com/roundup/apple-vision-pro/">Apple Vision Pro</a> spatial computer in the first developer beta of <a href="https://www.macrumors.com/roundup/visionos/">visionOS</a>. The feature, termed "Travel Mode," is specifically aimed at enhancing the user experience while on board an airplane.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/apple-vision-pro-airplane.jpg" alt="" width="1600" height="900" class="aligncenter size-full wp-image-901394" /><br/>
+Given that the cabin of an airplane with its enclosed space and unique environmental factors can be challenging for VR devices, Travel Mode seems to be Apple's solution for ensuring a smoother experience.<br/>
+<br/>
+<h2>Travel Mode: The Breakdown</h2><br/>
+Within the first developer beta for &zwnj;visionOS&zwnj;, we've discovered several text strings which shed light on the functionality of this new feature. The key prompts include:<br/>
+<br/>
+<ul><li>Are you on an airplane?</li><br/>
+<li>If you're on an airplane, you'll need to keep Travel Mode on to continue using your &zwnj;Apple Vision Pro&zwnj;.</li><br/>
+<li>Remain stationary in Travel Mode.</li><br/>
+<li>Remain stationary while this mode turns off.</li><br/>
+<li>Some awareness features will be off.</li><br/>
+<li>The current fit may reduce gaze accuracy.</li><br/>
+<li>Turn on Travel Mode when you're on an airplane to continue using your &zwnj;Apple Vision Pro&zwnj;.</li><br/>
+<li>Your representation is unavailable while Travel Mode is on.</li></ul><br/>
+From these text strings, it is apparent that Travel Mode is designed to adapt the functionality of &zwnj;Apple Vision Pro&zwnj; for the specific constraints of an airplane cabin.<br/>
+<br/>
+<h3>Disabled Awareness Features</h3><br/>
+One of the text strings indicates that "some awareness features will be off." This suggests that certain sensors and features which depend on spatial awareness might be turned off or scaled down. In an airplane, the proximity to other passengers and limited space could potentially cause these features to behave erratically or inaccurately. By disabling or limiting them, Travel Mode may help ensure that the user does not have an unpleasant or disrupted VR experience.<br/>
+<br/>
+<h3>Digital Personas Unavailable</h3><br/>
+The phrase "Your representation is unavailable while Travel Mode is on" implies that Digital Personas might not be available in this mode. The exact reason is not clear, but it might be connected to the constrained space and the disabled awareness features, which might affect the accuracy and representation of avatars.<br/>
+<br/>
+<h3>Gaze Accuracy Reduction</h3><br/>
+The text also mentions that "The current fit may reduce gaze accuracy." This could mean that due to the position you might take when seated in an airplane, the headset might not sit as precisely as usual, affecting gaze tracking. However, Travel Mode seems to acknowledge this and potentially makes adjustments to compensate for it.<br/>
+<br/>
+<h3>Staying Stationary</h3><br/>
+Another interesting prompt is "Remain stationary in Travel Mode." This might be a safety measure to ensure that users do not inadvertently move around or make large gestures while on a plane, which could be dangerous or disturbing to fellow passengers.<br/>
+<br/>
+<h2>Wrap-Up</h2><br/>
+Apple's Travel Mode for the &zwnj;Apple Vision Pro&zwnj; is an example of thoughtful innovation, adapting the device to work efficiently in different environments. This feature demonstrates Apple's attention to detail and commitment to ensuring a seamless experience for its users regardless of the circumstances.<br/>
+<br/>
+As Travel Mode is still in beta, we expect further refinements and potentially more features before it's rolled out to the general public. Stay tuned for more updates as we keep an eye on the evolution of &zwnj;Apple Vision Pro&zwnj;'s Travel Mode.<div class="linkback">Related Roundups: <a href="https://www.macrumors.com/roundup/apple-vision-pro/">Apple Vision Pro</a>, <a href="https://www.macrumors.com/roundup/visionos/">visionOS</a></div><div class="linkback">Related Forum: <a href="https://forums.macrumors.com/forums/apple-vision-pro.209">Apple Vision Pro</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/22/apple-vision-pro-travel-mode/">Apple Vision Pro to Feature &#039;Travel Mode&#039; for Better In-Flight Experience</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/apple-vision-pro-to-feature-travel-mode-for-better-in-flight-experience.2393850/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Deals: Apple Watch Series 8 Models Drop to Best-Ever Prices on Amazon, Starting at &#36;329</title>
+		<link>https://www.macrumors.com/2023/06/22/deals-apple-watch-series-8-amazon/</link>
+		<comments>https://forums.macrumors.com/threads/deals-apple-watch-series-8-models-drop-to-best-ever-prices-on-amazon-starting-at-329.2393837/</comments>
+		<pubDate>Thu, 22 Jun 2023 07:51:01 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/22/deals-apple-watch-series-8-amazon/</guid>
+		<dc:creator>Mitchel Broussard</dc:creator>
+		<category>Deals</category>
+		
+
+		<description><![CDATA[Amazon today has a few deals on the Apple Watch Series 8, including all-time low prices on both 41mm and 45mm GPS models. All of the watches mentioned below are in stock and ready to ship, with delivery dates around June 24 in most cases.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/series-8.jpg" alt="" width="2500" height="1406" class="aligncenter size-full wp-image-901386" /><em><small>Note: MacRumors is an affiliate partner with Amazon. When you click a link and make a purchase, we may receive a small payment, which helps us keep the site running.</small></em><br/>
+<br/>
+Starting with the 41mm GPS Apple Watch Series 8, you can get this model for <a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0BDHQD1CQ%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1"><strong>&#36;329.00</strong></a>, down from &#36;399.00. This one is available in Midnight, Silver, and Starlight, and all three colors have both S/M and M/L bands at this record low price.<br/>
+<br/>
+<div class="center-wrap"><a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0BDHQD1CQ%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1"target="_blank"><div class="fancybutton"><div class="fancybadge">&#36;70 OFF</div>Apple Watch Series 8 (41mm GPS) for &#36;329.00</div></a></div><br/>
+<br/>
+Amazon also has the 45mm GPS Apple Watch Series 8 on sale for <a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0BDJDH2WR%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1"><strong>&#36;359.00</strong></a>, down from &#36;429.00. All three of the same colors are on sale, including Midnight, Silver, and Starlight. You'll also find both S/M and M/L bands available in each color.<br/>
+<br/>
+<div class="center-wrap"><a href="https://buy.geni.us/Proxy.ashx?TSID=3088&GR_URL=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0BDJDH2WR%3Ftag%3Dmacrumors-20%26linkCode%3Dogi%26th%3D1"target="_blank"><div class="fancybutton"><div class="fancybadge">&#36;70 OFF</div>Apple Watch Series 8 (45mm GPS) for &#36;359.00</div></a></div><br/>
+<br/>
+Head to our full <a href="https://www.macrumors.com/roundup/best-apple-deals/">Deals Roundup</a> to get caught up with all of the latest deals and discounts that we've been tracking over the past week.<div class="linkback">Related Roundup: <a href="https://www.macrumors.com/roundup/best-apple-deals/">Apple Deals</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/22/deals-apple-watch-series-8-amazon/">Deals: Apple Watch Series 8 Models Drop to Best-Ever Prices on Amazon, Starting at &#36;329</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/deals-apple-watch-series-8-models-drop-to-best-ever-prices-on-amazon-starting-at-329.2393837/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Apple Vision Pro &#039;Visual Search&#039; Feature Can Identify Items, Copy Printed Text, Translate and More</title>
+		<link>https://www.macrumors.com/2023/06/21/vision-pro-visual-search-feature/</link>
+		<comments>https://forums.macrumors.com/threads/apple-vision-pro-visual-search-feature-can-identify-items-copy-printed-text-translate-and-more.2393788/</comments>
+		<pubDate>Wed, 21 Jun 2023 17:39:15 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/21/vision-pro-visual-search-feature/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>Vision Pro</category>
+		<category>Featured</category>
+		<category>visionOS</category>
+		
+
+		<description><![CDATA[The <a href="https://www.macrumors.com/roundup/apple-vision-pro/">Apple Vision Pro</a> headset's <a href="https://www.macrumors.com/roundup/visionos/">visionOS</a> operating system includes a feature called "Visual Search," which sounds like it is similar to the Visual Lookup feature on the <a href="https://www.macrumors.com/guide/iphone/">iPhone</a> and the <a href="https://www.macrumors.com/roundup/ipad/">iPad</a>.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/vision-pro-headset-1.jpg" alt="" width="2698" height="1518" class="aligncenter size-full wp-image-898460" /><br/>
+With Visual Search, users can use the Vision Pro headset to get information about an item, detect and interact with text in the world around them, copy and paste printed text from the real world into apps, translate text between 17 different languages, and more.<br/>
+<br/>
+Real world text that includes contact information, webpages, and unit conversions and similar information can be acted upon in &zwnj;visionOS&zwnj;. So, for example, if a printed handout has a website link in it, you can scan the link with the Vision Pro, opening up a Safari window to view the website. Or, if a recipe calls for grams and you need ounces, you can convert using the headset.<br/>
+<br/>
+Real-time text translation will also be useful for traveling and other instances when you might want to quickly translate what you're seeing in the real world. The &zwnj;Apple Vision Pro&zwnj; headset will be able to automatically detect text and documents, similar to how the &zwnj;iPhone&zwnj; can detect text in photos and allow it to be interacted with.<br/>
+<br/>
+The Visual Search function was found in &zwnj;visionOS&zwnj; by <a href="https://twitter.com/SteveMoser">Steve Moser</a>. &zwnj;visionOS&zwnj; can be accessed through the latest Xcode beta at the moment, as Apple <a href="https://www.macrumors.com/2023/06/21/apple-releases-first-ever-visionos-beta/">released the first version</a> of the software earlier today.<div class="linkback">Related Roundups: <a href="https://www.macrumors.com/roundup/apple-vision-pro/">Apple Vision Pro</a>, <a href="https://www.macrumors.com/roundup/visionos/">visionOS</a></div><div class="linkback">Related Forum: <a href="https://forums.macrumors.com/forums/apple-vision-pro.209">Apple Vision Pro</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/21/vision-pro-visual-search-feature/">Apple Vision Pro &#039;Visual Search&#039; Feature Can Identify Items, Copy Printed Text, Translate and More</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/apple-vision-pro-visual-search-feature-can-identify-items-copy-printed-text-translate-and-more.2393788/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Here Are All the &#039;Environments&#039; You Can Experience in visionOS</title>
+		<link>https://www.macrumors.com/2023/06/21/visionos-environments/</link>
+		<comments>https://forums.macrumors.com/threads/here-are-all-the-environments-you-can-experience-in-visionos.2393782/</comments>
+		<pubDate>Wed, 21 Jun 2023 16:00:46 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/21/visionos-environments/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>visionOS</category>
+		
+
+		<description><![CDATA[With the Vision Pro headset, there is an option to activate an Environment that allows you to shut out the world around you. While Apple has mentioned Mount Hood as an Environment you can visit and use as a backdrop, there are several others.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/vision-pro-environments.jpg" alt="" width="2290" height="1288" class="aligncenter size-full wp-image-901362" /><br/>
+Apple today released the first version of <a href="https://www.macrumors.com/roundup/visionos/">visionOS</a>, which can be experienced using the latest Xcode beta, and the &zwnj;visionOS&zwnj; update has given us some insight into new &zwnj;visionOS&zwnj; features. Here are the available environments right now:<br/>
+<ul><br/>
+ 	<li>Haleakalā</li><br/>
+ 	<li>Yosemite</li><br/>
+ 	<li>Sky</li><br/>
+ 	<li>Joshua Tree</li><br/>
+ 	<li>Lake Vrangla</li><br/>
+ 	<li>Mount Hood</li><br/>
+ 	<li>The Moon</li><br/>
+ 	<li>Beach</li><br/>
+ 	<li>White Sands</li><br/>
+ 	<li>Winter Light</li><br/>
+ 	<li>Fall Light</li><br/>
+ 	<li>Summer Light</li><br/>
+ 	<li>Spring Light</li><br/>
+</ul><br/>
+Vision Pro users will be able to enter a virtual environment by turning the Digital Crown to shut out the real world. Environments can be used as a background for watching movies, using apps, making calls, and more.<br/>
+<br/>
+<em>(Thanks, <a href="https://twitter.com/SteveMoser">Steve Moser</a>!)</em><div class="linkback">Related Roundup: <a href="https://www.macrumors.com/roundup/visionos/">visionOS</a></div><div class="linkback">Related Forum: <a href="https://forums.macrumors.com/forums/apple-vision-pro.209">Apple Vision Pro</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/21/visionos-environments/">Here Are All the &#039;Environments&#039; You Can Experience in visionOS</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/here-are-all-the-environments-you-can-experience-in-visionos.2393782/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Everything New in iOS 17 Beta 2</title>
+		<link>https://www.macrumors.com/2023/06/21/everything-new-in-ios-17-beta-2/</link>
+		<comments>https://forums.macrumors.com/threads/everything-new-in-ios-17-beta-2.2393779/</comments>
+		<pubDate>Wed, 21 Jun 2023 15:16:09 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/21/everything-new-in-ios-17-beta-2/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>Featured</category>
+		
+
+		<description><![CDATA[Apple today released the second beta of upcoming <a href="https://www.macrumors.com/roundup/ios-17/">iOS 17</a> and <a href="https://www.macrumors.com/roundup/ipados-17/">iPadOS 17</a> updates to developers for testing purposes, and like all new betas for a major point update, the software includes a number of small tweaks and changes as Apple refines the operating systems ahead of launch. We've aggregated everything new that we've found in the second beta so far. <br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/General-iOS-17-Feature-Blue-Green.jpg" alt="" width="2250" height="1266" class="aligncenter size-full wp-image-898581" /><br/>
+<h2>Update Screen</h2><br/>
+This is technically a feature from the first beta, but the update screen now shows more information about beta software. It includes details about joining a beta program and backing up before you install beta software.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/ios-17-beta-2-updates.jpg" alt="" width="2000" height="1125" class="aligncenter size-full wp-image-901349" /><br/>
+<h2>App Tips</h2><br/>
+Various Apple-designed apps are utilizing a tips feature that provides details on available functionality. In the Messages app, for example, there's a tip about sending a message by talking instead of typing with <a href="https://www.macrumors.com/guide/siri/">Siri</a>.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/ios-17-tips-in-apps.jpg" alt="" width="1977" height="1112" class="aligncenter size-full wp-image-901351" /><br/>
+When AirDropping, there's a suggestion to hold the phone near another phone if you don't see people nearby.<br/>
+<br/>
+<h2>Location Settings</h2><br/>
+In the Systems Settings section of the Location privacy options, there is a new "MicroLocation" option. Apple does not explain what this is. App Clips Location Confirmation has disappeared as an option, as has Standby Clock Faces.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/ios-17-microlocation.jpg" alt="" width="2391" height="1345" class="aligncenter size-full wp-image-901350" /><br/>
+<h2>Messages Check In</h2><br/>
+In the Messages section of the Settings app, Apple has changed the wording of the data options for the Check-In feature. Options are now "Full" and "Limited," rather than "Current location only" and "All locations visited.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/messages-check-in-changes.jpg" alt="" width="3345" height="1882" class="aligncenter size-full wp-image-901357" /><br/>
+Limited data is described as current location and details about battery and network signal, while Full includes all limited data plus route traveled and location of last <a href="https://www.macrumors.com/guide/iphone/">iPhone</a> unlock and Apple Watch removal. <br/>
+<br/>
+<h2>Music App</h2><br/>
+Activating Crossfade for <a href="https://www.macrumors.com/guide/apple-music/">Apple Music</a> in the Settings app no longer crashes the Settings app, plus there is a customizable length for the Crossfade feature.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/apple-music-crossfade-length.jpg" alt="" width="2558" height="1439" class="aligncenter size-full wp-image-901352" /><br/>
+<br/>
+<h2>StandBy</h2><br/>
+There's now an option to toggle off notifications when in StandBy mode. Notifications classified as "Critical" will be delivered even when the feature is off. <br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/standby-ios-17-show-notifications.jpg" alt="" width="3343" height="1880" class="aligncenter size-full wp-image-901356" /><br/>
+<br/>
+<h2>Apple Music Widgets</h2><br/>
+Some of the &zwnj;Apple Music&zwnj; widgets are now available in different size options.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/apple-music-widgets.jpg" alt="" width="4470" height="2936" class="aligncenter size-full wp-image-901359" /><br/>
+<h2>Other New Features</h2><br/>
+Find something that we didn't mention here? Let us know in the comments below.<br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/21/everything-new-in-ios-17-beta-2/">Everything New in iOS 17 Beta 2</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/everything-new-in-ios-17-beta-2.2393779/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Apple Releases Second Studio Display 17 Firmware Beta</title>
+		<link>https://www.macrumors.com/2023/06/21/apple-studio-display-17-firmware-beta-2/</link>
+		<comments>https://forums.macrumors.com/threads/apple-releases-second-studio-display-17-firmware-beta.2393775/</comments>
+		<pubDate>Wed, 21 Jun 2023 14:30:49 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/21/apple-studio-display-17-firmware-beta-2/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>Apple</category>
+		<category>Rumors</category>
+		<category>Mac</category>
+		<category>iOS</category>
+		<category>iPhone</category>
+		<category>iPad</category>
+		
+
+		<description><![CDATA[Apple today released a second Studio Display 17 firmware beta, with the update coming two weeks after the release of the first beta.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2022/03/apple-studio-display-blue.jpg" alt="" width="2250" height="1266" class="aligncenter size-full wp-image-839183" /><br/>
+All Studio Display models are able to receive over-the-air firmware updates, but this firmware update is limited to Macs that are running the new <a href="https://www.macrumors.com/roundup/macos-sonoma/">macOS Sonoma</a> operating system at the current time. Studio Display owners running &zwnj;macOS Sonoma&zwnj; can go to System Settings > Software Update to install the firmware.<br/>
+<br/>
+Apple has not provided details on what's included in the firmware update and no new features were found by those running the betas. <br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/21/apple-studio-display-17-firmware-beta-2/">Apple Releases Second Studio Display 17 Firmware Beta</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/apple-releases-second-studio-display-17-firmware-beta.2393775/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Apple Releases First Ever visionOS Beta</title>
+		<link>https://www.macrumors.com/2023/06/21/apple-releases-first-ever-visionos-beta/</link>
+		<comments>https://forums.macrumors.com/threads/apple-releases-first-ever-visionos-beta.2393774/</comments>
+		<pubDate>Wed, 21 Jun 2023 13:48:41 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/21/apple-releases-first-ever-visionos-beta/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>Apple</category>
+		<category>Rumors</category>
+		<category>Mac</category>
+		<category>iOS</category>
+		<category>iPhone</category>
+		<category>iPad</category>
+		
+
+		<description><![CDATA[Apple today introduced the first version of the <a href="https://www.macrumors.com/roundup/visionos/">visionOS</a> software, debuting the &zwnj;visionOS&zwnj; 1.0 Developer Beta. The introduction of the beta comes as Apple has announced the launch of the &zwnj;visionOS&zwnj; <a href="https://www.macrumors.com/2023/06/21/apple-vision-pro-sdk/">software development kit</a> (SDK) that will allow third-party developers to build apps for the Vision Pro headset.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/visionos-home-screen-mt-hood.jpg" alt="" width="1600" height="900" class="aligncenter size-full wp-image-900011" /><br/>
+The SDK can be accessed through Xcode 15 beta 2, and while developers do not have access to the Vision Pro headset itself as of yet, Apple will begin allowing testing starting next month.<br/>
+<br/>
+Apple in July plans to open developer labs in select countries around the world, and some developers will be able to apply for development kits to test apps directly on Vision Pro.<br/>
+<br/>
+While &zwnj;visionOS&zwnj; 1.0 can't be downloaded on headsets except by Apple employees, the software may give us hints of unannounced functionality the device is capable of.<br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/21/apple-releases-first-ever-visionos-beta/">Apple Releases First Ever visionOS Beta</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/apple-releases-first-ever-visionos-beta.2393774/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Apple Seeds Second Betas of iOS 17 and iPadOS 17 to Developers</title>
+		<link>https://www.macrumors.com/2023/06/21/apple-seeds-ios-17-beta-2-to-developers/</link>
+		<comments>https://forums.macrumors.com/threads/apple-seeds-second-betas-of-ios-17-and-ipados-17-to-developers.2393770/</comments>
+		<pubDate>Wed, 21 Jun 2023 13:18:08 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/21/apple-seeds-ios-17-beta-2-to-developers/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>Featured</category>
+		<category>iOS 17</category>
+		
+
+		<description><![CDATA[Apple today seeded the second betas of upcoming <a href="https://www.macrumors.com/roundup/ios-17/">iOS 17</a> and <a href="https://www.macrumors.com/roundup/ipados-17/">iPadOS 17</a> updates to developers for testing purposes, with the software coming two weeks after the release of the first betas following the WWDC keynote event.<br/>
+<br/>
+<img class="aligncenter size-full wp-image-880344" src="https://images.macrumors.com/article-new/2023/01/iOS-17-Icon-Mock-Feature-Feature.jpg" alt="" width="2500" height="1406" /><br/>
+Registered developers are able to opt into the betas by opening up the Settings app, going to the Software Update section, tapping on the "Beta Updates" option, and toggling on the <a href="https://www.macrumors.com/roundup/ios-16/">iOS 16</a> Developer Beta. Note that an <a href="https://www.macrumors.com/guide/apple-id/">Apple ID</a> associated with a developer account is required to download and install the beta.<br/>
+<br/>
+&zwnj;iOS 17&zwnj; is a major update that introduces a customized look for each person that calls, with the person who places the call able to customize their look. Live voicemails let you see a transcript of a message someone is leaving in real time so you can choose to pick up the phone if you want, and voice messages people send in iMessage are now transcribed into text. You can also record a video or audio message when someone misses your <a href="https://www.macrumors.com/guide/facetime/">FaceTime</a> call, and &zwnj;FaceTime&zwnj; works on the <a href="https://www.macrumors.com/roundup/apple-tv/">Apple TV</a> through Continuity functionality.<br/>
+<br/>
+In Messages, apps have been moved to a new tucked-away interface for a cleaner look, and there is a new Check In feature that is designed to let your friends and family keep an eye on you when you're traveling. Check In automatically notifies friends or family members when you arrive at a destination, such as home. Locations can also now be shared directly from the Messages app.<br/>
+<br/>
+In a group chat, there's a catch-up arrow so you can see the first message you haven't seen in a conversation, and with search filters, you can more easily find what you're looking for. Stickers have been overhauled, and all emoji are now stickers, living alongside sticker packs and Memoji. Using the remove from background feature in &zwnj;iOS 17&zwnj;, you can turn the subject from any image into a sticker.<br/>
+<br/>
+With StandBy, an <a href="https://www.macrumors.com/guide/iphone/">iPhone</a> placed horizontally turns into a little home hub that displays information like the calendar, time, home controls, and more, and Live Activities can be displayed in full screen too.<br/>
+<br/>
+<a href="https://www.macrumors.com/guide/home-screen/">Widgets</a> on the <a href="https://www.macrumors.com/guide/home-screen/">Home Screen</a> are interactive, so you can do things like check off an item on a to-do list or turn off the lights without having to open an app. AirDrop has been improved and there's a NameDrop function for sharing contacts quickly, plus you can hold two iPhones together to start a SharePlay session. SharePlay also now works with <a href="https://www.macrumors.com/roundup/carplay/">CarPlay</a> so passengers can play their music in the car too.<br/>
+<br/>
+Other new features include a journaling app coming later this year, <a href="https://www.macrumors.com/guide/airplay/">AirPlay</a> in select hotel rooms, improvements to <a href="https://www.macrumors.com/roundup/airpods-pro/">AirPods Pro</a> 2 thanks to a new Adaptive Audio feature, offline Maps, <a href="https://www.macrumors.com/guide/siri/">Siri</a> that does not require the "Hey" activation, and improvements to search and spotlight.<br/>
+<br/>
+While today's beta is limited to developers, Apple will be providing a public beta later this summer.<div class="linkback">Related Roundups: <a href="https://www.macrumors.com/roundup/ios-17/">iOS 17</a>, <a href="https://www.macrumors.com/roundup/ipados-17/">iPadOS 17</a></div><div class="linkback">Related Forums: <a href="https://forums.macrumors.com/forums/ios-17.241">iOS 17</a>, <a href="https://forums.macrumors.com/forums/ipados-17.242">iPadOS 17</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/21/apple-seeds-ios-17-beta-2-to-developers/">Apple Seeds Second Betas of iOS 17 and iPadOS 17 to Developers</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/apple-seeds-second-betas-of-ios-17-and-ipados-17-to-developers.2393770/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+		<item>
+		<title>Apple Seeds Second Beta of macOS 14 Sonoma to Developers</title>
+		<link>https://www.macrumors.com/2023/06/21/apple-seeds-macos-sonoma-14-beta-2/</link>
+		<comments>https://forums.macrumors.com/threads/apple-seeds-second-beta-of-macos-14-sonoma-to-developers.2393769/</comments>
+		<pubDate>Wed, 21 Jun 2023 13:17:41 PDT</pubDate>
+		<guid isPermaLink="false">https://www.macrumors.com/2023/06/21/apple-seeds-macos-sonoma-14-beta-2/</guid>
+		<dc:creator>Juli Clover</dc:creator>
+		<category>Featured</category>
+		<category>macOS Sonoma</category>
+		
+
+		<description><![CDATA[Apple today seeded the second beta of the recently announced macOS 14 Sonoma update to developers for testing purposes. The beta comes two weeks after the launch of the first beta that came out following the June 5 WWDC keynote event. While the beta is limited to developers at this time, Apple plans to provide a public beta later this summer.<br/>
+<br/>
+<img src="https://images.macrumors.com/article-new/2023/06/macos-sonoma-4.jpg" alt="" width="2336" height="1314" class="aligncenter size-full wp-image-900182" /><br/>
+Registered developers can download the beta through the Apple Developer Center and after the appropriate profile is installed, with the betas available through the Software Update mechanism in System Settings.<br/>
+<br/>
+<a href="https://www.macrumors.com/roundup/macos-sonoma/">macOS Sonoma</a> introduces new Apple TV-like screen savers that also serve as wallpapers after you log in, plus it moves widgets to the desktop. You can use the new widget gallery to choose from a range of widgets, and then drag them to your Mac's desktop.<br/>
+<br/>
+<a href="https://www.macrumors.com/guide/home-screen/">Widgets</a> can be arranged in any way that's useful, and when you're using an app, they are designed to fade into the background so they're less distracting. &zwnj;Widgets&zwnj; are more interactive than before, so you can use them to do things like play music, turn off the lights in your home, and more. Through Continuity, your <a href="https://www.macrumors.com/guide/iphone/">iPhone</a>'s widgets can also show up on your Mac's desktop.<br/>
+<br/>
+Video conferencing has improved with a new Presenter Overlay view that shows your desktop or project in new ways, plus Safari now supports web apps for the Dock and the option to create Profiles so you can separate personal browsing from work browsing.<br/>
+<br/>
+Other new features include improved search that's faster and more responsive, password and passkey sharing, a revamped stickers interface for the Messages app, PDF integration in notes that makes it easier than ever to manage PDFs, and more.<br/>
+<br/>
+&zwnj;macOS Sonoma&zwnj; will be in beta testing for several months, with a public release for the fall.<div class="linkback">Related Roundup: <a href="https://www.macrumors.com/roundup/macos-sonoma/">macOS Sonoma</a></div><div class="linkback">Related Forum: <a href="https://forums.macrumors.com/forums/macos-sonoma.243">macOS Sonoma</a></div><br/>This article, &quot;<a href="https://www.macrumors.com/2023/06/21/apple-seeds-macos-sonoma-14-beta-2/">Apple Seeds Second Beta of macOS 14 Sonoma to Developers</a>&quot; first appeared on <a href="https://www.macrumors.com">MacRumors.com</a><br/><br/><a href="https://forums.macrumors.com/threads/apple-seeds-second-beta-of-macos-14-sonoma-to-developers.2393769/">Discuss this article</a> in our forums<br/><br/>]]></description>
+		</item>
+		
+	</channel>
+</rss>
