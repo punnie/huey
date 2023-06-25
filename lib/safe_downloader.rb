@@ -19,7 +19,11 @@ class SafeDownloader
       .follow(max_hops: max_hops)
       .get(url)
 
-    raise SafeDownloadError unless response.status.success?
+    unless response.status.success?
+      puts "Request to #{url} failed."
+
+      raise SafeDownloadError 
+    end
 
     response.body.each do |chunk|
       break if content_size > max_size || chunk.nil?
