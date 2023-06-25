@@ -24,6 +24,7 @@ module Fetchers
         entry = feed.entries.find_or_initialize_by(uri: guid)
 
         entry.authors = item.authors
+        entry.description = ''
         entry.link = item.link.href
         entry.title = item.title.content
         entry.published_date = item.published.content
@@ -36,12 +37,26 @@ module Fetchers
             type: 'text/html',
             content: contents
           }
+
+          entry.description = scrub_html(contents)
         end
 
         entry.save!
       end
 
       feed.save!
+    end
+
+    private
+
+    def scrub_html(content)
+      fragment = Loofah.fragment(content)
+      scrubber = Scrubbers::Description.new
+      sanitizer = Rails::Html::FullSanitizer.new
+
+      fragment.scrub!(scrubber)
+
+      sanitizer.sanitize(fragment.to_s.strip.gsub("\n", ' ').gsub(/\.(\S)/, '. \1'))
     end
   end
 end

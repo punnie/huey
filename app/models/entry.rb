@@ -10,8 +10,8 @@ class Entry < ApplicationRecord
 
   # Getting some PHP vibes here
   def real_uri
-    return uri if uri =~ URI::DEFAULT_PARSER.make_regexp
     return link if link =~ URI::DEFAULT_PARSER.make_regexp
+    return uri if uri =~ URI::DEFAULT_PARSER.make_regexp
 
     raise StandardError, 'No valid URI found'
   end
