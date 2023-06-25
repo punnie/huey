@@ -16,6 +16,10 @@ class Entry < ApplicationRecord
     raise StandardError, 'No valid URI found'
   end
 
+  def mark_as_ready
+    self.is_ready = true
+  end
+
   private
 
   def download_readable_content
@@ -25,9 +29,5 @@ class Entry < ApplicationRecord
       mark_as_ready
       save!
     end
-  end
-
-  def mark_as_ready
-    self.is_ready = true
   end
 end
