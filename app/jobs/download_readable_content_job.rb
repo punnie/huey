@@ -24,7 +24,7 @@ class DownloadReadableContentJob < ApplicationJob
       content: content.content
     }
 
-    entry.is_ready = true
+    entry.mark_as_ready
     entry.save!
   end
 

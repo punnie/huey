@@ -19,6 +19,15 @@ class Entry < ApplicationRecord
   private
 
   def download_readable_content
-    DownloadReadableContentJob.perform_later(entry: self)
+    if feed.download_content
+      DownloadReadableContentJob.perform_later(entry: self)
+    else
+      mark_as_ready
+      save!
+    end
+  end
+
+  def mark_as_ready
+    self.is_ready = true
   end
 end

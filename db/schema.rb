@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_19_164318) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_24_153114) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
@@ -66,6 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_19_164318) do
     t.string "scrape_index_date_format"
     t.string "scrape_index_author_selector"
     t.boolean "use_googlebot_agent", default: true, null: false
+    t.boolean "download_content", default: true, null: false
     t.index ["id"], name: "index_feeds_on_id", unique: true
   end
 
