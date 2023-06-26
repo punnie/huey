@@ -16,7 +16,7 @@ class StreamsController < ApplicationController
 
     @feeds = @stream.feeds
 
-    @entries = @stream.entries.for_feed.page(filtered_params[:page]).per(default_per_page)
+    @entries = @stream.entries.for_feed.includes(:feed).page(filtered_params[:page]).per(default_per_page)
   end
 
   def default_per_page
