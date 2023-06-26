@@ -10,7 +10,7 @@ class StreamsController < ApplicationController
   private
 
   def set_controller_entities
-    @streams = Stream.all.order(id: :asc)
+    @streams = Stream.all.sorted
 
     @stream = Stream.find(params[:id])
 

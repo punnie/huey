@@ -199,7 +199,8 @@ CREATE TABLE public.streams (
     permalink character varying,
     user_id bigint,
     created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    updated_at timestamp(6) without time zone NOT NULL,
+    "order" integer DEFAULT 0 NOT NULL
 );
 
 
@@ -448,6 +449,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20230219121807'),
 ('20230219164258'),
 ('20230219164318'),
-('20230624153114');
+('20230624153114'),
+('20230626061645');
 
 
