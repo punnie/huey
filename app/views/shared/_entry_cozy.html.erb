@@ -1,13 +1,11 @@
 <div class="py-1 flex flex-nowrap space-x-4 px-2">
-  <% if entry.readable_content && entry.readable_content.dig('table', 'lead_image_url').present? %>
-    <div class=" flex-shrink-0 flex flex-col align-bottom">
+  <div class=" flex-shrink-0 flex flex-col align-bottom">
+    <% if entry.readable_content && entry.readable_content.dig('table', 'lead_image_url').present? %>
       <img class="object-cover w-16 h-16 rounded my-auto" src="<%= entry.readable_content.dig('table', 'lead_image_url') %>" />
-    </div>
-  <% else %>
-    <div class=" flex-shrink-0 flex flex-col align-bottom">
+    <% else %>
       <img class="object-cover w-16 h-16 rounded my-auto" src="https://source.boringavatars.com/beam/120/<%= entry.feed.id %>?colors=264653,2a9d8f,e9c46a,f4a261,e76f51&square=true" />
-    </div>
-  <% end %>
+    <% end %>
+  </div>
   <div class="flex-grow space-y-1 my-2">
     <p class="text-gray-500 text-xs"><%= link_to entry.feed.title, feed_url(entry.feed) %></p>
     <a href="<%= entry.real_uri %>" target="_blank">
