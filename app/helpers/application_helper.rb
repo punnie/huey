@@ -1,5 +1,5 @@
 module ApplicationHelper
-  AVATAR_STYLES = %w[marble beam pixel sunset ring bauhaus].freeze
+  AVATAR_STYLES = %w[marble beam pixel sunset bauhaus].freeze
 
   def img_src_for_entry(entry)
     if entry.readable_content && entry.readable_content.dig('table', 'lead_image_url').present?
