@@ -15,4 +15,5 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
   get 'chronological', to: 'welcome#chronological', as: :chronological
+  get 'reader', to: 'welcome#reader', as: :reader
 end

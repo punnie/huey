@@ -14,6 +14,10 @@ class WelcomeController < ApplicationController
     redirect_to stream_path(default_stream)
   end
 
+  def reader
+    redirect_to stream_path(default_stream)
+  end
+
   private
 
   def set_feeds
