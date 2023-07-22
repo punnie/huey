@@ -37,7 +37,7 @@ module Fetchers
             content: contents
           }
 
-          entry.description = generate_description_from_content(contents) if entry.description.empty?
+          entry.description = generate_description_from_content(contents) if entry.description.blank?
         end
 
         entry.save!
