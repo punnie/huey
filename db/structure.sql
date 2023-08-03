@@ -49,33 +49,6 @@ CREATE FUNCTION public.generate_snowflake_id() RETURNS bigint
       $$;
 
 
---
--- Name: id_generator(); Type: FUNCTION; Schema: public; Owner: -
---
-
-CREATE FUNCTION public.id_generator() RETURNS bigint
-    LANGUAGE plpgsql
-    AS $$
-DECLARE
-    our_epoch bigint := 1467327600000;
-    seq_id bigint;
-    now_millis bigint;
-    -- the id of this DB shard, must be set for each
-    -- schema shard you have - you could pass this as a parameter too
-    shard_id int := 1;
-    result bigint:= 0;
-BEGIN
-    SELECT nextval('public.global_id_seq') % 1024 INTO seq_id;
-
-    SELECT FLOOR(EXTRACT(EPOCH FROM clock_timestamp()) * 1000) INTO now_millis;
-    result := (now_millis - our_epoch) << 22;
-    result := result | (shard_id << 10);
-    result := result | (seq_id);
-	return result;
-END;
-$$;
-
-
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
