@@ -155,3 +155,7 @@ build-iPhoneSimulator/
 /.envrc
 /.direnv/
 /pg_dump.sql
+
+# Local data
+/localdata
+/dump.rdb

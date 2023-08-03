@@ -1,3 +1,6 @@
 web: unset PORT && bin/rails server
+sidekiq: sidekiq
 css: yarn build:css --watch
 js: yarn build --watch
+postgres: postgres -D localdata/pgsql/data
+redis: redis-server
