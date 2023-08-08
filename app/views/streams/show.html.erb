@@ -20,27 +20,5 @@
     </div>
 </section>
 
-<button id="back-to-top-button" onclick="backToTop()" title="Back To Top"
+<button id="back-to-top-button" title="Back To Top"
         class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
-
-<script type="text/javascript">
- let bttButton = document.getElementById("back-to-top-button");
-
- window.onscroll = function () {
-     scrollFunction();
- };
-
- function scrollFunction() {
-     if (
-         document.body.scrollTop > 100 ||
-         document.documentElement.scrollTop > 100
-     ) {
-         bttButton.style.display = "block";
-     } else {
-         bttButton.style.display = "none";
-     }
- }
- function backToTop() {
-     document.documentElement.scrollIntoView({ behavior: "smooth" })
- }
-</script>

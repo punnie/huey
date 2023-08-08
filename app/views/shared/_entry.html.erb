@@ -8,6 +8,6 @@
       <h2 class="font-semibold text-gray-900 title-font"><%= entry.title %></h2>
     </a>
     <p class="leading-relaxed text-xs"><%= entry.description.truncate_words(100) %></p>
-    <p class="text-gray-500 text-xs"><%= time_ago_in_words entry.published_date %> ago</p>
+    <p class="text-gray-500 text-xs huey-timestamp" data-timestamp="<%= timestamp_with_millis(entry.published_date) %>"><%= time_ago_in_words entry.published_date %> ago</p>
   </div>
 </div>

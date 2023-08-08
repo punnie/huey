@@ -8,4 +8,8 @@ module ApplicationHelper
       "https://source.boringavatars.com/#{AVATAR_STYLES[entry.feed.id % AVATAR_STYLES.length]}/120/#{entry.feed.id}?colors=264653,2a9d8f,e9c46a,f4a261,e76f51&square=true"
     end
   end
+
+  def timestamp_with_millis(datetime)
+    (datetime.to_f * 1000).to_i
+  end
 end
