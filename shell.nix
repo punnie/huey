@@ -1,10 +1,11 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {}, hueyGems }:
 
 with pkgs;
 
 mkShell {
     buildInputs = [
-        ruby_3_1
+        hueyGems
+        hueyGems.wrappedRuby
         rubyPackages_3_1.solargraph
 
         bundix

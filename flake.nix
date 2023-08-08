@@ -11,16 +11,28 @@
       let
         pkgs = import nixpkgs { inherit system; };
 
-        hueyPackage = import ./default.nix { inherit pkgs; };
+        ruby = pkgs.ruby_3_1;
+
+        hueyGems = pkgs.bundlerEnv {
+          name = "huey-bundler-env";
+          inherit ruby;
+          gemfile  = ./Gemfile;
+          lockfile = ./Gemfile.lock;
+          gemset   = ./gemset.nix;
+        };
+
+        hueyPackage = import ./default.nix { inherit pkgs hueyGems; };
         dockerImage = import ./docker.nix { inherit pkgs hueyPackage; };
-        defaultOverlay = import ./overlay.nix {};
       in {
+        # Packages
         packages.huey = hueyPackage;
         packages.docker = dockerImage;
         packages.default = dockerImage;
 
-        devShell = import ./shell.nix { inherit pkgs; };
+        # Development shells
+        devShell = import ./shell.nix { inherit pkgs hueyGems; };
 
+        # Overlays
         overlays.default = (final: prev: {
           huey = hueyPackage;
           huey-docker-image = dockerImage;

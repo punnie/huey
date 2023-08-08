@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {}, hueyGems }:
 
 with pkgs;
 
@@ -6,16 +6,6 @@ stdenv.mkDerivation rec {
   name = "huey";
 
   src = ./.;
-
-  ruby = ruby_3_1;
-
-  hueyGems = bundlerEnv {
-    name = "huey-bundler-env";
-    inherit ruby;
-    gemfile  = ./Gemfile;
-    lockfile = ./Gemfile.lock;
-    gemset   = ./gemset.nix;
-  };
 
   hueyModules = stdenv.mkDerivation {
     name = "huey-modules";
