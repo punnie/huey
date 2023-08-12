@@ -159,3 +159,5 @@ build-iPhoneSimulator/
 # Local data
 /localdata
 /dump.rdb
+*.sql.gz
+/result
