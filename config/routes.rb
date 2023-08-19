@@ -8,6 +8,12 @@ Rails.application.routes.draw do
     namespace :v2 do
       resources :feeds, only: [:show]
     end
+
+    namespace :v3 do
+      resources :feeds
+      resources :streams
+      resources :stream_assignments
+    end
   end
 
   resources :feeds, only: [:show]
