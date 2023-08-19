@@ -9,16 +9,13 @@ const units = {
     second: 1000
 }
 
-const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' })
+const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" })
 
 document.addEventListener("DOMContentLoaded", (event) => {
     let backToTopButton = document.getElementById("back-to-top-button");
 
     let displayBackToTopButton = () => {
-        if (
-            document.body.scrollTop > 100 ||
-                document.documentElement.scrollTop > 100
-        ) {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             backToTopButton.style.display = "block";
         } else {
             backToTopButton.style.display = "none";
@@ -40,15 +37,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         // "Math.abs" accounts for both "past" & "future" scenarios
         for (var u in units) {
-            if (Math.abs(elapsed) > units[u] || u == 'second') {
+            if (Math.abs(elapsed) > units[u] || u == "second") {
                 return rtf.format(Math.round(elapsed/units[u]), u)
             }
         }
     }
 
     let updateTimestamps = () => {
-        document.querySelectorAll(".huey-timestamp").forEach((element) => {
-            let elementTimestamp = element.dataset.timestamp;
+        document.querySelectorAll("p[data-relative-timestamp]").forEach((element) => {
+            let elementTimestamp = element.dataset.relativeTimestamp;
             let newRelativeTimestamp = getRelativeTime(elementTimestamp);
 
             element.innerHTML = newRelativeTimestamp;
