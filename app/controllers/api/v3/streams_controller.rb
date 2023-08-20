@@ -6,20 +6,20 @@ class Api::V3::StreamsController < Api::V3::ApiController
 
   # GET /api/v3/streams
   def index
-    @streams = Stream.all.page(pagination_params[:page]).per(default_per_page)
-    render
+    @streams = Stream.all.includes(:feeds).page(pagination_params[:page]).per(default_per_page)
+    render :index
   end
 
   # GET /api/v3/streams/:id
   def show
-    render
+    render :show
   end
 
   # POST /api/v3/streams
   def create
     @stream = Stream.new(stream_params)
     if @stream.save
-      render status: :created
+      render :show, status: :created
     else
       render json: @stream.errors, status: :unprocessable_entity
     end
@@ -28,7 +28,7 @@ class Api::V3::StreamsController < Api::V3::ApiController
   # PATCH/PUT /api/v3/streams/:id
   def update
     if @stream.update(stream_params)
-      render
+      render :show
     else
       render json: @stream.errors, status: :unprocessable_entity
     end
@@ -47,7 +47,7 @@ class Api::V3::StreamsController < Api::V3::ApiController
   end
 
   def stream_params
-    params.require(:stream).permit(:title, :content)
+    params.require(:stream).permit(:name, :permalink)
   end
 
   def default_per_page

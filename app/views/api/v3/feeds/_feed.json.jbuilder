@@ -20,8 +20,7 @@ json.extract! feed,
               :feed_uri,
               :last_refreshed_at,
 
-              :created_at,
-              :updated_at,
+              :type,
 
               :scrape_index_news_element_selector,
               :scrape_index_news_element_selector,

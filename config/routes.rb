@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     namespace :v3 do
       resources :feeds
       resources :streams
-      resources :stream_assignments
+      resources :stream_assignments, only: [:create, :destroy]
     end
   end
 

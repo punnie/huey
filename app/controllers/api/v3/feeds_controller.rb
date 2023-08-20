@@ -7,19 +7,22 @@ class Api::V3::FeedsController < Api::V3::ApiController
   # GET /api/v3/feeds
   def index
     @feeds = Feed.all.page(pagination_params[:page]).per(default_per_page)
-    render
+    render :index
   end
 
   # GET /api/v3/feeds/:id
   def show
-    render
+    render :show
   end
 
   # POST /api/v3/feeds
   def create
-    @feed = Feed.new(feed_params)
+    @feed = Builders::RssFeedBuilder.new.build(feed_params[:uri], use_googlebot_agent: feed_params[:use_googlebot_agent])
+
+    created = @feed.new_record?
+
     if @feed.save
-      render status: :created
+      render :show, status: created ? :created : :ok
     else
       render json: @feed.errors, status: :unprocessable_entity
     end
@@ -28,7 +31,7 @@ class Api::V3::FeedsController < Api::V3::ApiController
   # PATCH/PUT /api/v3/feeds/:id
   def update
     if @feed.update(feed_params)
-      render
+      render :show
     else
       render json: @feed.errors, status: :unprocessable_entity
     end
@@ -47,7 +50,7 @@ class Api::V3::FeedsController < Api::V3::ApiController
   end
 
   def feed_params
-    params.require(:feed).permit(:uri)
+    params.require(:feed).permit(:uri, :use_googlebot_agent)
   end
 
   def default_per_page
