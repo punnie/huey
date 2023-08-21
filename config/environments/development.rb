@@ -65,4 +65,5 @@ Rails.application.configure do
 
   # Allow access to the development environment throught the following hosts
   config.hosts << 'dev.test'
+  config.hosts << 'oxygen.dog-major.ts.net'
 end
