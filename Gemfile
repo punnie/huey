@@ -29,9 +29,6 @@ gem 'sprockets-rails'
 gem 'jsbundling-rails'
 gem 'cssbundling-rails'
 
-# Foreman for parallel execution
-gem 'foreman'
-
 # RSS
 gem 'rss'
 # Http gem
