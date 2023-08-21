@@ -11,7 +11,7 @@ mkShell {
         bundix
         nodejs
         overmind
-        postgresql_14
+        (postgresql_14.withPackages (p: [ p.pgvector ]))
         redis
         yarn
 
