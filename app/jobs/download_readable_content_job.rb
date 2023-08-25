@@ -26,6 +26,8 @@ class DownloadReadableContentJob < ApplicationJob
 
     entry.mark_as_ready
     entry.save!
+
+    FetchOpenaiEmbeddingsJob.perform_later(entry: entry) if entry.feed.calculate_openai_embeddings?
   end
 
   private

@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, hueyGems }:
+{ pkgs ? import <nixpkgs> {}, unstable, hueyGems }:
 
 with pkgs;
 
@@ -11,9 +11,11 @@ mkShell {
         bundix
         nodejs
         overmind
-        (postgresql_14.withPackages (p: [ p.pgvector ]))
-        redis
         yarn
+
+        # PostgreSQL from unstable to upgrade pgvector
+        (unstable.postgresql_14.withPackages (p: [ p.pgvector ]))
+        redis
 
         nodePackages.eslint
         nodePackages.typescript

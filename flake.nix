@@ -3,13 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
+        unstable = import nixpkgs-unstable { inherit system; };
 
         ruby = pkgs.ruby_3_1;
 
@@ -30,7 +33,7 @@
         packages.default = dockerImage;
 
         # Development shells
-        devShell = import ./shell.nix { inherit pkgs hueyGems; };
+        devShell = import ./shell.nix { inherit pkgs unstable hueyGems; };
 
         # Overlays
         overlays.default = (final: prev: {

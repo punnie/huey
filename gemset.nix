@@ -526,6 +526,17 @@
     };
     version = "1.6.0";
   };
+  neighbor = {
+    dependencies = ["activerecord"];
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "1r9k34xz7x7fpd18bix0cd5bk2wv6mj8z67f8fr7l30d2717m23h";
+      type = "gem";
+    };
+    version = "0.2.3";
+  };
   net-imap = {
     dependencies = ["date" "net-protocol"];
     groups = ["default"];

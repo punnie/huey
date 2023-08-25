@@ -4,6 +4,8 @@
 class Entry < ApplicationRecord
   belongs_to :feed
 
+  has_neighbors :openai_embeddings
+
   after_commit :download_readable_content, on: :create
 
   scope :for_feed, -> { where(is_ready: true).order(published_date: :desc) }
@@ -18,6 +20,15 @@ class Entry < ApplicationRecord
 
   def mark_as_ready
     self.is_ready = true
+  end
+
+  def content
+    contents["content"]
+  end
+
+  def sanitized_content
+    sanitizer = Rails::Html::FullSanitizer.new
+    sanitizer.sanitize(content).split(/\s/)[0...512].join(" ").strip rescue ""
   end
 
   private

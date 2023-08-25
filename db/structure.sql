@@ -24,28 +24,42 @@ COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UU
 
 
 --
+-- Name: vector; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS vector WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION vector; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION vector IS 'vector data type and ivfflat access method';
+
+
+--
 -- Name: generate_snowflake_id(); Type: FUNCTION; Schema: public; Owner: -
 --
 
 CREATE FUNCTION public.generate_snowflake_id() RETURNS bigint
     LANGUAGE plpgsql
-    AS $$
-      DECLARE
-          our_epoch bigint := 1314220021721;
-          seq_id bigint;
-          now_millis bigint;
-          -- the id of this DB shard, must be set for each
-          -- schema shard you have - you could pass this as a parameter too
-          shard_id int := 99;
-          result bigint:= 0;
-      BEGIN
-          SELECT nextval('public.global_id_seq') % 4096 INTO seq_id;
-          SELECT FLOOR(EXTRACT(EPOCH FROM clock_timestamp()) * 1000) INTO now_millis;
-          result := (now_millis - our_epoch) << 22;
-          result := result | (shard_id << 12);
-          result := result | (seq_id);
-          return result;
-      END;
+    AS $$
+      DECLARE
+          our_epoch bigint := 1314220021721;
+          seq_id bigint;
+          now_millis bigint;
+          -- the id of this DB shard, must be set for each
+          -- schema shard you have - you could pass this as a parameter too
+          shard_id int := 99;
+          result bigint:= 0;
+      BEGIN
+          SELECT nextval('public.global_id_seq') % 4096 INTO seq_id;
+          SELECT FLOOR(EXTRACT(EPOCH FROM clock_timestamp()) * 1000) INTO now_millis;
+          result := (now_millis - our_epoch) << 22;
+          result := result | (shard_id << 12);
+          result := result | (seq_id);
+          return result;
+      END;
       $$;
 
 
@@ -85,7 +99,8 @@ CREATE TABLE public.entries (
     readable_content jsonb,
     is_ready boolean DEFAULT false NOT NULL,
     id bigint DEFAULT public.generate_snowflake_id() NOT NULL,
-    feed_id bigint
+    feed_id bigint,
+    openai_embeddings public.vector(1536)
 );
 
 
@@ -124,7 +139,8 @@ CREATE TABLE public.feeds (
     scrape_index_author_selector character varying,
     id bigint DEFAULT public.generate_snowflake_id() NOT NULL,
     use_googlebot_agent boolean DEFAULT true NOT NULL,
-    download_content boolean DEFAULT true NOT NULL
+    download_content boolean DEFAULT true NOT NULL,
+    calculate_openai_embeddings boolean DEFAULT false
 );
 
 
@@ -423,6 +439,9 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20230219164258'),
 ('20230219164318'),
 ('20230624153114'),
-('20230626061645');
+('20230626061645'),
+('20230821190651'),
+('20230821190710'),
+('20230824143332');
 
 
