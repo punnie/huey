@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :feeds
       resources :streams
       resources :stream_assignments, only: [:create, :destroy]
+      resources :entries, only: [:index]
     end
   end
 
