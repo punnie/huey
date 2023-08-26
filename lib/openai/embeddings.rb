@@ -4,7 +4,7 @@
 module Openai
   class Embeddings
     def fetch(text:)
-      response = HTTP.auth("Bearer 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")
+      response = HTTP.auth("Bearer #{api_key}")
                    .post(
                      endpoint_uri,
                      json: {
@@ -24,6 +24,10 @@ module Openai
 
     def model_name
       'text-embedding-ada-002'
+    end
+
+    def api_key
+      ENV.fetch('OPENAI_API_TOKEN')
     end
   end
 end
