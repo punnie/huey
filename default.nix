@@ -43,7 +43,7 @@ stdenv.mkDerivation rec {
     '';
   };
 
-  buildInputs = [ cacert nodejs-slim hueyGems hueyGems.wrappedRuby ];
+  buildInputs = [ nodejs-slim hueyGems hueyGems.wrappedRuby ];
 
   buildPhase = ''
     patchShebangs bin/

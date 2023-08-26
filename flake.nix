@@ -25,12 +25,10 @@
         };
 
         hueyPackage = import ./default.nix { inherit pkgs hueyGems; };
-        dockerImage = import ./docker.nix { inherit pkgs hueyPackage; };
       in {
         # Packages
         packages.huey = hueyPackage;
-        packages.docker = dockerImage;
-        packages.default = dockerImage;
+        packages.default = hueyPackage;
 
         # Development shells
         devShell = import ./shell.nix { inherit pkgs unstable hueyGems; };
@@ -38,7 +36,6 @@
         # Overlays
         overlays.default = (final: prev: {
           huey = hueyPackage;
-          huey-docker-image = dockerImage;
         });
       });
 }
