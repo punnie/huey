@@ -2,7 +2,7 @@
     <div class="flex p-2 flex-nowrap text-sm ml-auto gap-2">
         <% @streams.each do |stream| %>
             <% if stream.id == @stream.id %>
-                <% pill_class = "rounded-full bg-indigo-500 text-white font-semibold px-3 py-1 flex-none" %>
+                <% pill_class = "rounded-full bg-indigo-500 dark:bg-blue-500 text-white font-semibold px-3 py-1 flex-none" %>
             <% else  %>
                 <% pill_class = "rounded-full bg-gray-300 dark:bg-gray-700 px-3 py-1 flex-none" %>
             <% end %>
@@ -13,7 +13,7 @@
 </div>
 
 <section class="text-gray-600 body-font">
-    <div class="divide-y-2 divide-gray-100 dark:divide-gray-700">
+    <div class="divide-y-2 dark:divide-dotted divide-gray-100 dark:divide-gray-700">
         <% @entries.each do |entry| %>
             <%= render partial: 'shared/entry_cozy', locals: { entry: entry } %>
         <% end %>
@@ -21,4 +21,4 @@
 </section>
 
 <button id="back-to-top-button" title="Back To Top"
-        class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">&uarr;</button>
+        class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md bg-indigo-500 dark:bg-blue-500 text-white text-3xl font-bold">&uarr;</button>
