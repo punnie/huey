@@ -1,6 +1,6 @@
 <% entry_partial = if local_assigns.fetch(:display_mode, :compact) == :compact then 'shared/entry_compact' else 'shared/entry' end %>
 
-<section class="text-gray-600 body-font my-4">
+<section class="text-gray-600 dark:text-white body-font my-4">
     <div class="py-2 flex md:flex-nowrap space-x-2 px-2">
         <div class="flex w-3/5 flex-nowrap text-sm space-x-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
@@ -26,7 +26,7 @@
             </span>
         </div>
     </div>
-    <div class="divide-y-2 divide-gray-100">
+    <div class="divide-y-2 divide-gray-100 dark:divide-gray-700">
         <% entries.each do |entry| %>
             <%= render partial: entry_partial, locals: { entry: entry } %>
         <% end %>

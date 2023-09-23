@@ -4,7 +4,7 @@
             <% if stream.id == @stream.id %>
                 <% pill_class = "rounded-full bg-indigo-500 text-white font-semibold px-3 py-1 flex-none" %>
             <% else  %>
-                <% pill_class = "rounded-full bg-gray-300 px-3 py-1 flex-none" %>
+                <% pill_class = "rounded-full bg-gray-300 dark:bg-gray-700 px-3 py-1 flex-none" %>
             <% end %>
 
             <%= link_to stream.name, stream_url(stream), class: pill_class %>
@@ -13,7 +13,7 @@
 </div>
 
 <section class="text-gray-600 body-font">
-    <div class="divide-y-2 divide-gray-100">
+    <div class="divide-y-2 divide-gray-100 dark:divide-gray-700">
         <% @entries.each do |entry| %>
             <%= render partial: 'shared/entry_cozy', locals: { entry: entry } %>
         <% end %>
