@@ -15,7 +15,7 @@
 <section class="text-gray-600 body-font">
     <div class="divide-y-2 dark:divide-dotted divide-gray-100 dark:divide-gray-700">
         <% @entries.each do |entry| %>
-            <%= render partial: 'shared/entry_cozy', locals: { entry: entry } %>
+            <%= render partial: "shared/#{@entry_layout}", locals: { entry: entry } %>
         <% end %>
     </div>
 </section>
