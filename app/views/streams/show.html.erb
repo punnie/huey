@@ -7,7 +7,7 @@
                 <% pill_class = "rounded-full bg-gray-300 dark:bg-gray-700 px-3 py-1 flex-none" %>
             <% end %>
 
-            <%= link_to stream.name, stream_url(stream), class: pill_class %>
+            <%= link_to stream.name, stream_url(stream, request.query_parameters.slice(:l)), class: pill_class %>
         <% end %>
     </div>
 </div>
