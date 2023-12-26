@@ -1,6 +1,9 @@
+# typed: false
+# frozen_string_literal: true
+
 module Scrubbers
   class Description < Loofah::Scrubber
-    attr_reader :tags 
+    attr_reader :tags
 
     def initialize # rubocop:disable Lint/MissingSuper
       @direction = :top_down

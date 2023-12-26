@@ -1,8 +1,8 @@
 # typed: false
 # frozen_string_literal: true
 
-class EmbeddingSearcher
-  def search(scope:, text:, limit: 10, distance: "cosine")
+class EmbeddingSearcher # rubocop:disable Style/Documentation
+  def search(scope:, text:, limit: 10, distance: 'cosine')
     fetcher = Openai::Embeddings.new
     embeddings = fetcher.fetch(text: text)
 
