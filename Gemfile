@@ -26,8 +26,8 @@ gem 'sidekiq'
 gem 'sprockets-rails'
 
 # JS and CSS bundling
-gem 'jsbundling-rails'
 gem 'cssbundling-rails'
+gem 'jsbundling-rails'
 
 # RSS
 gem 'rss'
@@ -39,6 +39,9 @@ gem 'kaminari'
 
 # Neighbor search
 gem 'neighbor'
+
+# Nokogiri
+gem 'nokogiri', force_ruby_platform: true
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
