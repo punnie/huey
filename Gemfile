@@ -25,9 +25,11 @@ gem 'sidekiq'
 # Sprockets for asset generation
 gem 'sprockets-rails'
 
-# JS and CSS bundling
-gem 'cssbundling-rails'
-gem 'jsbundling-rails'
+# Use importmap for JavaScript
+gem 'importmap-rails'
+
+# Use tailwindcss for styles
+gem 'tailwindcss-rails'
 
 # RSS
 gem 'rss'

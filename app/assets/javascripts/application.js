@@ -1,4 +1,4 @@
-//  Entry point for the build script in your package.json
+// Huey application javascript
 
 const units = {
   year  : 24 * 60 * 60 * 1000 * 365,

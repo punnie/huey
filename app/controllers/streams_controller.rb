@@ -12,13 +12,9 @@ class StreamsController < ApplicationController
 
   def set_controller_entities
     @streams = Stream.all.sorted
-
     @stream = Stream.find(filtered_params[:id])
-
     @feeds = @stream.feeds
-
     @entries = @stream.entries.for_feed.includes(:feed).page(filtered_params[:page]).per(default_per_page)
-
     @entry_layout = entry_layout
   end
 

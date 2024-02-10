@@ -78,8 +78,6 @@ GEM
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
-    cssbundling-rails (1.3.3)
-      railties (>= 6.0.0)
     date (3.3.4)
     domain_name (0.6.20231109)
     erubi (1.12.0)
@@ -99,11 +97,13 @@ GEM
     http-form_data (2.3.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    importmap-rails (2.0.1)
+      actionpack (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      railties (>= 6.0.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    jsbundling-rails (1.2.1)
-      railties (>= 6.0.0)
     json (2.7.1)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
@@ -254,6 +254,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    tailwindcss-rails (2.3.0)
+      railties (>= 6.0.0)
     thor (1.3.0)
     timeout (0.4.1)
     tzinfo (2.0.6)
@@ -272,10 +274,9 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
-  cssbundling-rails
   http
+  importmap-rails
   jbuilder (~> 2.7)
-  jsbundling-rails
   kaminari
   listen (~> 3.2)
   neighbor
@@ -296,10 +297,11 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sprockets-rails
+  tailwindcss-rails
   tzinfo-data
 
 RUBY VERSION
    ruby 3.1.4p223
 
 BUNDLED WITH
-   2.4.17
+   2.4.13

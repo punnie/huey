@@ -9,16 +9,17 @@ mkShell {
         rubyPackages_3_1.solargraph
 
         bundix
-        nodejs
         overmind
-        yarn
+
+        tailwindcss
 
         # PostgreSQL from unstable to upgrade pgvector
         (unstable.postgresql_14.withPackages (p: [ p.pgvector ]))
         redis
-
-        nodePackages.eslint
-        nodePackages.typescript
-        nodePackages.typescript-language-server
     ];
+
+    # Export the tailwindcss install dir so the gem can find it
+    shellHook = ''
+      export TAILWINDCSS_INSTALL_DIR=${tailwindcss}/bin
+    '';
 }
