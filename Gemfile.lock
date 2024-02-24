@@ -70,10 +70,20 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     bcrypt (3.1.20)
+    bindex (0.8.1)
     bootsnap (1.17.0)
       msgpack (~> 1.2)
     builder (3.2.4)
     byebug (11.1.3)
+    capybara (3.40.0)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.11)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
     coderay (1.1.3)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
@@ -133,6 +143,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
+    matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
     mini_portile2 (2.8.5)
@@ -168,7 +179,7 @@ GEM
       pry (~> 0.11)
       yard (~> 0.9.11)
     public_suffix (5.0.4)
-    puma (4.3.12)
+    puma (5.6.8)
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (2.2.8)
@@ -238,6 +249,11 @@ GEM
       rubocop (>= 1.33.0, < 2.0)
       rubocop-ast (>= 1.30.0, < 2.0)
     ruby-progressbar (1.13.0)
+    rubyzip (2.3.2)
+    selenium-webdriver (4.10.0)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
     sidekiq (7.2.0)
       concurrent-ruby (< 2)
       connection_pool (>= 2.3.0)
@@ -261,9 +277,21 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
+    web-console (4.2.1)
+      actionview (>= 6.0.0)
+      activemodel (>= 6.0.0)
+      bindex (>= 0.4.0)
+      railties (>= 6.0.0)
+    webdrivers (5.3.1)
+      nokogiri (~> 1.6)
+      rubyzip (>= 1.3.0)
+      selenium-webdriver (~> 4.0, < 4.11)
+    websocket (1.2.10)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
     yard (0.9.34)
     zeitwerk (2.6.12)
 
@@ -274,6 +302,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
+  capybara
   http
   importmap-rails
   jbuilder (~> 2.7)
@@ -285,7 +314,7 @@ DEPENDENCIES
   pry
   pry-byebug
   pry-doc
-  puma (~> 4.1)
+  puma (~> 5.0)
   rack-cors
   rails (~> 7.0.0)
   redis (~> 4.0)
@@ -293,15 +322,18 @@ DEPENDENCIES
   rubocop
   rubocop-performance
   rubocop-rails
+  selenium-webdriver
   sidekiq
   spring
   spring-watcher-listen (~> 2.0.0)
   sprockets-rails
   tailwindcss-rails
   tzinfo-data
+  web-console
+  webdrivers
 
 RUBY VERSION
    ruby 3.1.4p223
 
 BUNDLED WITH
-   2.4.13
+   2.4.22

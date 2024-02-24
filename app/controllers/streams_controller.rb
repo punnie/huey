@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 class StreamsController < ApplicationController
   before_action :set_controller_entities, only: :show
 

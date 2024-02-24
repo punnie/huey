@@ -1,6 +1,5 @@
 # typed: false
 # frozen_string_literal: true
 
-class ApplicationController < ActionController::API
-  include ActionController::MimeResponds
+class ApplicationController < ActionController::Base
 end

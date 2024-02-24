@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-class Api::V3::ApiController < ApplicationController
+class Api::V3::ApiController < ActionController::API
   before_action :authenticate_user!
 
   attr_reader :current_user

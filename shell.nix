@@ -13,6 +13,9 @@ mkShell {
 
         tailwindcss
 
+        # For Github Copilot
+        nodejs
+
         # PostgreSQL from unstable to upgrade pgvector
         (unstable.postgresql_14.withPackages (p: [ p.pgvector ]))
         redis

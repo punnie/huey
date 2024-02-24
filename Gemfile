@@ -8,7 +8,7 @@ gem 'rails', '~> 7.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 5.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -24,10 +24,8 @@ gem 'sidekiq'
 
 # Sprockets for asset generation
 gem 'sprockets-rails'
-
 # Use importmap for JavaScript
 gem 'importmap-rails'
-
 # Use tailwindcss for styles
 gem 'tailwindcss-rails'
 
@@ -49,6 +47,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-byebug'
+
+  # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'web-console'
 end
 
 group :development do
@@ -63,6 +64,13 @@ group :development do
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
+end
+
+group :test do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
