@@ -4,6 +4,9 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: %i[show]
 
+  # TODO: Access via readable permalink
+
+  # GET /feeds/1
   # GET /feeds/1.json
   # GET /feeds/1.rss
   def show

@@ -1,24 +1,20 @@
-<div class="relative overflow-x-auto">
-    <div class="flex p-2 flex-nowrap text-sm ml-auto gap-2">
-        <% @streams.each do |stream| %>
-            <% if stream.id == @stream.id %>
-                <% pill_class = "rounded-full bg-indigo-500 dark:bg-blue-500 text-white font-semibold px-3 py-1 flex-none" %>
-            <% else  %>
-                <% pill_class = "rounded-full bg-gray-300 dark:bg-gray-700 px-3 py-1 flex-none" %>
-            <% end %>
+<div class="flex p-2 flex-nowrap text-sm ml-auto gap-2 relative overflow-x-auto">
+  <% @streams.each do |stream| %>
+    <% if stream.id == @stream.id %>
+      <% pill_class = "rounded-full bg-indigo-500 dark:bg-blue-500 text-white font-semibold px-3 py-1 flex-none" %>
+    <% else  %>
+      <% pill_class = "rounded-full bg-gray-300 dark:bg-gray-700 px-3 py-1 flex-none" %>
+    <% end %>
 
-            <%= link_to stream.name, stream_url(stream, request.query_parameters.slice(:l)), class: pill_class %>
-        <% end %>
-    </div>
+    <%= link_to stream.name, stream_url(stream, request.query_parameters.slice(:l)), class: pill_class %>
+  <% end %>
 </div>
 
-<section class="text-gray-600 body-font">
-    <div class="divide-y-2 dark:divide-dotted divide-gray-100 dark:divide-gray-700">
-        <% @entries.each do |entry| %>
-            <%= render partial: "shared/#{@entry_layout}", locals: { entry: entry } %>
-        <% end %>
-    </div>
+<section class="text-gray-600 body-font divide-solid divide-y-1 dark:divide-dotted divide-gray-100 dark:divide-gray-700 max-w-screen-sm">
+  <% @entries.each do |entry| %>
+    <%= render partial: "shared/entry", locals: { entry: entry } %>
+  <% end %>
 </section>
 
 <button id="back-to-top-button" title="Back To Top"
-        class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md bg-indigo-500 dark:bg-blue-500 text-white text-3xl font-bold">&uarr;</button>
+  class="hidden fixed z-90 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md bg-indigo-500 dark:bg-blue-500 text-white text-3xl font-bold">&uarr;</button>
