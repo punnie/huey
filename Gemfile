@@ -40,6 +40,15 @@ gem 'kaminari'
 # Neighbor search
 gem 'neighbor'
 
+# Readability and dependencies
+gem 'fastimage'
+gem 'ruby-readability'
+gem 'sanitize'
+
+# Storage
+gem 'aws-sdk-s3', require: false
+gem 'image_processing'
+
 # Nokogiri
 gem 'nokogiri', force_ruby_platform: true
 

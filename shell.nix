@@ -8,6 +8,8 @@ mkShell {
         hueyGems.wrappedRuby
         rubyPackages_3_1.solargraph
 
+        imagemagick
+
         bundix
         overmind
 
