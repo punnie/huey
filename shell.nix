@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, unstable, hueyGems }:
+{ pkgs ? import <nixpkgs> {}, hueyGems }:
 
 with pkgs;
 
@@ -19,7 +19,7 @@ mkShell {
         nodejs
 
         # PostgreSQL from unstable to upgrade pgvector
-        (unstable.postgresql_14.withPackages (p: [ p.pgvector ]))
+        (postgresql_15.withPackages (p: [ p.pgvector ]))
         redis
     ];
 

@@ -31,7 +31,7 @@
         packages.default = hueyPackage;
 
         # Development shells
-        devShell = import ./shell.nix { inherit pkgs unstable hueyGems; };
+        devShell = import ./shell.nix { inherit pkgs hueyGems; };
 
         # Overlays
         overlays.default = (final: prev: {
