@@ -1,4 +1,4 @@
-<div class="flex p-2 flex-nowrap text-sm ml-auto gap-2 relative overflow-x-auto">
+<div class="flex flex-nowrap p-2 text-sm ml-auto gap-2 relative overflow-x-auto">
   <% @streams.each do |stream| %>
     <% if stream.id == @stream.id %>
       <% pill_class = "rounded-full bg-indigo-500 dark:bg-blue-500 text-white font-semibold px-3 py-1 flex-none" %>
@@ -10,9 +10,19 @@
   <% end %>
 </div>
 
-<section class="text-gray-600 body-font divide-solid divide-y-1 dark:divide-dotted divide-gray-100 dark:divide-gray-700 max-w-screen-sm">
-  <% @entries.each do |entry| %>
-    <%= render partial: "shared/entry", locals: { entry: entry } %>
+<section class="text-gray-600 body-font divide-y-2 dark:divide-dotted divide-gray-100 dark:divide-gray-700">
+  <% @entries.each do |feed, feed_entries| %>
+  <div class="py-1 flex flex-row flex-nowrap space-x-4 px-2">
+    <div class="flex-none">
+      <img class="w-8 h-8 lg:w-16 lg:h-16 rounded my-2 sticky top-2" src="<%= img_src_for_feed(feed) %>" />
+    </div>
+
+    <div class="flex-1">
+      <% feed_entries.each do |entry| %>
+        <%= render partial: "shared/entry", locals: { entry: entry } %>
+      <% end %>
+    </div>
+  </div>
   <% end %>
 </section>
 

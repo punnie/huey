@@ -1,19 +1,13 @@
-<div class="py-1 flex flex-nowrap space-x-4 px-2">
-  <div class="flex-shrink-0 flex flex-col align-bottom">
-    <img class="object-cover w-8 h-8 lg:w-16 lg:h-16 rounded my-2" src="<%= img_src_for_feed(entry.feed) %>" />
+<div class="space-y-2 mb-6">
+  <div class="flex flex-row justify-between">
+    <p class="text-gray-500 dark:text-gray-300"><%= link_to entry.feed.title, feed_url(entry.feed) %></p>
+    <p class="text-gray-500 dark:text-gray-300 text-xs" data-relative-timestamp="<%= timestamp_with_millis(entry.published_date) %>"><%= time_ago_in_words entry.published_date %> ago</p>
   </div>
 
-  <div class="flex-grow space-y-2 my-2">
-    <div class="flex flex-row justify-between">
-      <p class="text-gray-500 dark:text-gray-900"><%= link_to entry.feed.title, feed_url(entry.feed) %></p>
-      <p class="text-gray-500 dark:text-gray-300 text-xs" data-relative-timestamp="<%= timestamp_with_millis(entry.published_date) %>"><%= time_ago_in_words entry.published_date %> ago</p>
-    </div>
+  <h2 class="font-semibold text-gray-900 dark:text-white title-font"><%= entry.title %></h2>
 
-    <h2 class="font-semibold text-gray-900 dark:text-white title-font"><%= entry.title %></h2>
+  <p class="dark:text-gray-300 text-sm"><%= entry.description.truncate_words(80) %></p>
+  <p class="dark:text-white text-sm font-semibold"><%= link_to entry.link&.truncate(80), entry.link, target: "_blank" %></p>
 
-    <p class="dark:text-gray-300 text-sm"><%= entry.description.truncate_words(80) %></p>
-    <p class="dark:text-gray-900 text-sm font-semibold"><%= link_to entry.link&.truncate(80), entry.link, target: "_blank" %></p>
-
-    <img class="object-cover rounded" src="<%= entry.readable_content.dig('table', 'lead_image_url') %>"  />
-  </div>
+  <img class="rounded" src="<%= entry.readable_content.dig('table', 'lead_image_url') %>"  />
 </div>
